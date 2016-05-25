@@ -5,7 +5,7 @@
 
 This application demonstrates how the Conversation service uses intent capabilities in a simple chat interface.
 
-[See the demo](http://deb-simple.stage1.mybluemix.net/).
+[See the demo](http://conversation-simple-node-app-doc.mybluemix.net/).
 
 Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
 
@@ -16,9 +16,9 @@ The app interface is designed and trained for chatting with a cognitive car. The
 JSON that the JavaScript code receives from the server is on the right. Your questions and commands are run against a
 small set of sample data trained with intents like these:
 
-* `lights`
-* `wipers`
-* `ac`
+* `power_on`
+* `traffic_info`
+* `amenities`
 
 To see all the intents, open `/training/car_intents.csv`.
 
