@@ -1,0 +1,211 @@
+Set cruise control,cruise_control
+Please set my cruise control for me,cruise_control
+save my speed,cruise_control
+hold my speed,cruise_control
+turn cruise control off,cruise_control
+cruise control off,cruise_control
+cancel cruise control,cruise_control
+Cruise control,cruise_control
+what can you do for me,capability
+what do you know,capability
+what things can you do,capability
+what can you help me with,capability
+tell me what you can do,capability
+how can you help me,capability
+what can you do,capability
+tell me what things you can do,capability
+How are you going to help me?,capability
+headlights on,lights_on
+lights on,lights_on
+turn my lights on for me,lights_on
+its getting dark,lights_on
+its too dark,lights_on
+the sun is down,lights_on
+I need my lights on,lights_on
+watson please turn my headlights on,lights_on
+switch my headlights to off,lights_off
+turn off my headlights,lights_off
+lights off,lights_off
+Turn off my nightbeams,lights_off
+turn off my lights please,lights_off
+will you turn my lights off please,lights_off
+turn on my hazards,hazard_lights
+turn on my lights,lights_on
+click my locks,lock_door
+I need you to lock my doors,lock_door
+I dont feel safe,lock_door
+it's a dangerous neighborhood,lock_door
+I need my doors to be locked,lock_door
+lock my doors,lock_doors
+unlock my doors now,unlock_door
+please unlock the door for me,unlock_door
+unlock my door please,unlock_door
+I don't need my doors locked anymore,unlock_door
+I need to open my door,unlock_door
+please le me open the door,unlock_door
+I cant hear it,volume_up
+its too quiet,volume_up
+turn the radio up,volume_up
+make it louder,volume_up
+please turn up the music,volume_up
+please turn my music up,volume_up
+increase the volume,volume_up
+turn the volume up now,volume_up
+turn up this song,volume_up
+its too loud,volume_down
+I cant hear myself think,volume_down
+turn down the radio,volume_down
+turn down the music,volume_down
+turn my music down,volume_down
+lower the volume,volume_down
+I need you to turn my music down,volume_down
+I need you to turn the radio down,volume_down
+please turn the music down,volume_down
+make the music quieter,volume_down
+turn this song down,volume_down
+turn it down,volume_down
+turn down the radio,volume_down
+turn down the music,volume_down
+switch off the radio,radio_off
+turn the radio off,radio_off
+switch off the radio,radio_off
+turn the music off please,radio_off
+I need silence,radio_off
+I don't want to hear music anymore,radio_off
+I want the radio off,radio_off
+turn off the radio right now,radio_off
+radio on now,radio_on
+play me a song,radio_on
+play,radio_on
+I want to listen to music,radio_on
+I want to hear a song,radio_on
+turn the radio off,radio_off
+can you turn on the radio,radio_on
+"Play music (radio, CD, etc.)",radio_on
+play music,radio_on
+music choice / sync phone,radio_on
+I want to see behind me,backup_camera
+I cant see behind me,backup_camera
+turn on my rear camera,backup_camera
+turn my backup cam on,backup_camera
+turn on the backcam,backup_camera
+Backup camera,backup_camera
+Navigation,locate_amenity
+Find best gas option,locate_amenity
+Stop for food/coffee,locate_amenity
+Information on locations I want to travel to,locate_amenity
+directions/map,locate_amenity
+gps,locate_amenity
+nearest exit,locate_amenity
+nearest restrooms,locate_amenity
+nearest food,locate_amenity
+nearest gas station,locate_amenity
+get me directions,locate_amenity
+Traffic updates/Alternate routes,traffic
+ETA,traffic
+is there an accident,traffic
+traffic conditions,traffic
+traffic on 85,traffic
+how long until I arrive,traffic
+are there any conditions I should be aware of,traffic
+accidents,traffic
+rain - update my eta?,traffic
+hows traffic looking,traffic
+are there any accidents ahead,traffic
+make a phone call,phone
+use the phone,phone
+call on the telephone,phone
+text someone,phone
+read my text messages,phone
+answer the phone,phone
+Make a call,phone
+call someone,phone
+text mom,phone
+call Mitch,phone
+text Justin,phone
+tell Dan im on my way home,phone
+ask Mitch whats for dinner,phone
+turn up the heater,temp_up
+im cold,temp_up
+its cold in here,temp_up
+its chilly in here,temp_up
+its freezing in the car,temp_up
+im sweating,temp_down
+im hot,temp_down
+its hot in here,temp_down
+hot in hurr,temp_down
+its boiling in here,temp_down
+its too hot in the car,temp_down
+the car is getting hot,temp_down
+im cold,temp_up
+im hot,temp_down
+its getting warm in here,temp_down
+please turn the heater up,temp_up
+turn the ac up,temp_down
+its getting chilly in here,temp_up
+it's a tad bit nippy in here isnt it,temp_up
+will you make it hot in here?,temp_up
+turn on defroster ,temp_up
+turn on ac,temp_up
+turn on heater,temp_down
+can you turn the heat up,temp_up
+can you turn my seat warmer on,temp_up
+React to obstacles on the road,traffic
+remind me to keep my distance,traffic
+which lane is the fastest?,traffic
+how warm is it?,weather
+how cold is it out?,weather
+do I need a jacket?,weather
+how hot is it outside?,weather
+whats the weather outside?,weather
+what is the weather like?,weather
+When will the rain stop?,weather
+Does the weather get worse,weather
+whats the weather outside,weather
+how long will it rain,weather
+is it raining?,weather
+when will the sun come out,weather
+how cold is it outside,weather
+how hot is it outside,weather
+whats the weather like right now,weather
+tell me the weather,weather
+whats the weather outside,weather
+will the rain effect my arrival time?,traffic
+turn on wipers,wipers_on
+turn my windshield wipers on,wipers_on
+turn off my wipers,wipers_off
+its raining,wipers_on
+"its raining, turn my wipers on",wipers_on
+I cant see its raining,wipers_on
+it stopped raining,wipers_off
+I don't need my wipers anymore,wipers_off
+turn off my window wipers,wipers_off
+turn off my windshield wipers,wipers_off
+I need my wipers off,wipers_off
+I need my wipers on,wipers_on
+what color is the sky,off_topic
+how far is the moon,off_topic
+whats the square root of 70,off_topic
+how many licks does it take to get to the center of a tootsie roll,off_topic
+how do I change my tire?,off_topic
+how do I replace a hub cap?,off_topic
+how do I paint my car?,off_topic
+tell me how to remove a dent,off_topic
+I want to date you,off_topic
+I love you,off_topic
+how tall are you,off_topic
+how much do you weigh,off_topic
+whats your favorite color,off_topic
+whats your favorite movie,off_topic
+tell me your favorite color,off_topic
+I love dolphins,off_topic
+cats are my favorite animal,off_topic
+I enjoy petting cats,off_topic
+I want to eat tacos everyday,off_topic
+I love spicy food,off_topic
+what kind of food do you eat,off_topic
+what types of food do you like,off_topic
+tell me your favorite foods,off_topic
+do I need to change my tire,off_topic
+how should I replace my engine,off_topic
+I need to work on my car,off_topic

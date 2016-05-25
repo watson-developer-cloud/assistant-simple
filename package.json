@@ -1,0 +1,33 @@
+{
+  "name": "conversation-car-simple",
+  "description": "A simple Node.js based web app which shows how to use the Conversation API to recognize user intents.",
+  "version": "0.1.1",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "lint": "eslint .",
+    "autofix": "eslint --fix .",
+    "codecov": "npm run test && (codecov || true)"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "4.13.4",
+    "body-parser": "1.15.1",
+    "watson-developer-cloud": "^1.8.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "codecov": "^1.0.1",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb-es5": "^1.0.9",
+    "eslint-plugin-react": "^5.1.1",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "supertest": "^1.2.0"
+  },
+  "engine": {
+    "node": ">= 4.2.4"
+  }
+}

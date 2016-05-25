@@ -1,0 +1,385 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* IBM Design fonts https://github.ibm.com/Design/fonts */
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/light/h-n-light.eot?') format('eot'),
+    url('../fonts/light/h-n-light.woff2') format('woff2'),
+    url('../fonts/light/h-n-light.woff') format('woff'),
+    url('../fonts/light/h-n-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/light-italic/h-n-light-italic.eot?') format('eot'),
+    url('../fonts/light-italic/h-n-light-italic.woff2') format('woff2'),
+    url('../fonts/light-italic/h-n-light-italic.woff') format('woff'),
+    url('../fonts/light-italic/h-n-light-italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/roman/h-n-roman.eot?') format('eot'),
+    url('../fonts/roman/h-n-roman.woff2') format('woff2'),
+    url('../fonts/roman/h-n-roman.woff') format('woff'),
+    url('../fonts/roman/h-n-roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/roman-italic/h-n-roman-italic.eot?') format('eot'),
+    url('../fonts/roman-italic/h-n-roman-italic.woff2') format('woff2'),
+    url('../fonts/roman-italic/h-n-roman-italic.woff') format('woff'),
+    url('../fonts/roman-italic/h-n-roman-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/medium/h-n-medium.eot?') format('eot'),
+    url('../fonts/medium/h-n-medium.woff2') format('woff2'),
+    url('../fonts/medium/h-n-medium.woff') format('woff'),
+    url('../fonts/medium/h-n-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/medium-italic/h-n-medium-italic.eot?') format('eot'),
+    url('../fonts/medium-italic/h-n-medium-italic.woff2') format('woff2'),
+    url('../fonts/medium-italic/h-n-medium-italic.woff') format('woff'),
+    url('../fonts/medium-italic/h-n-medium-italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/bold/h-n-bold.eot?') format('eot'),
+    url('../fonts/bold/h-n-bold.woff2') format('woff2'),
+    url('../fonts/bold/h-n-bold.woff') format('woff'),
+    url('../fonts/bold/h-n-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/bold-italic/h-n-bold-italic.eot?') format('eot'),
+    url('../fonts/bold-italic/h-n-bold-italic.woff2') format('woff2'),
+    url('../fonts/bold-italic/h-n-bold-italic.woff') format('woff'),
+    url('../fonts/bold-italic/h-n-bold-italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* IBM Icons */
+@font-face {
+    font-family: 'ibm-icons';
+    src:url('../fonts/ibm-icons.eot?ytcz1z') format('eot'),
+      url('../fonts/ibm-icons.eot?ytcz1z#iefix') format('embedded-opentype'),
+      url('../fonts/ibm-icons.ttf?ytcz1z') format('truetype'),
+      url('../fonts/ibm-icons.woff?ytcz1z') format('woff'),
+      url('../fonts/ibm-icons.svg?ytcz1z#ibm-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* IBM glyphs */
+@font-face {
+    font-family: 'ibm-glyph';
+    src:url('../fonts/ibm-glyphs.eot?1b8643') format('eot'),
+      url('../fonts/ibm-glyphs.eot?1b8643#iefix') format('embedded-opentype'),
+      url('../fonts/ibm-glyphs.ttf?1b8643') format('truetype'),
+      url('../fonts/ibm-glyphs.woff?1b8643') format('woff'),
+      url('../fonts/ibm-glyphs.svg?1b8643#ibm-glyph') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+input {
+  max-width: 350px;
+  width: 100%;
+  height: 40px;
+  font-size: 12pt;
+}
+
+div {
+  word-wrap: break-word;
+  line-height: 20px;
+}
+
+.parentDiv {
+  height: 100%;
+}
+
+.responsive-columns-wrapper {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -ms-display: flex;
+  -ms-flex-direction: row;
+}
+
+.responsive-column {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow: auto;
+}
+
+.chat-column-holder {
+  text-align: center;
+}
+
+.chat-column {
+  height: 100%;
+  padding: 64px 0px;
+  margin: auto;
+  max-width: 450px;
+  min-width: 150px;
+  text-align: left;
+}
+
+#scrollingChat {
+  height: 765px;
+  padding-right: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100% - 40px);
+}
+
+.message-inner {
+  opacity: 0;
+  margin-top: 15px;
+  -webkit-transition-property: opacity, margin-top;
+  -webkit-transition-duration: 0.75s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-property: opacity, margin-top;
+  -moz-transition-duration: 0.75s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-property: opacity, margin-top;
+  -o-transition-duration: 0.75s;
+  -o-transition-timing-function: ease-in;
+  -ms-transition-property: opacity, margin-top;
+  -ms-transition-duration: 0.75s;
+  -ms-transition-timing-function: ease-in;
+  transition-property: opacity, margin-top;
+  transition-duration: 0.75s;
+  transition-timing-function: ease-in;
+}
+
+.load .message-inner {
+  opacity: 1;
+  margin-top: 5px;
+}
+
+.from-user {
+  text-align: right;
+}
+
+.from-user .message-inner {
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 0.24px;
+  line-height: 21px;
+  background: #00B4A0;
+  border-radius: 20px;
+  border-bottom-right-radius: 0px;
+  text-align: left;
+  display: inline-block;
+  margin-left: 40px;
+  min-width: 40px;
+}
+
+.from-user .message-inner p {
+  margin: 5px;
+  padding: 0 15px;
+}
+
+.from-user .message-inner:before, .from-user .message-inner:after {
+  content: "";
+  position: absolute;
+}
+
+
+.from-user .message-inner:before {
+  z-index: -2;
+  top: 31px;
+  right: 0px;
+  height: 6px;
+  width: 8px;
+  background: #1cb3a0;
+}
+
+.from-user .message-inner:after {
+  z-index: -1;
+  top: 31px;
+  right: 0px;
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  border-top-right-radius: 20px;
+}
+
+.from-watson .message-inner {
+  position: relative;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #B5B5B5;
+  letter-spacing: 0.24px;
+  line-height: 21px;
+}
+
+.from-watson.latest .message-inner {
+  color: #323232;
+}
+
+.from-watson p {
+  margin: 5px;
+  padding: 0 20px;
+}
+
+.from-watson.latest p:before {
+  content: ".";
+  color: #9855D4;
+  background-image: url("../img/marker_image.png");
+  background-size: 5px 21px;
+  position: absolute;
+  z-index: 2;
+  left: 7px;
+  width: 5px;
+  height: 21px;
+  line-height: 21px;
+}
+
+#textInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #323232;
+  letter-spacing: 0.24px;
+  line-height: 21px;
+  height: 40px;
+  max-width: 100%;
+  padding-left: 2px;
+  margin-bottom: -2px;
+  font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+}
+
+#textInput.underline {
+  border-bottom: 2px solid #00B4A0;
+}
+
+::-webkit-input-placeholder {
+  color: #B5B5B5;
+}
+
+::-moz-placeholder {
+  color: #B5B5B5;
+  opacity:  1;
+}
+
+input:-moz-placeholder {
+  color: #B5B5B5;
+  opacity:  1;
+}
+
+:-ms-input-placeholder {
+  color: #B5B5B5;
+}
+
+::-ms-clear {
+  display: none;
+}
+
+.inputOutline {
+  display: block;
+  border-bottom: 1px solid #aeaeae;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+#textInputDummy {
+  position:absolute;
+  white-space:pre;
+  top: 0px;
+  left: -1000%;
+  opacity: 0;
+}
+
+.payload-column {
+  font-family: Monaco, monospace;
+  font-size: 12px;
+  letter-spacing: 0px;
+  line-height: 18px;
+  max-width: 500px;
+  min-width: 150px;
+  width: 45%;
+  background-color: #23292A;
+  color: #fff;
+  overflow-x: auto;
+}
+
+.payload-column .header-text {
+  font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #9E9E9E;
+  letter-spacing: 0.3px;
+  padding: 8px;
+}
+
+.payload-column hr {
+  margin: 0px;
+  border: 0;
+  height: 1px;
+  background: #646364;
+}
+
+.hide {
+  display: none;
+}
+
+.payload .pre-wrapper {
+  padding: 8px;
+}
+
+.line-numbers {
+  width: 32px;
+  background: #383D3E;
+  color: #898989;
+  text-align: right;
+}
+
+pre {
+  margin: 0px;
+  word-wrap: normal;
+}
+
+.string {
+  color: #54EED0;
+}
+
+.boolean, .null, .number {
+  color: #CE8EFF;
+}
+
+.key {
+  color: #66B7FF;
+}

@@ -1,0 +1,8 @@
+cf applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: stage1.mybluemix.net
+  name: deb-simple
+  host: deb-simple
+  disk_quota: 1024M
