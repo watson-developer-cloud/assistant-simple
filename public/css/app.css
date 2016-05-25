@@ -5,123 +5,45 @@
 }
 
 body {
-  font-size: 16px;
   font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin: 0px;
-  padding: 0px;
-}
-
-/* IBM Design fonts https://github.ibm.com/Design/fonts */
-@font-face {
-  font-family: 'Helvetica Neue for IBM';
-  src: url('../fonts/light/h-n-light.eot?') format('eot'),
-    url('../fonts/light/h-n-light.woff2') format('woff2'),
-    url('../fonts/light/h-n-light.woff') format('woff'),
-    url('../fonts/light/h-n-light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Helvetica Neue for IBM';
-  src: url('../fonts/light-italic/h-n-light-italic.eot?') format('eot'),
-    url('../fonts/light-italic/h-n-light-italic.woff2') format('woff2'),
-    url('../fonts/light-italic/h-n-light-italic.woff') format('woff'),
-    url('../fonts/light-italic/h-n-light-italic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Helvetica Neue for IBM';
-  src: url('../fonts/roman/h-n-roman.eot?') format('eot'),
-    url('../fonts/roman/h-n-roman.woff2') format('woff2'),
-    url('../fonts/roman/h-n-roman.woff') format('woff'),
-    url('../fonts/roman/h-n-roman.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Helvetica Neue for IBM';
-  src: url('../fonts/roman-italic/h-n-roman-italic.eot?') format('eot'),
-    url('../fonts/roman-italic/h-n-roman-italic.woff2') format('woff2'),
-    url('../fonts/roman-italic/h-n-roman-italic.woff') format('woff'),
-    url('../fonts/roman-italic/h-n-roman-italic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Helvetica Neue for IBM';
-  src: url('../fonts/medium/h-n-medium.eot?') format('eot'),
-    url('../fonts/medium/h-n-medium.woff2') format('woff2'),
-    url('../fonts/medium/h-n-medium.woff') format('woff'),
-    url('../fonts/medium/h-n-medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Helvetica Neue for IBM';
-  src: url('../fonts/medium-italic/h-n-medium-italic.eot?') format('eot'),
-    url('../fonts/medium-italic/h-n-medium-italic.woff2') format('woff2'),
-    url('../fonts/medium-italic/h-n-medium-italic.woff') format('woff'),
-    url('../fonts/medium-italic/h-n-medium-italic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Helvetica Neue for IBM';
-  src: url('../fonts/bold/h-n-bold.eot?') format('eot'),
-    url('../fonts/bold/h-n-bold.woff2') format('woff2'),
-    url('../fonts/bold/h-n-bold.woff') format('woff'),
-    url('../fonts/bold/h-n-bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Helvetica Neue for IBM';
-  src: url('../fonts/bold-italic/h-n-bold-italic.eot?') format('eot'),
-    url('../fonts/bold-italic/h-n-bold-italic.woff2') format('woff2'),
-    url('../fonts/bold-italic/h-n-bold-italic.woff') format('woff'),
-    url('../fonts/bold-italic/h-n-bold-italic.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* IBM Icons */
-@font-face {
-    font-family: 'ibm-icons';
-    src:url('../fonts/ibm-icons.eot?ytcz1z') format('eot'),
-      url('../fonts/ibm-icons.eot?ytcz1z#iefix') format('embedded-opentype'),
-      url('../fonts/ibm-icons.ttf?ytcz1z') format('truetype'),
-      url('../fonts/ibm-icons.woff?ytcz1z') format('woff'),
-      url('../fonts/ibm-icons.svg?ytcz1z#ibm-icons') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* IBM glyphs */
-@font-face {
-    font-family: 'ibm-glyph';
-    src:url('../fonts/ibm-glyphs.eot?1b8643') format('eot'),
-      url('../fonts/ibm-glyphs.eot?1b8643#iefix') format('embedded-opentype'),
-      url('../fonts/ibm-glyphs.ttf?1b8643') format('truetype'),
-      url('../fonts/ibm-glyphs.woff?1b8643') format('woff'),
-      url('../fonts/ibm-glyphs.svg?1b8643#ibm-glyph') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-input {
-  max-width: 350px;
-  width: 100%;
-  height: 40px;
-  font-size: 12pt;
+  margin: 0;
+  padding: 0;
 }
 
 div {
   word-wrap: break-word;
-  line-height: 20px;
+  line-height: 1.25rem;
 }
 
-.parentDiv {
+#view-change-button {
+  display: inline-block;
+  position: absolute;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 1.5625rem;
+  background: #AB72F8;
+  top: 0.3125rem;
+  right: 0.3125rem;
+  line-height: 3.125rem;
+  vertical-align: middle;
+}
+
+#view-change-button img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#view-change-button:not(.full) .not-full {
+  display: inline-block;
+}
+
+#view-change-button.full .full {
+  display: inline-block;
+}
+
+#contentParent {
   height: 100%;
 }
 
@@ -141,30 +63,29 @@ div {
   overflow: auto;
 }
 
-.chat-column-holder {
+#chat-column-holder {
   text-align: center;
 }
 
 .chat-column {
   height: 100%;
-  padding: 64px 0px;
+  padding: 0.9375rem 0 0.625rem 0;
   margin: auto;
-  max-width: 450px;
-  min-width: 150px;
   text-align: left;
+  max-width: 25rem;
+  min-width: 9.375rem;
 }
 
 #scrollingChat {
-  height: 765px;
-  padding-right: 10px;
+  margin: 0.75rem;
   overflow-y: auto;
   overflow-x: hidden;
-  height: calc(100% - 40px);
+  height: calc(100% - 4rem);
 }
 
 .message-inner {
   opacity: 0;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
   -webkit-transition-property: opacity, margin-top;
   -webkit-transition-duration: 0.75s;
   -webkit-transition-timing-function: ease-in;
@@ -184,7 +105,7 @@ div {
 
 .load .message-inner {
   opacity: 1;
-  margin-top: 5px;
+  margin-top: 0.3125rem;
 }
 
 .from-user {
@@ -193,22 +114,22 @@ div {
 
 .from-user .message-inner {
   position: relative;
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
-  letter-spacing: 0.24px;
-  line-height: 21px;
+  letter-spacing: 0.015rem;
+  line-height: 1.3125rem;
   background: #00B4A0;
-  border-radius: 20px;
-  border-bottom-right-radius: 0px;
+  border-radius: 1.25rem;
+  border-bottom-right-radius: 0;
   text-align: left;
   display: inline-block;
-  margin-left: 40px;
-  min-width: 40px;
+  margin-left: 2.5rem;
+  min-width: 2.5rem;
 }
 
 .from-user .message-inner p {
-  margin: 5px;
-  padding: 0 15px;
+  margin: 0.3125rem;
+  padding: 0 0.9375rem;
 }
 
 .from-user .message-inner:before, .from-user .message-inner:after {
@@ -219,30 +140,30 @@ div {
 
 .from-user .message-inner:before {
   z-index: -2;
-  top: 31px;
-  right: 0px;
-  height: 6px;
-  width: 8px;
+  bottom: -0.375rem;
+  right: 0;
+  height: 0.375rem;
+  width: 0.5rem;
   background: #1cb3a0;
 }
 
 .from-user .message-inner:after {
   z-index: -1;
-  top: 31px;
-  right: 0px;
-  height: 8px;
-  width: 8px;
+  bottom: -0.5rem;
+  right: 0;
+  height: 0.5rem;
+  width: 0.5rem;
   background: #fff;
-  border-top-right-radius: 20px;
+  border-top-right-radius: 1.25rem;
 }
 
 .from-watson .message-inner {
   position: relative;
-  border-radius: 25px;
-  font-size: 16px;
+  border-radius: 1.5625rem;
+  font-size: 1rem;
   color: #B5B5B5;
-  letter-spacing: 0.24px;
-  line-height: 21px;
+  letter-spacing: 0.015rem;
+  line-height: 1.3125rem;
 }
 
 .from-watson.latest .message-inner {
@@ -250,41 +171,41 @@ div {
 }
 
 .from-watson p {
-  margin: 5px;
-  padding: 0 20px;
+  margin: 0.3125rem;
+  padding: 0 1.25rem;
 }
 
 .from-watson.latest p:before {
   content: ".";
   color: #9855D4;
   background-image: url("../img/marker_image.png");
-  background-size: 5px 21px;
+  background-size: 0.3125rem 1.3125rem;
   position: absolute;
   z-index: 2;
-  left: 7px;
-  width: 5px;
-  height: 21px;
-  line-height: 21px;
+  left: 0.4375rem;
+  width: 0.3125rem;
+  height: 1.3125rem;
+  line-height: 1.3125rem;
 }
 
 #textInput {
   border: none;
   outline: none;
   background: transparent;
-  font-size: 16px;
+  font-size: 1rem;
   color: #323232;
-  letter-spacing: 0.24px;
-  line-height: 21px;
-  height: 40px;
+  letter-spacing: 0.015rem;
+  line-height: 1.3125rem;
+  height: 2.5rem;
   max-width: 100%;
-  padding-left: 2px;
-  margin-bottom: -2px;
+  padding-left: 0.125rem;
+  margin-bottom: -0.125rem;
   font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
 
 }
 
 #textInput.underline {
-  border-bottom: 2px solid #00B4A0;
+  border-bottom: 0.125rem solid #00B4A0;
 }
 
 ::-webkit-input-placeholder {
@@ -311,64 +232,65 @@ input:-moz-placeholder {
 
 .inputOutline {
   display: block;
-  border-bottom: 1px solid #aeaeae;
-  margin-left: 8px;
-  margin-right: 8px;
+  border-bottom: 0.0625rem solid #aeaeae;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 #textInputDummy {
   position:absolute;
   white-space:pre;
-  top: 0px;
+  top: 0;
   left: -1000%;
   opacity: 0;
 }
 
-.payload-column {
+#payload-column {
   font-family: Monaco, monospace;
-  font-size: 12px;
-  letter-spacing: 0px;
-  line-height: 18px;
-  max-width: 500px;
-  min-width: 150px;
-  width: 45%;
+  font-size: 0.75rem;
+  letter-spacing: 0;
+  line-height: 1.125rem;
   background-color: #23292A;
   color: #fff;
   overflow-x: auto;
+
+  width: 45%;
+  max-width: 32.0625rem;
+  min-width: 29.6875rem;
 }
 
-.payload-column .header-text {
+#payload-column.full {
+  width: 100%;
+  max-width: none;
+  min-width: initial;
+}
+
+#payload-column .header-text, #payload-column #payload-initial-message {
   font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #9E9E9E;
-  letter-spacing: 0.3px;
-  padding: 8px;
-}
-
-.payload-column hr {
-  margin: 0px;
-  border: 0;
-  height: 1px;
-  background: #646364;
+  letter-spacing: 0.01875rem;
+  padding: 0.5rem;
+  padding-left: 2.5rem;
+  background: #383D3E;
 }
 
 .hide {
   display: none;
 }
 
-.payload .pre-wrapper {
-  padding: 8px;
+.payload .line-numbers, .payload .payload-text {
+  padding: 0.5rem;
 }
 
 .line-numbers {
-  width: 32px;
-  background: #383D3E;
+  width: 2rem;
   color: #898989;
   text-align: right;
 }
 
 pre {
-  margin: 0px;
+  margin: 0;
   word-wrap: normal;
 }
 
@@ -382,4 +304,128 @@ pre {
 
 .key {
   color: #66B7FF;
+}
+
+html{
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+
+  .chat-column {
+    padding-top: 4rem;
+  }
+
+  #payload-column {
+    width: 0;
+    max-width: none;
+    min-width: initial;
+  }
+}
+
+/* IBM Design fonts https://github.ibm.com/Design/fonts */
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/light/h-n-light.eot?') format('eot'),
+  url('../fonts/light/h-n-light.woff2') format('woff2'),
+  url('../fonts/light/h-n-light.woff') format('woff'),
+  url('../fonts/light/h-n-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/light-italic/h-n-light-italic.eot?') format('eot'),
+  url('../fonts/light-italic/h-n-light-italic.woff2') format('woff2'),
+  url('../fonts/light-italic/h-n-light-italic.woff') format('woff'),
+  url('../fonts/light-italic/h-n-light-italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/roman/h-n-roman.eot?') format('eot'),
+  url('../fonts/roman/h-n-roman.woff2') format('woff2'),
+  url('../fonts/roman/h-n-roman.woff') format('woff'),
+  url('../fonts/roman/h-n-roman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/roman-italic/h-n-roman-italic.eot?') format('eot'),
+  url('../fonts/roman-italic/h-n-roman-italic.woff2') format('woff2'),
+  url('../fonts/roman-italic/h-n-roman-italic.woff') format('woff'),
+  url('../fonts/roman-italic/h-n-roman-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/medium/h-n-medium.eot?') format('eot'),
+  url('../fonts/medium/h-n-medium.woff2') format('woff2'),
+  url('../fonts/medium/h-n-medium.woff') format('woff'),
+  url('../fonts/medium/h-n-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/medium-italic/h-n-medium-italic.eot?') format('eot'),
+  url('../fonts/medium-italic/h-n-medium-italic.woff2') format('woff2'),
+  url('../fonts/medium-italic/h-n-medium-italic.woff') format('woff'),
+  url('../fonts/medium-italic/h-n-medium-italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/bold/h-n-bold.eot?') format('eot'),
+  url('../fonts/bold/h-n-bold.woff2') format('woff2'),
+  url('../fonts/bold/h-n-bold.woff') format('woff'),
+  url('../fonts/bold/h-n-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue for IBM';
+  src: url('../fonts/bold-italic/h-n-bold-italic.eot?') format('eot'),
+  url('../fonts/bold-italic/h-n-bold-italic.woff2') format('woff2'),
+  url('../fonts/bold-italic/h-n-bold-italic.woff') format('woff'),
+  url('../fonts/bold-italic/h-n-bold-italic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* IBM Icons */
+@font-face {
+  font-family: 'ibm-icons';
+  src:url('../fonts/ibm-icons.eot?ytcz1z') format('eot'),
+  url('../fonts/ibm-icons.eot?ytcz1z#iefix') format('embedded-opentype'),
+  url('../fonts/ibm-icons.ttf?ytcz1z') format('truetype'),
+  url('../fonts/ibm-icons.woff?ytcz1z') format('woff'),
+  url('../fonts/ibm-icons.svg?ytcz1z#ibm-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* IBM glyphs */
+@font-face {
+  font-family: 'ibm-glyph';
+  src:url('../fonts/ibm-glyphs.eot?1b8643') format('eot'),
+  url('../fonts/ibm-glyphs.eot?1b8643#iefix') format('embedded-opentype'),
+  url('../fonts/ibm-glyphs.ttf?1b8643') format('truetype'),
+  url('../fonts/ibm-glyphs.woff?1b8643') format('woff'),
+  url('../fonts/ibm-glyphs.svg?1b8643#ibm-glyph') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }

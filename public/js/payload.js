@@ -6,9 +6,9 @@
 var PayloadPanel = (function() {
   var settings = {
     selectors: {
+      payloadColumn: '#payload-column',
       payloadInitial: '#payload-initial-message',
       payloadRequest: '#payload-request',
-      payloadHr: '#payload-hr',
       payloadResponse: '#payload-response'
     },
     payloadTypes: {
@@ -19,12 +19,28 @@ var PayloadPanel = (function() {
 
   // Publicly accessible methods defined
   return {
-    init: init
+    init: init,
+    togglePanel: togglePanel
   };
 
   // Initialize the module
   function init() {
     payloadUpdateSetup();
+  }
+
+  // Toggle panel between being:
+  //    reduced width (default for large resolution apps)
+  //    hidden (default for small/mobile resolution apps)
+  //    full width (regardless of screen size)
+  function togglePanel(event, element) {
+    var payloadColumn = document.querySelector(settings.selectors.payloadColumn);
+    if (element.classList.contains('full')) {
+      element.classList.remove('full');
+      payloadColumn.classList.remove('full');
+    } else {
+      element.classList.add('full');
+      payloadColumn.classList.add('full');
+    }
   }
 
   // Set up callbacks on payload setters in Api module
@@ -59,15 +75,9 @@ var PayloadPanel = (function() {
       payloadElement.appendChild(payloadDiv);
       // Set the horizontal rule to show (if request and response payloads both exist)
       // or to hide (otherwise)
-      var payloadHr = document.querySelector(settings.selectors.payloadHr);
       var payloadInitial = document.querySelector(settings.selectors.payloadInitial);
       if (Api.getRequestPayload() || Api.getResponsePayload()) {
         payloadInitial.classList.add('hide');
-        if (Api.getRequestPayload() && Api.getResponsePayload()) {
-          payloadHr.classList.remove('hide');
-        }
-      } else {
-        payloadHr.classList.add('hide');
       }
     }
   }
@@ -92,37 +102,24 @@ var PayloadPanel = (function() {
     var payloadJson = {
       'tagName': 'div',
       'children': [{
-        // <div class='header-line'>
+        // <div class='header-text'>
         'tagName': 'div',
-        'classNames': ['header-line', 'responsive-columns-wrapper'],
-        'children': [{
-          // <div class='line-numbers'>
-          'tagName': 'div',
-          'classNames': ['line-numbers']
-        }, {
-          // <div class='header-text'>
-          'tagName': 'div',
-          'text': isRequest ? 'User input' : 'Watson understands',
-          'classNames': ['header-text', 'responsive-column']
-        }]
+        'text': isRequest ? 'User input' : 'Watson understands',
+        'classNames': ['header-text']
       }, {
-        // <div class='code-line'>
+        // <div class='code-line responsive-columns-wrapper'>
         'tagName': 'div',
         'classNames': ['code-line', 'responsive-columns-wrapper'],
         'children': [{
           // <div class='line-numbers'>
-          'tagName': 'div',
+          'tagName': 'pre',
           'text': createLineNumberString((payloadPrettyString.match(/\n/g) || []).length + 1),
-          'classNames': ['line-numbers', 'pre-wrapper']
+          'classNames': ['line-numbers']
         }, {
-          // <div class='payload-text'>
-          'tagName': 'div',
-          'classNames': ['payload-text', 'responsive-column', 'pre-wrapper'],
-          'children': [{
-            // <pre>{payload}
-            'tagName': 'pre',
-            'html': payloadPrettyString
-          }]
+          // <div class='payload-text responsive-column'>
+          'tagName': 'pre',
+          'classNames': ['payload-text', 'responsive-column'],
+          'html': payloadPrettyString
         }]
       }]
     };
@@ -164,9 +161,11 @@ var PayloadPanel = (function() {
   // - used as line numbers for displayed JSON
   function createLineNumberString(numberOfLines) {
     var lineString = '';
+    var prefix = '';
     for (var i = 1; i <= numberOfLines; i++) {
-      lineString += '\n';
+      lineString += prefix;
       lineString += i;
+      prefix = '\n';
     }
     return lineString;
   }

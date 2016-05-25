@@ -11,9 +11,12 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-
-  <div class="parentDiv responsive-columns-wrapper" id="parent">
-    <div class="chat-column-holder responsive-column">
+  <div id="view-change-button" class="button" onclick="PayloadPanel.togglePanel(event, this)">
+    <img class="option full" src="../img/Chat Button.png">
+    <img class="option not-full" src="../img/Code Button.png">
+  </div>
+  <div id="contentParent" class="responsive-columns-wrapper">
+    <div id="chat-column-holder" class="responsive-column content-column">
       <div class="chat-column">
         <div id="scrollingChat"></div>
         <label for="textInput" class="inputOutline">
@@ -23,13 +26,12 @@
         </label>
       </div>
     </div>
-    <div class="payload-column fixed-column">
-      <div id="payload-initial-message" class="header-text">
+    <div id="payload-column" class="fixed-column content-column">
+      <div id="payload-initial-message">
         Type something to see the output
       </div>
-      <div class="payload" id="payload-request"></div>
-      <hr id="payload-hr" class="hide" />
-      <div class="payload" id="payload-response"></div>
+      <div id="payload-request" class="payload"></div>
+      <div id="payload-response" class="payload"></div>
     </div>
   </div>
 

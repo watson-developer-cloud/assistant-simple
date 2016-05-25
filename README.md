@@ -1,15 +1,15 @@
-# Conversation Simple
-[![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
-[![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
+# Conversation Car Simple
+[![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-car-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-car-simple)
+[![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-car-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-car-simple?branch=master)
 
 
 This application demonstrates how the Conversation service uses intent capabilities in a simple chat interface.
 
-[See the demo](http://conversation-simple.mybluemix.net/).
+[See the demo](http://deb-simple.stage1.mybluemix.net/).
 
 Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-car-simple)
 
 ## How the app works
 The app interface is designed and trained for chatting with a cognitive car. The chat interface is on the left, and the
