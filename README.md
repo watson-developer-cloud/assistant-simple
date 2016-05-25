@@ -1,11 +1,11 @@
-# Conversation Car Simple
+# Conversation Simple
 [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
 [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
 
 This application demonstrates how the Conversation service uses intent capabilities in a simple chat interface.
 
-[See the demo](http://deb-simple.stage1.mybluemix.net/).
+[See the demo](http://conversation-simple.mybluemix.net/).
 
 Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
 
