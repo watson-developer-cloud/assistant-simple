@@ -5,7 +5,7 @@ declared-services:
     plan: experimental
 applications:
 - services:
-  -conversation-experimental
+  - conversation-experimental
   command: npm start
   path: .
   instances: 1
