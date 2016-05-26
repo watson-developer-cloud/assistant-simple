@@ -16,9 +16,9 @@ The app interface is designed and trained for chatting with a cognitive car. The
 JSON that the JavaScript code receives from the server is on the right. Your questions and commands are run against a
 small set of sample data trained with intents like these:
 
-* `power_on`
-* `traffic_info`
-* `amenities`
+* `turn_on`
+* `weather`
+* `capabilities`
 
 To see all the intents, open `/training/car_intents.csv`.
 
@@ -69,7 +69,8 @@ understands that in both cases your intent is the same and responds accordingly.
   $ cf push
   ```
 
-To use your instance and work with intents, you need to create a workspace. For information on workspaces, see the full  [Conversation service  documentation][https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/conversation.html].
+To use your instance and work with intents, you need to create a workspace. For information on workspaces, 
+see the full  [Conversation service  documentation](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/conversation.html).
 
 ## Running locally
 
