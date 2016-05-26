@@ -69,7 +69,7 @@ understands that in both cases your intent is the same and responds accordingly.
   $ cf push
   ```
 
-See the full [Getting Started][getting_started] documentation for more details, including code snippets and references.
+To use your instance and work with intents, you need to create a workspace. For information on workspaces, see the full  [Conversation service  documentation][https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/conversation.html].
 
 ## Running locally
 
