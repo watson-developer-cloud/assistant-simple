@@ -1,6 +1,6 @@
-# Conversation Car Simple
-[![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-car-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-car-simple)
-[![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-car-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-car-simple?branch=master)
+# Conversation Simple
+[![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
+[![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
 
 This application demonstrates how the Conversation service uses intent capabilities in a simple chat interface.
@@ -9,7 +9,7 @@ This application demonstrates how the Conversation service uses intent capabilit
 
 Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-car-simple)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
 
 ## How the app works
 The app interface is designed and trained for chatting with a cognitive car. The chat interface is on the left, and the
@@ -69,7 +69,7 @@ understands that in both cases your intent is the same and responds accordingly.
   $ cf push
   ```
 
-See the full [Getting Started][getting_started] documentation for more details, including code snippets and references.
+To use your instance and work with intents, you need to create a workspace. For information on workspaces, see the full  [Conversation service  documentation][https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/conversation.html].
 
 ## Running locally
 

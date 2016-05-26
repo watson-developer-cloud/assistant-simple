@@ -17,4 +17,4 @@ deploy:
   space: demos
   on:
     repo: watson-developer-cloud/conversation-simple
-    branch: master
+    branch: release

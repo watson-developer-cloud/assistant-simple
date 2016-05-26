@@ -20,9 +20,12 @@ var app = require('../app');
 var request = require('supertest');
 
 describe('POST /api/message', function() {
-  it('Generate Error when no content passed', function(done) {
-    request(app).post('/api/message').expect(500, done);
+  it('GET to / should load the home page', function(done) {
+    request(app).get('/').expect(200, done);
   });
+  // it('Generate Error when no content passed', function(done) {
+  //   request(app).post('/api/message').expect(500, done);
+  // });
   // it('Generate 200 when passing in context', function(done) {
   //   request(app).post('/api/message').send('{"context":{}, "input":{"text": "Hi"}}').expect(200, done);
   // });
