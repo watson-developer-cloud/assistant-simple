@@ -79,13 +79,13 @@ tab will open in your browser, and you will be prompted to login if you have not
 description). Press **Create** to finish creating the workspace.  
 
 3. A new workspace tile will be created within the tooling. Press on the _menu_ button within the workspace tile, and select **View details**: 
-![Workpsace Details](https://github.com/watson-developer-cloud/conversation-simple/tree/master/readme_images/workspace_details.png "Workspace Details Menu")  
+![Workpsace Details](readme_images/workspace_details.png "Workspace Details Menu")  
 In the Details UI copy the 36 character UNID **ID** field (e.g. 84a74a20-1390-4540-ce8a-eabac5fdf921). This is the **Workspace ID**.  
 
 4. Open the workspace by pressing the **Get started** button within the workspace tile. You will be navigated to the Intents screen.
 At this point you can either create your own itents by following the instructions on screen, or upload the intents used in this application. 
 To upload the predefined intents from here simply press the **Import intents** button 
-![Import intents button](https://github.com/watson-developer-cloud/conversation-simple/tree/master/readme_images/import_intents.png "Import intents").
+![Import intents button](readme_images/import_intents.png "Import intents").
 Once you imported the intents or created your own the service will take a few moments to train the service.  
 
 5. Return to your application, either in your local dev environment, or on Bluemix. If running on Bluemix you will need to create a new 
