@@ -23,10 +23,11 @@ small set of sample data trained with intents like these:
 To see all the intents, open `/training/car_intents.csv`.
 
 These intents help the system to understand variations of questions and commands that you might submit.
-For example, if you say "Wipers on" or "I want to turn on the windshield wipers," the system
+For example, if you say *"Wipers on"* or *"I want to turn on the windshield wipers"*, the system
 understands that in both cases your intent is the same and responds accordingly.
 
 ## Getting Started
+If you have used the Deploy to Bluemix button above, skip to Step 7 below.  
 
 1. Create a Bluemix Account
 
@@ -36,7 +37,7 @@ understands that in both cases your intent is the same and responds accordingly.
 
 3. Edit the `manifest.yml` file and change the `<application-name>` to something unique.
   ```none
-  applications:
+  applications:git 
   - services:
     - conversation-service
     name: <application-name>
@@ -67,17 +68,39 @@ understands that in both cases your intent is the same and responds accordingly.
 
   ```sh
   $ cf push
-  ```
+  ```  
+  
+## Creating a Workspace  
+1. Once the service has been provisioned, you will need to create a workspace. To do that navigate to the service instance tile within 
+Bluemix. Once there click on the **Manage** menu item. Click on the **Launch Tooling** button within the documentation at which point a new
+tab will open in your browser, and you will be prompted to login if you have not done so before. Log in with your Bluemix credentials.  
 
-To use your instance and work with intents, you need to create a workspace. For information on workspaces, 
-see the full  [Conversation service  documentation](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/conversation.html).
+2. Once logged in you should be able to **Create a Workspace**. Press the **Create** button and give the workspace a name (and optional 
+description). Press **Create** to finish creating the workspace.  
+
+3. A new workspace tile will be created within the tooling. Press on the _menu_ button within the workspace tile, and select **View details**: 
+![Workpsace Details](https://github.com/watson-developer-cloud/conversation-simple/tree/master/readme_images/workspace_details.png "Workspace Details Menu")  
+In the Details UI copy the 36 character UNID **ID** field (e.g. 84a74a20-1390-4540-ce8a-eabac5fdf921). This is the **Workspace ID**.  
+
+4. Open the workspace by pressing the **Get started** button within the workspace tile. You will be navigated to the Intents screen.
+At this point you can either create your own itents by following the instructions on screen, or upload the intents used in this application. 
+To upload the predefined intents from here simply press the **Import intents** button 
+![Import intents button](https://github.com/watson-developer-cloud/conversation-simple/tree/master/readme_images/import_intents.png "Import intents").
+Once you imported the intents or created your own the service will take a few moments to train the service.  
+
+5. Return to your application, either in your local dev environment, or on Bluemix. If running on Bluemix you will need to create a new 
+Environment Variable called **WORKSPACE_ID**. Paste in the value of the Workspace id (obtained in step 3 above) as the value of the new variable.
+Restart your application. If running your application locally, skip to the next section.  
+
+For information on workspaces, see the full  [Conversation service  documentation](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/conversation/overview.shtml).
 
 ## Running locally
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
 
 1. Copy the credentials from your `conversation-service` service in Bluemix to a `.env` file in the root.
-1. Use the Conversation tooling app to create a workspace and add the id to the `.env` file.
+1. Use the Conversation tooling app to create a workspace, as described above, and add the workspace id to the `.env` file 
+(see above for details on obtaining the **Workspace ID**).
 1. Install [Node.js](http://nodejs.org/)
 1. Go to the project folder in a terminal and run:
     ```
