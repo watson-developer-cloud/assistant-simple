@@ -20,7 +20,7 @@ small set of sample data trained with intents like these:
 * `weather`
 * `capabilities`
 
-To see all the intents, open `/training/car_intents.csv`.
+To see all the intents, open [`/training/car_intents.csv`](https://github.com/watson-developer-cloud/conversation-simple/blob/master/training/car_intents.csv).
 
 These intents help the system to understand variations of questions and commands that you might submit.
 For example, if you say *"Wipers on"* or *"I want to turn on the windshield wipers"*, the system
