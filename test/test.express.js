@@ -35,6 +35,7 @@ describe('Basic API tests', function() {
       .send({'input': {'text': 'some random text'}})
       .expect(function(res) {
         if (!res.body) throw new Error('Body was not present in response');
+        console.log(res.body);
         if (!res.body.output) throw new Error('\'Output\' was not present in response');
         if (!res.body.output.text) throw new Error('\'text\' was not present in response');
       })
