@@ -17,7 +17,7 @@
 'use strict';
 
 var app = require('../app');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var request = require('supertest');
 
 app.use(bodyParser.json());
@@ -33,10 +33,10 @@ describe('Basic API tests', function() {
       .set('Accept', /application\/json/)
       .expect('Content-Type', /application\/json/)
       .send({'input': {'text': 'some random text'}})
-      .expect(function(res){
-        if(!res.body) throw new Error("Body was not present in response");
-        if(!res.body.output) throw new Error("\'Output\' was not present in response");
-        if(!res.body.output.text) throw new Error("\'text\' was not present in response");
+      .expect(function(res) {
+        if (!res.body) throw new Error('Body was not present in response');
+        if (!res.body.output) throw new Error('\'Output\' was not present in response');
+        if (!res.body.output.text) throw new Error('\'text\' was not present in response');
       })
       .expect(200, done);
   });
