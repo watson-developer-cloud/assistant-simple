@@ -32,7 +32,7 @@ describe('Basic API tests', function() {
       .post('/api/message')
       .set('Accept', /application\/json/)
       .expect('Content-Type', /application\/json/)
-      .send({'input': {'text': 'some random text'}})
+      .send({'input': {'text': 'Turn on the radio'}})
       .expect(function(res) {
         if (!res.body) throw new Error('Body was not present in response');
         console.log(res.body);
