@@ -1,0 +1,435 @@
+How are you going to help me?,capabilities
+how can you help me,capabilities
+tell me what things you can do,capabilities
+tell me what you can do,capabilities
+what can you do,capabilities
+what can you do for me,capabilities
+what can you help me with,capabilities
+what do you know,capabilities
+what things can you do,capabilities
+what else,capabilities
+what can you do,capabilities
+what can I do,capabilities
+What are you,capabilities
+What can i say,capabilities
+Find best gas option,locate_amenity
+I'd like to get something to eat,locate_amenity
+Information on locations near me,locate_amenity
+Navigation,locate_amenity
+Stop for food/coffee,locate_amenity
+can you find the nearest gas station for me,locate_amenity
+get me directions,locate_amenity
+gps,locate_amenity
+i need some coffee,locate_amenity
+i need to stop for gas,locate_amenity
+I want to stop for some food,locate_amenity
+im hungry I want to eat something,locate_amenity
+let's get some grub,locate_amenity
+where are the closest restrooms,locate_amenity
+wheres the nearest exi,locate_amenity
+order a pizza,locate_amenity
+pizza,locate_amenity
+locate ammenity,locate_amenity
+navigate home,locate_amenity
+go to home,locate_amenity
+navigate to home,locate_amenity
+where is a restaurant,locate_amenity
+where is the pool,locate_amenity
+where can i have pizza?,locate_amenity
+where can i have piza?,locate_amenity
+where can i have piza?,locate_amenity
+I want a bar,locate_amenity
+Take me home,locate_amenity
+i want pizza,locate_amenity
+i want pizza,locate_amenity
+i want piza,locate_amenity
+i want,locate_amenity
+i want drink,locate_amenity
+find a restaurant,locate_amenity
+Amenities,locate_amenity
+i'm hungry,locate_amenity
+I want to eat pizza,locate_amenity
+show me the best path,locate_amenity
+I am hungry,locate_amenity
+how do i get home?,locate_amenity
+where can i have pizza=,locate_amenity
+where can i drink=,locate_amenity
+where can i have piza,locate_amenity
+where can i have pizza,locate_amenity
+I want eat,locate_amenity
+where can i eat pizza?,locate_amenity
+where is ATM,locate_amenity
+hello. I want an ice cream. Where can I find one? ,locate_amenity
+how do i get to the hospital,locate_amenity
+where is the bathroom?,locate_amenity
+I enjoy petting cats,off_topic
+I love dolphins,off_topic
+I love spicy food,off_topic
+I want to date you,off_topic
+I want to eat tacos everyday,off_topic
+cats are my favorite animal,off_topic
+how far is the moon,off_topic
+how many licks does it take to get to the center of a tootsie roll,off_topic
+how much do you weigh,off_topic
+how tall are you,off_topic
+tell me your favorite color,off_topic
+tell me your favorite foods,off_topic
+what kind of food do you eat,off_topic
+what types of food do you like,off_topic
+whats the square root of 70,off_topic
+whats your favorite color,off_topic
+whats your favorite movie,off_topic
+culd,off_topic
+hello,off_topic
+Hello,off_topic
+Hi,off_topic
+lgiths,off_topic
+poop,off_topic
+lgits,off_topic
+Ola,off_topic
+dfddfg,off_topic
+aho,off_topic
+asdasdasda,off_topic
+hello,off_topic
+Hello,off_topic
+hi,off_topic
+Hello,off_topic
+carrot,off_topic
+HI,off_topic
+huhu,off_topic
+Hey,off_topic
+hi,off_topic
+hello,off_topic
+Yolo,off_topic
+test,off_topic
+test,off_topic
+hello,off_topic
+hello,off_topic
+hola como estas,off_topic
+cool,off_topic
+yes,off_topic
+hi,off_topic
+test,off_topic
+hello,off_topic
+Nuts!,off_topic
+hi,off_topic
+fdsafsaHi watson,off_topic
+Hello Watson,off_topic
+Hi watson,off_topic
+i need a new wheelchair,off_topic
+This is awesome,off_topic
+This is good,off_topic
+I want to talk,off_topic
+"system error, unable to lonin",off_topic
+why?,off_topic
+I need to open my door,off_topic
+What does a car smell like after an airbag deploys?,off_topic
+hi how are u,off_topic
+hi there,off_topic
+why is the sky blue ,off_topic
+How do I pop the gas tank cover?,off_topic
+where is the poop deck on this ship?,off_topic
+i want to see how this demo works,off_topic
+I need to shut it down,off_topic
+nope,off_topic
+hi,off_topic
+open door,off_topic
+shut down,off_topic
+asdasidjiwe,off_topic
+it's too dark,off_topic
+what's your name,off_topic
+Hello,off_topic
+test,off_topic
+hi watson,off_topic
+roll down windows,off_topic
+hello,off_topic
+hi,off_topic
+$,off_topic
+hi,off_topic
+yes,off_topic
+Post-it notes taste terrible.,off_topic
+deploy airbags,off_topic
+shutdown,off_topic
+hi,off_topic
+yeah,off_topic
+testing om,off_topic
+what is your name,off_topic
+where should I turn?,off_topic
+my car won't start,off_topic
+What's your name?,off_topic
+what time is it?,off_topic
+What's the speed?,off_topic
+what is my speed?,off_topic
+which color is best for wedding,off_topic
+what is your name?,off_topic
+Turn left,off_topic
+"ok watson, why should I use you",off_topic
+how do i reset lotus notes password,off_topic
+how do i reset notes password,off_topic
+I'd like to have dinner with you,off_topic
+whats your name,off_topic
+How are you doing?,off_topic
+"Hello, how are you?",off_topic
+You're asking me too much,off_topic
+book a flight for NY on sunday,off_topic
+I need to work on my car,out_of_scope
+do I need to change my tire,out_of_scope
+how do I change my tire?,out_of_scope
+how do I paint my car?,out_of_scope
+how do I replace a hub cap?,out_of_scope
+how do i change my oil,out_of_scope
+how do i change my wipers,out_of_scope
+how should I replace my engine,out_of_scope
+tell me how to remove a dent,out_of_scope
+repair the car,out_of_scope
+repair the car,out_of_scope
+repair the car,out_of_scope
+How do I change tires?,out_of_scope
+Where is the spare tire?,out_of_scope
+What does red engine light mean?,out_of_scope
+Where is the spare tire?,out_of_scope
+What does the yellow light in dashboard mean?,out_of_scope
+"Can I continue to drive, if I see battery light on",out_of_scope
+What is the proper tire pressure?,out_of_scope
+How do I disable my security alarm?,out_of_scope
+Which side is the gas cap?,out_of_scope
+How can I open the bonet,out_of_scope
+where is the fuel filler flap,out_of_scope
+my engine is overheating,out_of_scope
+How often should I rotate my tires?,out_of_scope
+When should my air filter be changed?,out_of_scope
+where is the cruise control?,out_of_scope
+How do I lock the doors from inside?,out_of_scope
+Is there a passenger airbag?,out_of_scope
+How much oil do I need?,out_of_scope
+how big is my gas tank?,out_of_scope
+how do I start cruise control?,out_of_scope
+how do I resume cruise control?,out_of_scope
+how do I set cruise control?,out_of_scope
+Can I lock the passenger doors?,out_of_scope
+Can I child lock the windows?,out_of_scope
+How does the bluetooth work?,out_of_scope
+When do I need to change my oil?,out_of_scope
+How often do I need to change my oil?,out_of_scope
+What type of oil does it take?,out_of_scope
+how so I upload a new map to my navigation system,out_of_scope
+what is TPMS?,out_of_scope
+What is a good car for $5000?,out_of_scope
+What PSI do I inflate the spare tire to,out_of_scope
+Can you repair a 1977 Dodge Dart?,out_of_scope
+How to connect bluetooth?,out_of_scope
+How much gas does my car hold,out_of_scope
+How do I program my radio stations?,out_of_scope
+how to install third party audio device?,out_of_scope
+what type of oil do i need?,out_of_scope
+Where is the latch to pop the gas cap?,out_of_scope
+replace windshield wipers,out_of_scope
+when are the service due?,out_of_scope
+How do I change my tire?,out_of_scope
+How many miles flat tire can survive?,out_of_scope
+How frequently should I change the oil?,out_of_scope
+Replace headlight,out_of_scope
+Which side of the car do I pump gas into?,out_of_scope
+Replace the oil,out_of_scope
+how to turn on security system?,out_of_scope
+What kind of oil does my car take?,out_of_scope
+When do I start using high mileage oil?,out_of_scope
+What mileage is my first oil change?,out_of_scope
+Is there a warning light for when the brake pads are low?,out_of_scope
+How often should I change my wipers?,out_of_scope
+Does the oil light go on based on viscosity or just mileage?,out_of_scope
+What settings would I use for driving in snow?,out_of_scope
+What settings would I use for driving in mud?,out_of_scope
+What settings should I use for driving in sand?,out_of_scope
+Does the oil light take into account the high mileage synthetic oil?,out_of_scope
+Where is the fuse box located on my 2014 Ford Fusion?,out_of_scope
+Why is my check engine light flashing?,out_of_scope
+Can I drive safely if my check engine light is flashing?,out_of_scope
+Does my car have antilock brakes?,out_of_scope
+how do I change a tire?,out_of_scope
+What is the highway MPG?,out_of_scope
+I'm at the gas station and can't find the darn latch to access the gas tank. Where is it?,out_of_scope
+Where is the fuse box,out_of_scope
+Where is the usb charger on my car?,out_of_scope
+Will the interior lights turn off on their own after awhile?,out_of_scope
+Where is the gas tank open button?,out_of_scope
+Where is the fuse box located?,out_of_scope
+What kind of fuel does this car require?,out_of_scope
+Does this car require high octane gasoline?,out_of_scope
+How do I adjust the rear seats,out_of_scope
+How many cylinders does this car have?,out_of_scope
+Is there an automatic parallel park feature?,out_of_scope
+How often should I change the wiper blades?,out_of_scope
+Is there an automatic drive feature?,out_of_scope
+Is there a warning light for low washer fluid?,out_of_scope
+What kind of fuel should I use?,out_of_scope
+does the car have safety features?,out_of_scope
+How do I turn off the passenger side air bag,out_of_scope
+How is the miles-per-gallon number being calculated exactly?,out_of_scope
+what size is the car?,out_of_scope
+how wide is the wheels of the car?,out_of_scope
+What is the storage capacity?,out_of_scope
+how wide are the wheels of the car?,out_of_scope
+How do I disable the running lights?,out_of_scope
+when should I have my service check?,out_of_scope
+How much gas do I have when the light goes on?,out_of_scope
+Is there security on the GPS?,out_of_scope
+What is the model of my car?,out_of_scope
+Can I lock the navigation system?,out_of_scope
+What is the length of my windshield wiper blades?,out_of_scope
+what are the crash ratings?,out_of_scope
+What tire pressures to I use to inflate my tires?,out_of_scope
+answer the phone,phone
+call dad,phone
+call on the telephone,phone
+I want to text my father,phone
+I would like to call someone on the phone,phone
+I'd like to call my mom,phone
+I'd like to make a call,phone
+make a phone call,phone
+text mom,phone
+text someone,phone
+use the phone,phone
+smartphone,phone
+dial Home,phone
+What's your phone number?,phone
+do you have a phone?,phone
+are there any accidents ahead,traffic_update
+give me traffic updates,traffic_update
+how long until I arrive,traffic_update
+hows traffic looking,traffic_update
+is there an accident ahead,traffic_update
+traffic conditions,traffic_update
+traffic conditions on 85,traffic_update
+whats my ETA,traffic_update
+whats the traffic like on 101,traffic_update
+how fa,traffic_update
+how th traffice,traffic_update
+jam?,traffic_update
+how's traffic?,traffic_update
+how's traffic?,traffic_update
+how's traffic,traffic_update
+hows traffic,traffic_update
+when rain there is lot of trafic jams,traffic_update
+how is traffic looking this evening?,traffic_update
+how far,traffic_update
+How's the traffic?,traffic_update
+how's the traffic today?,traffic_update
+Are there any jams,traffic_update
+is the highway busy?,traffic_update
+hows traffic?,traffic_update
+how long it would take me get home?,traffic_update
+How long will it take to get there?,traffic_update
+I need you to turn my music down,turn_down
+I need you to turn the radio down,turn_down
+its too hot turn down the heat,turn_down
+lower the volume,turn_down
+make the music quieter,turn_down
+please turn the music down,turn_down
+the heater needs to be turned down,turn_down
+turn down the music,turn_down
+turn down the radio,turn_down
+turn it down,turn_down
+turn my music down,turn_down
+turn the ac down for me,turn_down
+turn the heat down,turn_down
+turn this song down,turn_down
+It's very loud,turn_down
+I don't need my doors locked anymore,turn_off
+I don't need my wipers anymore,turn_off
+I don't want to hear music anymore,turn_off
+I need my wipers off,turn_off
+I want the radio off,turn_off
+Turn off my nightbeams,turn_off
+cancel cruise control,turn_off
+cruise control off,turn_off
+lights off,turn_off
+please unlock the door for me,turn_off
+switch my headlights to off,turn_off
+switch off the radio,turn_off
+turn cruise control off,turn_off
+turn off my headlights,turn_off
+turn off my lights please,turn_off
+turn off my window wipers,turn_off
+turn off my windshield wipers,turn_off
+turn off my wipers,turn_off
+turn off the radio right now,turn_off
+turn the music off please,turn_off
+turn the radio off,turn_off
+unlock my door please,turn_off
+unlock my doors now,turn_off
+will you turn my lights off please,turn_off
+can you turn on the radio,turn_on
+click my locks,turn_on
+headlights on,turn_on
+"its raining, turn my wipers on",turn_on
+lights on,turn_on
+lock my doors,turn_on
+radio on now,turn_on
+turn my backup cam on,turn_on
+turn my lights on for me,turn_on
+turn my windshield wipers on,turn_on
+turn on my hazards,turn_on
+turn on my lights,turn_on
+turn on my rear camera,turn_on
+turn on the backcam,turn_on
+turn on wipers,turn_on
+watson please turn my headlights on,turn_on
+play music,turn_on
+I need more lights,turn_on
+wipers,turn_on
+i can't see,turn_on
+lights,turn_on
+it's dark,turn_on
+turn on power,turn_on
+turn on the A/C,turn_on
+turn the power on,turn_on
+turn on the ballgame,turn_on
+play some music,turn_on
+can you turn my seat warmer on,turn_up
+can you turn the heat up,turn_up
+increase the volume,turn_up
+please turn my music up,turn_up
+please turn the heater up,turn_up
+please turn up the music,turn_up
+turn on ac,turn_up
+turn on defroster,turn_up
+turn on heater,turn_up
+turn the ac up,turn_up
+turn the radio up,turn_up
+turn the volume up now,turn_up
+turn up the heater,turn_up
+turn up this song,turn_up
+play the song louder,turn_up
+can you increase the speed,turn_up
+Does the weather get worse,weather
+When will the rain stop?,weather
+do I need a jacket?,weather
+how cold is it out?,weather
+how cold is it outside,weather
+how hot is it outside,weather
+how hot is it outside?,weather
+how long will it rain,weather
+how warm is it?,weather
+is it raining?,weather
+tell me the weather,weather
+what is the weather like?,weather
+whats the weather like right now,weather
+whats the weather outside?,weather
+when will the sun come out,weather
+check the wheather,weather
+how hot,weather
+;cold,weather
+cold!,weather
+hot,weather
+what's the weather,weather
+check the weather,weather
+hot,weather
+hot,weather
+check weather,weather
+it's hot,weather
+is it dark outside,weather
+is it raining,weather
+how cold?,weather
+what is system err?,weather
+It's cold here,weather
