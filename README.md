@@ -27,7 +27,7 @@ For example, if you say *"Wipers on"* or *"I want to turn on the windshield wipe
 understands that in both cases your intent is the same and responds accordingly.
 
 ## Getting Started
-If you have used the Deploy to Bluemix button above, skip to Step 7 below.  
+If you have used the Deploy to Bluemix button above, skip to **Creating a Workspace** below.  
 
 1. Create a Bluemix Account
 
