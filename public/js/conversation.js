@@ -81,7 +81,7 @@ var ConversationPanel = (function() {
       } else {
         this.classList.add('underline');
         var txtNode = document.createTextNode(this.value);
-        dummy.innerText = txtNode.textContent;
+        dummy.textContent = txtNode.textContent;
         var widthValue = ( dummy.offsetWidth + padding) + 'px';
         this.setAttribute('style', 'width:' + widthValue);
         this.style.width = widthValue;
