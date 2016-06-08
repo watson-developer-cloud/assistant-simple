@@ -27,15 +27,15 @@ For example, if you say *"Wipers on"* or *"I want to turn on the windshield wipe
 understands that in both cases your intent is the same and responds accordingly.
 
 ## Getting Started
-If you have used the Deploy to Bluemix button above, skip to **Creating a Workspace** below.  
+If you used the **Deploy to Bluemix** button, skip this section and go to **Creating a workspace**.  
 
-1. Create a Bluemix Account
+1. Create a Bluemix account.
 
-  [Sign up][sign_up] in Bluemix, or use an existing account. Watson Beta or Experimental Services are free to use.
+  [Sign up][sign_up] in Bluemix, or use an existing account. Watson beta or experimental services are free to use.
 
-2. Download and install the [Cloud-foundry CLI][cloud_foundry] tool
+2. Download and install the [Cloud-foundry CLI][cloud_foundry] tool.
 
-3. Edit the `manifest.yml` file and change the `<application-name>` to something unique.
+3. Edit the `manifest.yml` file, and change the `<application-name>` to something unique.
   ```none
   applications:git 
   - services:
@@ -46,9 +46,9 @@ If you have used the Deploy to Bluemix button above, skip to **Creating a Worksp
     memory: 256M
   ```
 
-  The name you use will determinate your application url initially, e.g. `<application-name>.mybluemix.net`.
+  The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
 
-4. Connect to Bluemix in the command line tool
+4. Connect to Bluemix in the command-line tool:
   For US Region
   ```sh
   $ cf api https://api.ng.bluemix.net
@@ -58,59 +58,50 @@ If you have used the Deploy to Bluemix button above, skip to **Creating a Worksp
   $ cf login -u <your user ID>
   ```
 
-5. Create the [Conversation][service_url] Service in Bluemix
+5. Create the [Conversation][service_url] service in Bluemix:
 
   ```sh
   $ cf create-service conversation experimental conversation-service
   ```
 
-6. Push it live!
+6. Push it live:
 
   ```sh
   $ cf push
   ```  
   
-## Creating a Workspace  
-1. Once the service has been provisioned, you will need to create a workspace. To do that navigate to the service instance tile within 
-Bluemix. Once there click on the **Manage** menu item. Click on the **Launch Tooling** button within the documentation at which point a new
-tab will open in your browser, and you will be prompted to login if you have not done so before. Log in with your Bluemix credentials.  
+## Creating a workspace
+After the service is provisioned, you need to create a workspace.
 
-2. Once logged in you should be able to **Create a Workspace**. Press the **Create** button and give the workspace a name (and optional 
-description). Press **Create** to finish creating the workspace.  
-
-3. A new workspace tile will be created within the tooling. Press on the _menu_ button within the workspace tile, and select **View details**: 
-![Workpsace Details](readme_images/workspace_details.png "Workspace Details Menu")  
-In the Details UI copy the 36 character UNID **ID** field (e.g. 84a74a20-1390-4540-ce8a-eabac5fdf921). This is the **Workspace ID**.  
-
-4. Open the workspace by pressing the **Get started** button within the workspace tile. You will be navigated to the Intents screen.
-At this point you can either create your own itents by following the instructions on screen, or upload the intents used in this application. 
-To upload the predefined intents from here simply press the **Import intents** button 
-![Import intents button](readme_images/import_intents.png "Import intents").
-Once you imported the intents or created your own the service will take a few moments to train the service.  
-
-5. Return to your application, either in your local dev environment, or on Bluemix. If running on Bluemix you will need to create a new 
-Environment Variable called **WORKSPACE_ID**. Paste in the value of the Workspace id (obtained in step 3 above) as the value of the new variable.
-Restart your application. If running your application locally, skip to the next section.  
+1. Navigate to the service instance tile in Bluemix, and click **Manage** in the menu.
+2. Click the **Launch Tooling** button in the documentation. A new tab opens in your browser, and a log-in prompt is displayed, if you are not logged in.
+3. Log in with your Bluemix credentials.  
+4. Click **Create a Workspace**, and then click **Create**.
+5. Specify a name for the workspace and, optionally, a description, and click **Create**. A new workspace tile is created in the tooling.
+6. Click _menu_ in the workspace tile, and select **View details**: ![Workpsace Details](readme_images/workspace_details.png "Workspace Details Menu")
+7. In the Details window, copy the 36-character UNID in the **ID** field (for example, 84a74a20-1390-4540-ce8a-eabac5fdf921). This value is the workspace ID.
+8. Open the workspace by clicking **Get started** in the workspace tile. The Intents page is displayed. You can either create your own itents by following the displayed instructions or upload the intents that are used in this application. To upload the predefined intents from here, click the **Import intents** button: ![Import intents button](readme_images/import_intents.png "Import intents"). After you import the intents or create your own, the service takes a few moments to train itself.
+9. Return to your application in your local dev environment or on Bluemix. If the application is running on Bluemix, you must create a new environment variable called **WORKSPACE_ID**. Paste the value of the workspace ID that you copied in Step 7 as the value of the new variable.
+10. Restart your application. If you are running the application locally, skip to the next section.  
 
 For information on workspaces, see the full  [Conversation service  documentation](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/conversation/overview.shtml).
 
-## Running locally
+## Running the application locally
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
 
 1. Copy the credentials from your `conversation-service` service in Bluemix to a `.env` file in the root.
-1. Use the Conversation tooling app to create a workspace, as described above, and add the workspace id to the `.env` file 
-(see above for details on obtaining the **Workspace ID**).
-1. Install [Node.js](http://nodejs.org/)
-1. Go to the project folder in a terminal and run:
+2. Use the Conversation tooling app to create a workspace, as described above, and add the workspace ID environment variable to the `.env` file. For details about obtaining the workspace ID, see Step 6 - 7 in the previous section.
+3. Install [Node.js](http://nodejs.org/).
+4. Open the terminal, go to the project folder, and run this command:
     ```
     npm install
     ```
-1. Start the application
+5. Start the application by running this command:
     ```
     npm start
     ```
-6. Go to http://localhost:3000
+6. Open `http://localhost:3000` in a browser.
 
 ## Troubleshooting
 
