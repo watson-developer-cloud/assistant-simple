@@ -1,15 +1,15 @@
-# Conversation Simple
+# Conversation Sample Application
 [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
 [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
 
 This application demonstrates how the Conversation service uses intent capabilities in a simple chat interface.
 
+For more information about Conversation, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/overview.shtml).
+
 [See the demo](http://conversation-simple-node-app-doc.mybluemix.net/).
 
-Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
-
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="https://github.ibm.com/sgregglives/wea-app/blob/develop/conversation-service/readme_images/bluemix.png" width="200"/>](#bluemix)     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="https://github.ibm.com/sgregglives/wea-app/blob/develop/conversation-service/readme_images/local.png" width="200"/>](#local)
 
 ## How the app works
 The app interface is designed and trained for chatting with a cognitive car. The chat interface is on the left, and the
@@ -19,8 +19,6 @@ small set of sample data trained with intents like these:
 * `turn_on`
 * `weather`
 * `capabilities`
-
-To see all the intents, open [`/training/car_intents.csv`](https://raw.githubusercontent.com/watson-developer-cloud/conversation-simple/master/training/car_intents.csv).
 
 These intents help the system to understand variations of questions and commands that you might submit.
 For example, if you say *"Wipers on"* or *"I want to turn on the windshield wipers"*, the system
