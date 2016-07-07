@@ -26,33 +26,10 @@ var ConversationPanel = (function() {
   // Initialize the module
   function init() {
     chatUpdateSetup();
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
-    }
-    else{
-      console.log("Browser geolocation isn't supported.");
-      geoSuccess(position)
-    }
+    Api.sendRequest("", context);
     setupInputBox();
   }
-
-  //private functions
-  function geoSuccess(position){
-    var context = null;
-    if(position && position.coords){
-      context = {};
-      context.long = position.coords.longitude;
-      context.lat = position.coords.latitude;
-    }
-    // The client displays the initial message to the end user
-    Api.sendRequest("", context);
-  };
-
-  //Sends in null to ask for zip code
-  function geoError(){
-    geoSuccess(null);
-  };
-
+  
   // Set up callbacks on payload setters in Api module
   // This causes the displayMessage function to be called when messages are sent / received
   function chatUpdateSetup() {
