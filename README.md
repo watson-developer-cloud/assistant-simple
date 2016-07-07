@@ -75,7 +75,7 @@ The status of the deployment is shown. This can take some time.
 
 To build the application:
 
-1 Download and install the [Cloud-foundry CLI][cloud_foundry] tool.
+1 Download and install the [Cloud-foundry CLI tool](https://github.com/cloudfoundry/cli).
 
 2 Git clone the project `https://github.com/watson-developer-cloud/conversation-simple`
 
