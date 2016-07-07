@@ -1,12 +1,6 @@
 ---
-declared-services:
-  conversation-experimental:
-    label: conversation
-    plan: experimental
 applications:
-- services:
-  - conversation-experimental
-  command: npm start
+- command: npm start
   path: .
   instances: 1
   memory: 512MB
