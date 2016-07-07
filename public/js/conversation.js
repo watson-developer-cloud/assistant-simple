@@ -26,15 +26,9 @@ var ConversationPanel = (function() {
   // Initialize the module
   function init() {
     chatUpdateSetup();
-    // The client displays the initial message to the end user
-    displayMessage(
-      {output:
-        {text: 'This Watson app shows how intents work. Try testing some below, using the examples in the app description.'}
-      },
-      settings.authorTypes.watson);
+    Api.sendRequest( '', null );
     setupInputBox();
   }
-
   // Set up callbacks on payload setters in Api module
   // This causes the displayMessage function to be called when messages are sent / received
   function chatUpdateSetup() {
@@ -143,7 +137,7 @@ var ConversationPanel = (function() {
 
   // Constructs new DOM element from a message payload
   function buildMessageDomElement(newPayload, isUser) {
-    var dataObj = isUser ? newPayload.input : newPayload.output;
+    var text = isUser ? newPayload.input.text : newPayload.output.text.join(' ');
 
     var messageJson = {
       // <div class='segments'>
@@ -160,7 +154,7 @@ var ConversationPanel = (function() {
           'children': [{
             // <p>{messageText}</p>
             'tagName': 'p',
-            'text': dataObj.text
+            'text': text
           }]
         }]
       }]
