@@ -1,0 +1,3280 @@
+{
+  "name": "car_dashboard",
+  "created": "2016-06-29T17:38:11.221647",
+  "intents": [
+    {
+      "intent": "capabilities",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "How are you going to help me?",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "What are you",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "What can i say",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "how can you help me",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "tell me what things you can do",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "tell me what you can do",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what can I do",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what can you do",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what can you do for me",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what can you help me with",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what do you know",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what else",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what things can you do",
+          "created": "2016-06-30T16:04:37.881395"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "goodbyes",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "BYE",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "I'm leaving",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "adieu",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "adios",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "au revoir",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "bye bye",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "bye now",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "cya",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "farewell",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "good bye",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "good day",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "good night",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "goodbye",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "got to go",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "gotta go",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "gotta run",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "gtg",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "have to go",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "have to leave",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "have to run",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "later",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "laters",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "logging off",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "my time is up",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "need to go",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "need to leave",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "need to run",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "ok bye",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "out of time",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "over and out",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "see ya",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "see ya later",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "see ya soon",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "see you",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "see you later",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "see you soon",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "should be going",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "should go",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "signing off",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "signing out",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "so long",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "thank you for your help",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "thanks watson",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "then bye",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "time to go",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "toodles",
+          "created": "2016-06-30T16:04:37.896277"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "greetings",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "Hello",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "Hello Watson",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "Hello, how are you?",
+          "created": "2016-06-30T16:04:37.974618"
+        },
+        {
+          "text": "Hi watson",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "Hola",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "How are you doing?",
+          "created": "2016-06-30T16:04:37.974618"
+        },
+        {
+          "text": "I am not feeling good",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "I'm feeling good thanks",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "Its not that good",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "aloha",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "bad",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "bonjour",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "buenos dias",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "ciao",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "feeling bit low",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "g'day",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "good",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "good day",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "good evening",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "good how are you",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "good morning",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "great",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "greetings",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "hey",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "hey there",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "heya",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "hi",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "hi how are u",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "hi there",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "hiya",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "hola como estas",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "howdy",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "namaste",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "yello",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "yo",
+          "created": "2016-06-30T16:04:37.896277"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "locate_amenity",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "Amenities",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "Find best gas option",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I am hungry",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I want a bar",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I want eat",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I want to eat pizza",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I want to stop for some food",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I'd like to get something to eat",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "Information on locations near me",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "Navigation",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "Stop for food/coffee",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "Take me home",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "can you find the nearest gas station for me",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "find a restaurant",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "get me directions",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "go to home",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "gps",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "hello. I want an ice cream. Where can I find one?",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "how do i get home?",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "how do i get to the hospital",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i need some coffee",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i need to stop for gas",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i want",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i want drink",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i want piza",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i want pizza",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i'm hungry",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "im hungry I want to eat something",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "let's get some grub",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "locate ammenity",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "navigate home",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "navigate to home",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "order a pizza",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "pizza",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "show me the best path",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where are the closest restrooms",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where can i drink=",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where can i eat pizza?",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where can i have piza",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where can i have piza?",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where can i have pizza",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where can i have pizza=",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where can i have pizza?",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where is ATM",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where is a restaurant",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where is the bathroom?",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "where is the pool",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "wheres the nearest exi",
+          "created": "2016-06-30T16:04:37.881395"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "off_topic",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "$",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "I enjoy petting cats",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I love dolphins",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I love spicy food",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I need to shut it down",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "I want to date you",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I want to eat tacos everyday",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I want to talk",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "I'd like to have dinner with you",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "Nuts!",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "Post-it notes taste terrible.",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "This is awesome",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "This is good",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "Turn left",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "What's the speed?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "What's your name?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "Yolo",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "You're asking me too much",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "aho",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "asdasdasda",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "asdasidjiwe",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "book a flight for NY on sunday",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "carrot",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "cats are my favorite animal",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "cool",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "culd",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "deploy airbags",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "dfddfg",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "fdsafsaHi watson",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "how far is the moon",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "how many licks does it take to get to the center of a tootsie roll",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "how much do you weigh",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "how tall are you",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "huhu",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i need a new wheelchair",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "i want to see how this demo works",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "it's too dark",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "lgiths",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "lgits",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "nope",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "ok watson, why should I use you",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "open door",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "poop",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "roll down windows",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "shut down",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "shutdown",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "system error, unable to lonin",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "tell me your favorite color",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "tell me your favorite foods",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "test",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "testing om",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "what is my speed?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "what is your name",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "what is your name?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "what kind of food do you eat",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what time is it?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "what types of food do you like",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "what's your name",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "whats the square root of 70",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "whats your favorite color",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "whats your favorite movie",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "whats your name",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "where is the poop deck on this ship?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "where should I turn?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "which color is best for wedding",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "why is the sky blue",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "why?",
+          "created": "2016-06-30T16:04:37.881395"
+        },
+        {
+          "text": "yeah",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "yes",
+          "created": "2016-06-30T16:04:37.881395"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "out_of_scope",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "Can I play music through bluetooth from my phone?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "How do I pair my android phone to the radio?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "How do I pair my iPhone to the radio?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "How do I program my radio stations?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "How do I turn on the high-beams?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "How do I use cruise control?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "How frequently should I change the oil?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "How to connect bluetooth?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "Is there a lane change assist feature?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "Is there a warning light for low washer fluid?",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "Is there an automatic parallel park feature?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "What PSI do I inflate the spare tire to",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "What kind of fuel should I use?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "Where is the fuse box",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "Where is the fuse box located?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "change bulb",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "changing gears",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "changing the light bulb",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "checking the engine oil",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "coolant level",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "fuel tank flap",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "hi to switch on the fog lights",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how can i change oil",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how can i connect the phone",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how can i find current level of oil",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how can i lock the car",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how can i replace light bulb",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i adjust exterior mirrors",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i adjust head restraint",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i adjust the cruise control speed",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i adjust the mirror",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i adjust the mirror inside",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i adjust the rear view mirror",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i adjust the vehicle distance",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i arm the alarm",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i browse the tracks on the iPod",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i cancel cruise control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i change oil",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i change the headlight bulbs",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i change the lights bulb",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i change the oil",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i clean the vehicle",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i close the window",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i connect USB device",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i connect my phone",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i control a phone",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i disable the vehicle stability control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i fill in the engine oil",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i find the fuel consumption",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i lock the window",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i lock the windows",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i lock the windows to prevent children from opening",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i open the doors",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i open the fuel filler flap",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i open the power windows",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i open the rear window",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i open the side window",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i open the tank fuel",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i open the window",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i pause song in my iPod",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i play an iPod",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i play the track on the iPod",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i refill the engine oil",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i resume cruise control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i resume the cruise speed",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i resume the vehicle speed",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i save my favourite radio station",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i save the seat position",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i scroll the screen",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i select a desired track on the iPod",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i select the song on the iPod",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i set the adaptive cruise control speed",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i set the cruise speed",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i set the vehicle speed",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i switch on the cruise control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i tune the radio",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn light on",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn off ambient lights",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn off the alarm",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn off the cruise control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i turn off the high beams",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn off the radio",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn off the traction control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i turn off voice guidance",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on adaptive cruise control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i turn on ambient lights",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on cruise control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i turn on front seat heating",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on headlamps",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on heating",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on high beams",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on the alarm",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on the cruise control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i turn on the fog lamps",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i turn on the heater",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on the pre collision system",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on the radio",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on the traction control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i turn on traffic info",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on windscreen washer",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i turn on wipers",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i unlock the windows",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how do i use the blind spot monitor",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i use the electric power steering",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i use the iPod",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i use the pre collision system",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i use the traction control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how do i wash the car",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how often should i change the oil",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how to adjust the vehicle to vehicle distance",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how to change engine oil",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how to change oil",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how to change the oil",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how to replace light bulbs",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how to turn on lights",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how to turn on the headlights",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how to turn on the radio",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how to turn on warning lights",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "how to turn on wipers",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "light bulbs replacement",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "opening the windows",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "operating the radio",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "parking brake",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "refilling the engine coolant",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "show me how to change the light bulbs",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "switch on fog light",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "turn off the heating",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "turn off traffic info",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "what are the crash ratings?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "what is the pre collision system",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "what is the traction control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "what is the vehicle stability control",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "what kind of fuel does the car require?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "what kind of fuel should i use",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "what type of oil do i need?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "what's the tires pressure",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "where are fog lights",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "where are the lights",
+          "created": "2016-06-30T16:04:37.885121"
+        },
+        {
+          "text": "where can i start air conditioning",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "where can i turn on the lights",
+          "created": "2016-06-30T16:04:37.885121"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "phone",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "I want to text my father",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "I would like to call someone on the phone",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "I'd like to call my mom",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "I'd like to make a call",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "What's your phone number?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "answer the phone",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "call dad",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "call on the telephone",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "dial Home",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "do you have a phone?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "make a phone call",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "smartphone",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "text mom",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "text someone",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "use the phone",
+          "created": "2016-06-30T16:04:37.887497"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "traffic_update",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "Are there any jams",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "How long will it take to get there?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "How's the traffic?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "are there any accidents ahead",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "give me traffic updates",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how fa",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how far",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "how is traffic looking this evening?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "how long it would take me get home?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "how long until I arrive",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how th traffice",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "how's the traffic today?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "how's traffic",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "how's traffic?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "hows traffic",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "hows traffic looking",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "hows traffic?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "is the highway busy?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "is there an accident ahead",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "jam?",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "traffic conditions",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "traffic conditions on 85",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "whats my ETA",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "whats the traffic like on 101",
+          "created": "2016-06-30T16:04:37.887497"
+        },
+        {
+          "text": "when rain there is lot of trafic jams",
+          "created": "2016-06-30T16:04:37.894029"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "turn_down",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "I need you to turn my music down",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "I need you to turn the radio down",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "It's very loud",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "its too hot turn down the heat",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "lower the volume",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "make the music quieter",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "please turn the music down",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "the heater needs to be turned down",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn down the music",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn down the radio",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn it down",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn my music down",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn the ac down for me",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn the heat down",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn this song down",
+          "created": "2016-06-30T16:04:37.894029"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "turn_off",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "I don't need my doors locked anymore",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "I don't need my wipers anymore",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "I don't want to hear music anymore",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "I need my wipers off",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "I want the radio off",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "Turn off my nightbeams",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "cancel cruise control",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "cruise control off",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "lights off",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "please unlock the door for me",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "switch my headlights to off",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "switch off the radio",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn cruise control off",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn off my headlights",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn off my lights please",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn off my window wipers",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn off my windshield wipers",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn off my wipers",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn off the radio right now",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn the music off please",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn the radio off",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "unlock my door please",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "unlock my doors now",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "will you turn my lights off please",
+          "created": "2016-06-30T16:04:37.894029"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "turn_on",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "I need more lights",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "Turn on the AC",
+          "created": "2016-06-30T16:12:43.414358"
+        },
+        {
+          "text": "Turn on the radio",
+          "created": "2016-06-30T17:06:39.613004"
+        },
+        {
+          "text": "can you turn on the radio",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "click my locks",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "headlights on",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "i can't see",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "it's dark",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "its raining, turn my wipers on",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "lights",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "lights on",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "lock my doors",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "play music",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "play some music",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "radio on now",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn my backup cam on",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn my lights on for me",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn my windshield wipers on",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on my hazards",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on my lights",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on my rear camera",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on power",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on radio",
+          "created": "2016-06-30T17:27:33.602132"
+        },
+        {
+          "text": "turn on the A/C",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on the backcam",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on the ballgame",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on the light",
+          "created": "2016-07-05T19:27:37.212701"
+        },
+        {
+          "text": "turn on the radio please",
+          "created": "2016-06-30T17:27:47.873166"
+        },
+        {
+          "text": "turn on wipers",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn the power on",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "watson please turn my headlights on",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "wipers",
+          "created": "2016-06-30T16:04:37.894029"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "turn_up",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "can you increase the speed",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "can you turn my seat warmer on",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "can you turn the heat up",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "increase the volume",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "play the song louder",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "please turn my music up",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "please turn the heater up",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "please turn up the music",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on ac",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on defroster",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn on heater",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn the ac up",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn the radio up",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn the volume up now",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn up the heater",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "turn up this song",
+          "created": "2016-06-30T16:04:37.894029"
+        }
+      ],
+      "description": null
+    },
+    {
+      "intent": "weather",
+      "created": "2016-06-30T16:04:37.73743",
+      "examples": [
+        {
+          "text": "Does the weather get worse",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "It's cold here",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "When will the rain stop?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "check the weather",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "check the wheather",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "check weather",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "cold",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "do I need a jacket?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "hot",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "how cold is it out?",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "how cold is it outside",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "how cold?",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "how hot",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "how hot is it outside",
+          "created": "2016-06-30T16:04:37.894029"
+        },
+        {
+          "text": "how hot is it outside?",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "how long will it rain",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "how warm is it?",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "is it dark outside",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "is it raining",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "is it raining?",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "it's hot",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "tell me the weather",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "what is system err?",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "what is the weather like?",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "what's the weather",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "whats the weather like right now",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "whats the weather outside?",
+          "created": "2016-06-30T16:04:37.896277"
+        },
+        {
+          "text": "when will the sun come out",
+          "created": "2016-06-30T16:04:37.896277"
+        }
+      ],
+      "description": null
+    }
+  ],
+  "entities": [
+    {
+      "entity": "amenity",
+      "values": [
+        {
+          "value": "gas",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "fuel station",
+            "fuel stations",
+            "gas",
+            "gas station",
+            "gas stations",
+            "pump",
+            "pumps"
+          ]
+        },
+        {
+          "value": "restaurant",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            " food",
+            " meal",
+            " meals",
+            " restaurants",
+            "restaurant"
+          ]
+        },
+        {
+          "value": "restroom",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            " bathroom",
+            " bathrooms",
+            " restrooms",
+            " toilet",
+            " toilets",
+            "restroom"
+          ]
+        }
+      ],
+      "created": "2016-06-30T15:56:02.924935",
+      "open_list": false,
+      "description": null
+    },
+    {
+      "entity": "appliance",
+      "values": [
+        {
+          "value": "ac",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "ac",
+            "acs",
+            "air conditioner",
+            "air conditioners",
+            "fan",
+            "fans"
+          ]
+        },
+        {
+          "value": "heater",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "heat",
+            "heater"
+          ]
+        },
+        {
+          "value": "light",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "bulb",
+            "bulbs",
+            "head light",
+            "head lights",
+            "headlight",
+            "headlights",
+            "light",
+            "lights",
+            "tubelight",
+            "tubelights"
+          ]
+        },
+        {
+          "value": "music",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "music",
+            "radio",
+            "song",
+            "songs"
+          ]
+        },
+        {
+          "value": "volume",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "sound",
+            "volume"
+          ]
+        },
+        {
+          "value": "wiper",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "windshield wiper",
+            "windshield wipers",
+            "wiper",
+            "wipers"
+          ]
+        }
+      ],
+      "created": "2016-06-30T15:56:02.924935",
+      "open_list": false,
+      "description": null
+    },
+    {
+      "entity": "cuisine",
+      "values": [
+        {
+          "value": "italian",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            " Italian",
+            " pizza",
+            "italian"
+          ]
+        },
+        {
+          "value": "mexican",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            " Mexican",
+            "mexican"
+          ]
+        },
+        {
+          "value": "thai",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "thai"
+          ]
+        }
+      ],
+      "created": "2016-06-30T15:56:02.924935",
+      "open_list": false,
+      "description": null
+    },
+    {
+      "entity": "genre",
+      "values": [
+        {
+          "value": "classical",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "classical"
+          ]
+        },
+        {
+          "value": "jazz",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "jazz"
+          ]
+        },
+        {
+          "value": "pop",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "pop"
+          ]
+        },
+        {
+          "value": "rock",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            "rock"
+          ]
+        }
+      ],
+      "created": "2016-06-30T15:56:02.924935",
+      "open_list": false,
+      "description": null
+    },
+    {
+      "entity": "option",
+      "values": [
+        {
+          "value": "closest",
+          "created": "2016-07-06T14:14:57.456818",
+          "metadata": null,
+          "synonyms": [
+            " nearest",
+            "closest"
+          ]
+        },
+        {
+          "value": "first",
+          "created": "2016-07-06T14:12:59.377768",
+          "metadata": null,
+          "synonyms": [
+            " 1",
+            " first",
+            "one"
+          ]
+        },
+        {
+          "value": "second",
+          "created": "2016-07-06T14:13:13.031128",
+          "metadata": null,
+          "synonyms": [
+            " second",
+            " two",
+            "2"
+          ]
+        },
+        {
+          "value": "third",
+          "created": "2016-07-06T14:13:27.734994",
+          "metadata": null,
+          "synonyms": [
+            " 3",
+            " third",
+            "three"
+          ]
+        }
+      ],
+      "created": "2016-07-06T14:12:59.377768",
+      "open_list": false,
+      "description": null
+    },
+    {
+      "entity": "phone",
+      "values": [
+        {
+          "value": "call",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            " calls",
+            "call"
+          ]
+        },
+        {
+          "value": "text",
+          "created": "2016-06-30T15:56:02.924935",
+          "metadata": null,
+          "synonyms": [
+            " message",
+            " messages",
+            " texts",
+            "text"
+          ]
+        }
+      ],
+      "created": "2016-06-30T15:56:02.924935",
+      "open_list": false,
+      "description": null
+    }
+  ],
+  "language": "en",
+  "metadata": null,
+  "modified": "2016-07-06T14:17:47.594961",
+  "created_by": null,
+  "description": "Car demo app-v2",
+  "modified_by": null,
+  "dialog_nodes": [
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": ""
+      },
+      "parent": null,
+      "context": {
+        "handoffToRnR": true
+      },
+      "created": "2016-07-05T18:30:18.491617",
+      "metadata": null,
+      "conditions": "#out_of_scope",
+      "description": null,
+      "dialog_node": "node_1_1467743415843",
+      "previous_sibling": "node_1_1467304857249"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Goodbye! That was a fun chat. Hope to see you again soon.."
+      },
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#goodbyes",
+      "description": null,
+      "dialog_node": "node_4_1467222038979",
+      "previous_sibling": "node_3_1467221995681"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Great choice! Playing some @genre music for you."
+      },
+      "parent": "node_2_1467232480480",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@appliance:music && @genre",
+      "description": null,
+      "dialog_node": "node_3_1467232527937",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Great choice! Playing some @genre music for you."
+      },
+      "parent": "node_2_1467748591022",
+      "context": null,
+      "created": "2016-07-05T20:41:18.23602",
+      "metadata": null,
+      "conditions": "@genre",
+      "description": null,
+      "dialog_node": "node_2_1467751277710",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Hello! I'm here to help you..just say the word."
+      },
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#greetings",
+      "description": null,
+      "dialog_node": "node_3_1467221995681",
+      "previous_sibling": "node_1_1467221909631"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Hi. It looks like a nice drive today. What would you like me to do?"
+      },
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "conversation_start",
+      "description": null,
+      "dialog_node": "node_1_1467221909631",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "I prefer not to text while I drive."
+      },
+      "parent": "node_1_1467304857249",
+      "context": null,
+      "created": "2016-06-30T17:29:18.348128",
+      "metadata": null,
+      "conditions": "@phone:text",
+      "description": null,
+      "dialog_node": "node_2_1467307757606",
+      "previous_sibling": "node_1_1467307743052"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "I'm not sure about that. Click the \"what can I ask\" button to see what I can help with."
+      },
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_2_1467221939202",
+      "previous_sibling": "node_1_1467743415843"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "I'm trained to turn things on or off in the car, play music and find nearby locations. Click the \"what can I ask\" button on the top right to find out things I can do."
+      },
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#capabilities",
+      "description": null,
+      "dialog_node": "node_5_1467222063957",
+      "previous_sibling": "node_4_1467222038979"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "I've found the closest options. Which one would you like to drive to?"
+      },
+      "parent": "node_8_1467233758272",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@amenity:restroom",
+      "description": null,
+      "dialog_node": "node_11_1467233815579",
+      "previous_sibling": "node_10_1467233806357"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Of course. Do you have a specific cuisine in mind?"
+      },
+      "parent": "node_8_1467233758272",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@amenity:restaurant",
+      "description": null,
+      "dialog_node": "node_10_1467233806357",
+      "previous_sibling": "node_9_1467233775768"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Ok. Turning down the @appliance."
+      },
+      "parent": "node_2_1467233413666",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@appliance:ac || @appliance:heater || @appliance:music || @appliance:volume",
+      "description": null,
+      "dialog_node": "node_3_1467233447156",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Ok. Turning off the @appliance."
+      },
+      "parent": "node_7_1467232789215",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@appliance",
+      "description": null,
+      "dialog_node": "node_8_1467232810733",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Ok. Turning on the @appliance."
+      },
+      "parent": "node_2_1467232480480",
+      "context": null,
+      "created": "2016-07-05T20:03:40.57111",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_1_1467749020340",
+      "previous_sibling": "node_2_1467748591022"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Ok. Turning up the @appliance."
+      },
+      "parent": "node_11_1467233013716",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@appliance:ac || @appliance:heater || @appliance:music || @appliance:volume",
+      "description": null,
+      "dialog_node": "node_13_1467233048218",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Ok. We should get there quickly."
+      },
+      "parent": "node_11_1467233815579",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "input_text.contains('1') || input_text.contains('2') || input_text.contains('3')",
+      "description": null,
+      "dialog_node": "node_19_1467234523021",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Sorry I don't know how to make a phone call."
+      },
+      "parent": "node_1_1467304857249",
+      "context": null,
+      "created": "2016-06-30T17:29:03.18362",
+      "metadata": null,
+      "conditions": "@phone:call",
+      "description": null,
+      "dialog_node": "node_1_1467307743052",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Sorry I haven't yet learnt to perform operations with phones."
+      },
+      "parent": "node_1_1467304857249",
+      "context": null,
+      "created": "2016-06-30T17:30:38.764016",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_3_1467307837947",
+      "previous_sibling": "node_2_1467307757606"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Super! You can see some options on the car dashboard screen. Which one do you like?"
+      },
+      "parent": "node_10_1467233806357",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "entities['cuisine']!=null",
+      "description": null,
+      "dialog_node": "node_13_1467234287024",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Sure thing! Do you have a particular genre in mind? Jazz is my personal favorite.."
+      },
+      "parent": "node_2_1467232480480",
+      "context": {
+        "counter": 0
+      },
+      "created": "2016-07-05T19:56:32.077223",
+      "metadata": null,
+      "conditions": "@appliance:music",
+      "description": null,
+      "dialog_node": "node_2_1467748591022",
+      "previous_sibling": "node_3_1467232527937"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Sure thing. That place gets great reviews. You'll be there soon."
+      },
+      "parent": "node_13_1467234287024",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "input_text.contains('1') || input_text.contains('2') || input_text.contains('3')",
+      "description": null,
+      "dialog_node": "node_15_1467234349255",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Sure! Navigating to the @option gas station."
+      },
+      "parent": "node_9_1467233775768",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@option",
+      "description": null,
+      "dialog_node": "node_17_1467234455512",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "There are a few good options nearby. Which one would you like to drive to?"
+      },
+      "parent": "node_8_1467233758272",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@amenity:gas",
+      "description": null,
+      "dialog_node": "node_9_1467233775768",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "This is a short shower, it should only last a minute."
+      },
+      "parent": "node_1_1467303308178",
+      "context": null,
+      "created": "2016-06-30T16:17:07.184982",
+      "metadata": null,
+      "conditions": "input_text.contains('rain')",
+      "description": null,
+      "dialog_node": "node_2_1467303426532",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Traffic gets a little heavier downtown, but your route isn't effected."
+      },
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#traffic_update",
+      "description": null,
+      "dialog_node": "node_6_1467233590477",
+      "previous_sibling": "node_1_1467233388598"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": null,
+        "dialog_node": null
+      },
+      "output": {
+        "text": "Unfortunately I don't know much about the weather..I'm still learning."
+      },
+      "parent": "node_1_1467303308178",
+      "context": null,
+      "created": "2016-06-30T16:17:39.661894",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_3_1467303459465",
+      "previous_sibling": "node_2_1467303426532"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_11_1467233013716"
+      },
+      "output": {},
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#turn_up",
+      "description": null,
+      "dialog_node": "node_10_1467233003109",
+      "previous_sibling": "node_7_1467232789215"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_13_1467233048218"
+      },
+      "output": {
+        "text": ""
+      },
+      "parent": "node_10_1467233003109",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@appliance",
+      "description": null,
+      "dialog_node": "node_11_1467233013716",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_1_1467307743052"
+      },
+      "output": {
+        "text": ""
+      },
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T16:40:57.391516",
+      "metadata": null,
+      "conditions": "#phone || @phone",
+      "description": null,
+      "dialog_node": "node_1_1467304857249",
+      "previous_sibling": "node_1_1467303308178"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_2_1467232480480"
+      },
+      "output": {},
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#turn_on",
+      "description": null,
+      "dialog_node": "node_1_1467232431348",
+      "previous_sibling": "node_5_1467222063957"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_2_1467233413666"
+      },
+      "output": {},
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#turn_down",
+      "description": null,
+      "dialog_node": "node_1_1467233388598",
+      "previous_sibling": "node_10_1467233003109"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_2_1467303426532"
+      },
+      "output": {},
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T16:15:08.34455",
+      "metadata": null,
+      "conditions": "#weather",
+      "description": null,
+      "dialog_node": "node_1_1467303308178",
+      "previous_sibling": "node_7_1467233747449"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_3_1467232527937"
+      },
+      "output": {},
+      "parent": "node_1_1467232431348",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@appliance",
+      "description": null,
+      "dialog_node": "node_2_1467232480480",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_3_1467233447156"
+      },
+      "output": {
+        "text": "@appliance."
+      },
+      "parent": "node_1_1467233388598",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@appliance",
+      "description": null,
+      "dialog_node": "node_2_1467233413666",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_8_1467232810733"
+      },
+      "output": {},
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#turn_off",
+      "description": null,
+      "dialog_node": "node_7_1467232789215",
+      "previous_sibling": "node_1_1467232431348"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_8_1467233758272"
+      },
+      "output": {},
+      "parent": null,
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "#locate_amenity",
+      "description": null,
+      "dialog_node": "node_7_1467233747449",
+      "previous_sibling": "node_6_1467233590477"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "condition",
+        "dialog_node": "node_9_1467233775768"
+      },
+      "output": {},
+      "parent": "node_7_1467233747449",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "@amenity",
+      "description": null,
+      "dialog_node": "node_8_1467233758272",
+      "previous_sibling": null
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_11_1467233013716"
+      },
+      "output": {
+        "text": "Sadly, the @appliance cannot be turned up. Try some other appliance like heater or music.."
+      },
+      "parent": "node_11_1467233013716",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_14_1467233257478",
+      "previous_sibling": "node_13_1467233048218"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_11_1467233013716"
+      },
+      "output": {
+        "text": "What would you like me to turn up? You can say things like air conditioner, heat or volume."
+      },
+      "parent": "node_10_1467233003109",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_12_1467233032148",
+      "previous_sibling": "node_11_1467233013716"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_13_1467234287024"
+      },
+      "output": {
+        "text": "There are a few Mexican, Thai and Italian restaurants nearby. You can select one of these.."
+      },
+      "parent": "node_10_1467233806357",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_14_1467234311677",
+      "previous_sibling": "node_13_1467234287024"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_15_1467234349255"
+      },
+      "output": {
+        "text": "Which option would you like? You can say 1, 2, 3 and so on.."
+      },
+      "parent": "node_13_1467234287024",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_16_1467234390805",
+      "previous_sibling": "node_15_1467234349255"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_17_1467234455512"
+      },
+      "output": {
+        "text": "Which option would you like? You can say first, third, nearest and so on.."
+      },
+      "parent": "node_9_1467233775768",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_18_1467234505187",
+      "previous_sibling": "node_17_1467234455512"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_19_1467234523021"
+      },
+      "output": {
+        "text": "Which option would you like? You can say 1, 2, 3 and so on.."
+      },
+      "parent": "node_11_1467233815579",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_20_1467234565322",
+      "previous_sibling": "node_19_1467234523021"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_2_1467232480480"
+      },
+      "output": {
+        "text": "What would you like me to turn on? You can say things like light, fan, etc."
+      },
+      "parent": "node_1_1467232431348",
+      "context": {
+        "turn_on_counter": 1
+      },
+      "created": "2016-06-30T18:21:00.611586",
+      "metadata": null,
+      "conditions": "true && $turn_on_counter<1",
+      "description": null,
+      "dialog_node": "node_1_1467310860502",
+      "previous_sibling": "node_2_1467232480480"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_2_1467233413666"
+      },
+      "output": {
+        "text": "Sadly, the @appliance cannot be turned down. I can turn down the AC or volume. Try again.."
+      },
+      "parent": "node_2_1467233413666",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_4_1467233504463",
+      "previous_sibling": "node_3_1467233447156"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_2_1467233413666"
+      },
+      "output": {
+        "text": "What would you like me to turn down? You can say things like air conditioner, heat or volume."
+      },
+      "parent": "node_1_1467233388598",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_5_1467233563932",
+      "previous_sibling": "node_2_1467233413666"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_3_1467232527937"
+      },
+      "output": {
+        "text": "Oops..I don't have that in my collection. Want to try some other genre?Jazz? Rock?"
+      },
+      "parent": "node_2_1467748591022",
+      "context": {
+        "counter": 1
+      },
+      "created": "2016-07-05T20:41:24.522225",
+      "metadata": null,
+      "conditions": "true && $counter<1",
+      "description": null,
+      "dialog_node": "node_3_1467751284228",
+      "previous_sibling": "node_2_1467751277710"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_8_1467232810733"
+      },
+      "output": {
+        "text": "What would you like me to turn off? You can say things like wipers, lights, or fan."
+      },
+      "parent": "node_7_1467232789215",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_9_1467232828857",
+      "previous_sibling": "node_8_1467232810733"
+    },
+    {
+      "go_to": {
+        "return": null,
+        "selector": "user_input",
+        "dialog_node": "node_8_1467233758272"
+      },
+      "output": {
+        "text": "Which amenity are you looking for? I can find restaurants, gas stations and restrooms."
+      },
+      "parent": "node_7_1467233747449",
+      "context": null,
+      "created": "2016-06-30T15:56:02.924935",
+      "metadata": null,
+      "conditions": "true",
+      "description": null,
+      "dialog_node": "node_12_1467234209966",
+      "previous_sibling": "node_8_1467233758272"
+    }
+  ]
+}
