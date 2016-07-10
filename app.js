@@ -30,11 +30,12 @@ app.use(bodyParser.json());
 
 // Create the service wrapper
 var conversation = watson.conversation({
-  url: 'https://gateway.watsonplatform.net/conversation-experimental/api',
+  url: 'https://gateway.watsonplatform.net/conversation/api',
   username: process.env.CONVERSATION_USERNAME || '<username>',
   password: process.env.CONVERSATION_PASSWORD || '<password>',
   version_date: '2016-05-19',
-  version: 'v1-experimental'
+  version: 'v1-experimental',
+  silent: true
 });
 
 // Endpoint to be call from the client side
@@ -75,13 +76,13 @@ app.post('/api/message', function(req, res) {
  */
 function updateMessage(response) {
   var responseText = null;
+  if (!response.output) {
+    response.output = {};
+  } else {
+    return response;
+  }
   if (response.intents && response.intents[0]) {
     var intent = response.intents[0];
-    if (!response.output) {
-      response.output = {};
-    } else {
-      return response;
-    }
     // Depending on the confidence of the response the app can return different messages.
     // The confidence will vary depending on how well the system is trained. The service will always try to assign
     // a class/intent to the input. If the confidence is low, then it suggests the service is unsure of the
