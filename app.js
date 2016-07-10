@@ -30,12 +30,11 @@ app.use(bodyParser.json());
 
 // Create the service wrapper
 var conversation = watson.conversation({
-  url: 'https://gateway-s.watsonplatform.net/conversation/api',
+  url: 'https://gateway.watsonplatform.net/conversation-experimental/api',
   username: process.env.CONVERSATION_USERNAME || '<username>',
   password: process.env.CONVERSATION_PASSWORD || '<password>',
   version_date: '2016-05-19',
-  version: 'v1-experimental',
-  silent: true
+  version: 'v1-experimental'
 });
 
 // Endpoint to be call from the client side
