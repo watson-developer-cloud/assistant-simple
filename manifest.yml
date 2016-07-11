@@ -1,11 +1,11 @@
 ---
 declared-services:
-  conversation-experimental:
+  conversation-free:
     label: conversation
-    plan: experimental
+    plan: free
 applications:
 - services:
-  - conversation-experimental
+  - conversation-free
   command: npm start
   path: .
   instances: 1
