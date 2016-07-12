@@ -28,6 +28,8 @@ understands that in both cases your intent is the same and responds accordingly.
 # Getting Started using Bluemix
 </a>
 
+![](readme_images/Deploy on Bluemix - simple app.png)
+
 ## Before you begin
 1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/).
 
