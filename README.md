@@ -9,7 +9,7 @@ For more information about Conversation, see the [detailed documentation](http:/
 
 [See the demo](http://conversation-simple-node-app-doc.mybluemix.net/).
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="https://github.com/sgregglives/conversation-simple/blob/master/readme_images/bluemix.png" width="200"/>](#bluemix)     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="https://github.com/sgregglives/conversation-simple/blob/master/readme_images/local.png" width="200"/>](#local)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="readme_images/bluemix.png" width="200"/>](#bluemix)     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="readme_images/local.png" width="200"/>](#local)
 
 ## How the app works
 The app interface is designed and trained for chatting with a cognitive car. The chat interface is on the left, and the
@@ -28,6 +28,8 @@ understands that in both cases your intent is the same and responds accordingly.
 # Getting Started using Bluemix
 </a>
 
+![](readme_images/Deploy on Bluemix - simple app.png)
+
 ## Before you begin
 1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/).
 
@@ -38,7 +40,9 @@ understands that in both cases your intent is the same and responds accordingly.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](readme_images/services.PNG)
 
 ## Deploy the App
-1 Select Deploy to Bluemix (This will be available when we go public)
+1 Select Deploy to Bluemix.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
 
 2 Log in with an existing Bluemix account or sign up.
 
@@ -75,7 +79,7 @@ The status of the deployment is shown. This can take some time.
 
 To build the application:
 
-1 Download and install the [Cloud-foundry CLI][cloud_foundry] tool.
+1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
 
 2 Git clone the project `https://github.com/watson-developer-cloud/conversation-simple`
 
@@ -104,10 +108,10 @@ To build the application:
   $ cf login -u <your user ID>
   ```
 
-6 Create the [Conversation][service_url] service in Bluemix:
+6 Create the Conversation service in Bluemix:
 
   ```sh
-  $ cf create-service conversation experimental conversation-service
+  $ cf create-service conversation free conversation-service
   ```
 
 7 Push it live:
