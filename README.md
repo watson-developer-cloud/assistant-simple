@@ -33,7 +33,7 @@ understands that in both cases your intent is the same and responds accordingly.
 ## Before you begin
 1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/).
 
-2 Ensure that you have the necessary space available in your Bluemix account. This action deploys 1 application and 3 services.
+2 Ensure that you have the necessary space available in your Bluemix account. This action deploys 1 application and 1 service.
    * You can view this on your Bluemix Dashboard. Tiles will show what space you have available.
    * For example, for Services & APIS
 
@@ -71,7 +71,7 @@ The status of the deployment is shown. This can take some time.
 
 1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/). While you can do part of this deployment locally, you must still use Bluemix.
 
-2 In Bluemix, [create a Conversation Service](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/conversation/overview.shtml).
+2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
 - Copy the Service Credentials for later use.
 - [Import a workspace](#workspace)
 
