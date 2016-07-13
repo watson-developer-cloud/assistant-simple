@@ -33,7 +33,7 @@ understands that in both cases your intent is the same and responds accordingly.
 ## Before you begin
 1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/).
 
-2 Ensure that you have the necessary space available in your Bluemix account. This action deploys 1 application and 3 services.
+2 Ensure that you have the necessary space available in your Bluemix account. This action deploys 1 application and 1 service.
    * You can view this on your Bluemix Dashboard. Tiles will show what space you have available.
    * For example, for Services & APIS
 
@@ -71,7 +71,7 @@ The status of the deployment is shown. This can take some time.
 
 1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/). While you can do part of this deployment locally, you must still use Bluemix.
 
-2 In Bluemix, [create a Conversation Service](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/conversation/overview.shtml).
+2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
 - Copy the Service Credentials for later use.
 - [Import a workspace](#workspace)
 
@@ -152,7 +152,7 @@ To build the application:
 
 3 Return to the **Manage** menu item and select **Launch Tooling**. This opens a new tab in your browser, where you are prompted to login if you have not done so before. Use your Bluemix credentials.
 
-4 Download the [exported JSON file](src/main/resources/workspace.json) that contains the Workspace contents.
+4 Download the [exported JSON file](training/car_workspace.json) that contains the Workspace contents.
 
 5 Select **Import**. Browse to (or drag and drop) the JSON file that you downloaded in Step 4. Choose to import **Everything(Intents, Entities, and Dialog)**. Then select **Import** to finish importing the workspace.
 
