@@ -72,7 +72,9 @@ understands that in both cases your intent is the same and responds accordingly.
 5 Navigate to your Bluemix Dashboard and [import a workspace](#workspace). Setup your workspace then <b>return to these steps</b>.
 </a>
 
-6 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
+6 Navigate to your Bluemix Dashboard and add [Service Credentials](#credentials). Then <b>return to these steps</b>.
+
+7 After you have set up a workspace and added credentials, [add the WORKSPACE_ID environment variable](#env).
 
 <a name="local">
 # Getting Started locally
@@ -167,6 +169,9 @@ To build the application:
 
 3 Copy the credentials (or remember this location) for later use.
 
+4 Return to the steps you were following:
+- For Bluemix - [return to here](#returnbluemix)
+- For Local - [return here](#returnlocal)
 
 <a name="workspace">
 # Import a workspace
