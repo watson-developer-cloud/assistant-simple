@@ -165,6 +165,8 @@ To build the application:
 
 2 Select **ADD CREDENTIALS**. Name your credentials then select **ADD**.
 
+3 Copy the credentials (or remember this location) for later use.
+
 
 <a name="workspace">
 # Import a workspace
