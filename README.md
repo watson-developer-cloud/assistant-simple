@@ -85,7 +85,8 @@ understands that in both cases your intent is the same and responds accordingly.
 <a name="returnlocal">
 2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
 - [Import a workspace](#workspace)
-- Copy the [Service Credentials](#credentials) for later use. 
+- Copy the [Service Credentials](#credentials) for later use.
+- <b>Return to these steps</b>
 </a>
 
 ## Building locally
