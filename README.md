@@ -66,10 +66,10 @@ understands that in both cases your intent is the same and responds accordingly.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](readme_images/viewyourapp.PNG)
 
 <a name="returnbluemix">
-6 Navigate to your Bluemix Dashboard and [import a workspace](#workspace). Setup your workspace then <b>return to these steps</b>.
+5 Navigate to your Bluemix Dashboard and [import a workspace](#workspace). Setup your workspace then <b>return to these steps</b>.
 </a>
 
-7 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
+6 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
 
 <a name="local">
 # Getting Started locally
@@ -187,7 +187,7 @@ For more information on workspaces, see the full  [Conversation service  documen
 
 6 Return to the deploy steps that you were following:
 - For Local - [return to step 2](#returnlocal)
-- For Bluemix - [return to step 6](#returnbluemix)
+- For Bluemix - [return to step 5](#returnbluemix)
 
 <a name="env">
 # Adding environment variables in Bluemix
