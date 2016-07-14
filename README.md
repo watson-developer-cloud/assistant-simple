@@ -169,7 +169,12 @@ To build the application:
 <a name="workspace">
 # Import a workspace
 </a>
-1 Navigate to the Bluemix dashboard, select the service you created.
+
+To use the app you're creating, you need to add a worksapce to your Conversation service. A workspace is a container for all the artifacts that define the behavior of your service (ie: intents, entities and chat flows). For this sample app, a workspace is provided.
+
+For more information on workspaces, see the full  [Conversation service  documentation](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/conversation/overview.shtml).
+
+1 Navigate to the Bluemix dashboard, select the Conversation service that you created.
 
 2 Go to the **Manage** menu item and select **Launch Tool**. This opens a new tab in your browser, where you are prompted to login if you have not done so before. Use your Bluemix credentials.
 
@@ -186,8 +191,6 @@ In the Details UI, copy the 36 character UNID **ID** field. This is the **Worksp
 </a>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](readme_images/workspaceid.PNG)
-
-For more information on workspaces, see the full  [Conversation service  documentation](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/conversation/overview.shtml).
 
 6 Return to the deploy steps that you were following:
 - For Local - [return to step 2](#returnlocal)
