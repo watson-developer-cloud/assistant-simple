@@ -5,7 +5,8 @@
 var Common = (function() {
   // Publicly accessible methods defined
   return {
-    buildDomElement: buildDomElementFromJson
+    buildDomElement: buildDomElementFromJson,
+    fireEvent: fireEvent
   };
 
   // Take in JSON object and build a DOM element out of it
@@ -53,5 +54,19 @@ var Common = (function() {
       }
     }
     return element;
+  }
+
+  // Trigger an event to fire
+  function fireEvent(element, event) {
+    var evt;
+    if (document.createEventObject) {
+      // dispatch for IE
+      evt = document.createEventObject();
+      return element.fireEvent('on' + event, evt);
+    }
+    // otherwise, dispatch for Firefox, Chrome + others
+    evt = document.createEvent('HTMLEvents');
+    evt.initEvent(event, true, true); // event type,bubbling,cancelable
+    return !element.dispatchEvent(evt);
   }
 }());
