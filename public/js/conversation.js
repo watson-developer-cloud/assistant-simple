@@ -134,7 +134,7 @@ var ConversationPanel = (function() {
     }
     var messageArray = [];
 
-    textArray.forEach(function(currentText, index) {
+    textArray.forEach(function(currentText) {
       if (currentText) {
         var messageJson = {
           // <div class='segments'>
@@ -143,7 +143,7 @@ var ConversationPanel = (function() {
           'children': [{
             // <div class='from-user/from-watson latest'>
             'tagName': 'div',
-            'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest', ((index === 0) ? 'top' : 'sub')],
+            'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest', ((messageArray.length === 0) ? 'top' : 'sub')],
             'children': [{
               // <div class='message-inner'>
               'tagName': 'div',
