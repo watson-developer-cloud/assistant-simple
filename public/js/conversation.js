@@ -135,27 +135,29 @@ var ConversationPanel = (function() {
     var messageArray = [];
 
     textArray.forEach(function(currentText, index) {
-      var messageJson = {
-        // <div class='segments'>
-        'tagName': 'div',
-        'classNames': ['segments'],
-        'children': [{
-          // <div class='from-user/from-watson latest'>
+      if (currentText) {
+        var messageJson = {
+          // <div class='segments'>
           'tagName': 'div',
-          'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest', ((index === 0) ? 'top' : 'sub')],
+          'classNames': ['segments'],
           'children': [{
-            // <div class='message-inner'>
+            // <div class='from-user/from-watson latest'>
             'tagName': 'div',
-            'classNames': ['message-inner'],
+            'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest', ((index === 0) ? 'top' : 'sub')],
             'children': [{
-              // <p>{messageText}</p>
-              'tagName': 'p',
-              'text': currentText
+              // <div class='message-inner'>
+              'tagName': 'div',
+              'classNames': ['message-inner'],
+              'children': [{
+                // <p>{messageText}</p>
+                'tagName': 'p',
+                'text': currentText
+              }]
             }]
           }]
-        }]
-      };
-      messageArray.push(Common.buildDomElement(messageJson));
+        };
+        messageArray.push(Common.buildDomElement(messageJson));
+      }
     });
 
     return messageArray;
