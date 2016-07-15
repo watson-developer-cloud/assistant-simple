@@ -94,12 +94,14 @@ var ConversationPanel = (function() {
       // Create new message DOM element
       var messageDivs = buildMessageDomElements(newPayload, isUser);
       var chatBoxElement = document.querySelector(settings.selectors.chatBox);
-      var previousLatest = chatBoxElement.querySelector((isUser
+      var previousLatest = chatBoxElement.querySelectorAll((isUser
               ? settings.selectors.fromUser : settings.selectors.fromWatson)
               + settings.selectors.latest);
       // Previous "latest" message is no longer the most recent
       if (previousLatest) {
-        previousLatest.classList.remove('latest');
+        Common.listForEach(previousLatest, function(element) {
+          element.classList.remove('latest');
+        });
       }
 
       messageDivs.forEach(function(currentDiv) {
@@ -132,7 +134,7 @@ var ConversationPanel = (function() {
     }
     var messageArray = [];
 
-    textArray.forEach(function(currentText) {
+    textArray.forEach(function(currentText, index) {
       var messageJson = {
         // <div class='segments'>
         'tagName': 'div',
@@ -140,7 +142,7 @@ var ConversationPanel = (function() {
         'children': [{
           // <div class='from-user/from-watson latest'>
           'tagName': 'div',
-          'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest'],
+          'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest', ((index === 0) ? 'top' : 'sub')],
           'children': [{
             // <div class='message-inner'>
             'tagName': 'div',
