@@ -175,7 +175,7 @@ div {
   padding: 0 1.25rem;
 }
 
-.from-watson.latest p:before {
+.from-watson.latest.top p:before {
   content: ".";
   color: #9855D4;
   background-image: url("../img/marker_image.png");
