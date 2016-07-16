@@ -82,20 +82,7 @@ var ConversationPanel = (function() {
       }
     });
 
-    fireEvent(input, 'input');
-  }
-
-  function fireEvent(element, event) {
-    var evt;
-    if (document.createEventObject) {
-      // dispatch for IE
-      evt = document.createEventObject();
-      return element.fireEvent('on' + event, evt);
-    }
-    // otherwise, dispatch for Firefox, Chrome + others
-    evt = document.createEvent('HTMLEvents');
-    evt.initEvent(event, true, true); // event type,bubbling,cancelable
-    return !element.dispatchEvent(evt);
+    Common.fireEvent(input, 'input');
   }
 
   // Display a user or Watson message that has just been sent/received
@@ -105,19 +92,23 @@ var ConversationPanel = (function() {
       || (newPayload.output && newPayload.output.text);
     if (isUser !== null && textExists) {
       // Create new message DOM element
-      var messageDiv = buildMessageDomElement(newPayload, isUser);
+      var messageDivs = buildMessageDomElements(newPayload, isUser);
       var chatBoxElement = document.querySelector(settings.selectors.chatBox);
-      var previousLatest = chatBoxElement.querySelector((isUser
-              ? settings.selectors.fromUser : settings.selectors.fromWatson)
-              + settings.selectors.latest);
+      var previousLatest = chatBoxElement.querySelectorAll((isUser
+          ? settings.selectors.fromUser : settings.selectors.fromWatson)
+        + settings.selectors.latest);
       // Previous "latest" message is no longer the most recent
       if (previousLatest) {
-        previousLatest.classList.remove('latest');
+        Common.listForEach(previousLatest, function(element) {
+          element.classList.remove('latest');
+        });
       }
 
-      chatBoxElement.appendChild(messageDiv);
-      // Class to start fade in animation
-      messageDiv.classList.add('load');
+      messageDivs.forEach(function(currentDiv) {
+        chatBoxElement.appendChild(currentDiv);
+        // Class to start fade in animation
+        currentDiv.classList.add('load');
+      });
       // Move chat to the most recent messages when new messages are added
       scrollToChatBottom();
     }
@@ -136,31 +127,40 @@ var ConversationPanel = (function() {
   }
 
   // Constructs new DOM element from a message payload
-  function buildMessageDomElement(newPayload, isUser) {
-    var text = isUser ? newPayload.input.text : newPayload.output.text.join(' ');
+  function buildMessageDomElements(newPayload, isUser) {
+    var textArray = isUser ? newPayload.input.text : newPayload.output.text;
+    if (Object.prototype.toString.call( textArray ) !== '[object Array]') {
+      textArray = [textArray];
+    }
+    var messageArray = [];
 
-    var messageJson = {
-      // <div class='segments'>
-      'tagName': 'div',
-      'classNames': ['segments'],
-      'children': [{
-        // <div class='from-user/from-watson latest'>
-        'tagName': 'div',
-        'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest'],
-        'children': [{
-          // <div class='message-inner'>
+    textArray.forEach(function(currentText) {
+      if (currentText) {
+        var messageJson = {
+          // <div class='segments'>
           'tagName': 'div',
-          'classNames': ['message-inner'],
+          'classNames': ['segments'],
           'children': [{
-            // <p>{messageText}</p>
-            'tagName': 'p',
-            'text': text
+            // <div class='from-user/from-watson latest'>
+            'tagName': 'div',
+            'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest', ((messageArray.length === 0) ? 'top' : 'sub')],
+            'children': [{
+              // <div class='message-inner'>
+              'tagName': 'div',
+              'classNames': ['message-inner'],
+              'children': [{
+                // <p>{messageText}</p>
+                'tagName': 'p',
+                'text': currentText
+              }]
+            }]
           }]
-        }]
-      }]
-    };
+        };
+        messageArray.push(Common.buildDomElement(messageJson));
+      }
+    });
 
-    return Common.buildDomElement(messageJson);
+    return messageArray;
   }
 
   // Scroll to the bottom of the chat window (to the most recent messages)
@@ -170,26 +170,12 @@ var ConversationPanel = (function() {
   //   even if the Watson message is long.
   function scrollToChatBottom() {
     var scrollingChat = document.querySelector('#scrollingChat');
-    var messages = scrollingChat.children;
-    var lastMessage = messages[messages.length - 1];
-
-    // If the most recent message is from Watson,
-    // scroll the latest message to the top of the section, rather than the bottom
-    var top = false;
-    var scrollEl = lastMessage.querySelector(settings.selectors.fromWatson
-            + settings.selectors.latest);
-    if (scrollEl) {
-      top = true;
-    }
 
     // Scroll to the latest message sent by the user
-    scrollEl = scrollingChat.querySelector(settings.selectors.fromUser
-            + settings.selectors.latest);
+    var scrollEl = scrollingChat.querySelector(settings.selectors.fromUser
+      + settings.selectors.latest);
     if (scrollEl) {
-      scrollEl.scrollIntoView({
-        'behavior': 'smooth', // Only supported by Firefox, but including doesn't break other browsers
-        'block': (top ? 'start' : 'end')
-      });
+      scrollingChat.scrollTop = scrollEl.offsetTop;
     }
   }
 
@@ -209,7 +195,7 @@ var ConversationPanel = (function() {
 
       // Clear input box for further messages
       inputBox.value = '';
-      fireEvent(inputBox, 'input');
+      Common.fireEvent(inputBox, 'input');
     }
   }
 }());
