@@ -1,12 +1,6 @@
 ---
-declared-services:
-  conversation-free:
-    label: conversation
-    plan: free
 applications:
-- services:
-  - conversation-free
-  command: npm start
+- command: npm start
   path: .
   instances: 1
   memory: 512MB
