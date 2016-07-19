@@ -12,6 +12,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "basic-auth-connect": "1.0.0",
     "dotenv": "^2.0.0",
     "express": "4.13.4",
     "body-parser": "1.15.1",
