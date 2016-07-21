@@ -95,8 +95,8 @@ var ConversationPanel = (function() {
       var messageDivs = buildMessageDomElements(newPayload, isUser);
       var chatBoxElement = document.querySelector(settings.selectors.chatBox);
       var previousLatest = chatBoxElement.querySelectorAll((isUser
-          ? settings.selectors.fromUser : settings.selectors.fromWatson)
-        + settings.selectors.latest);
+              ? settings.selectors.fromUser : settings.selectors.fromWatson)
+              + settings.selectors.latest);
       // Previous "latest" message is no longer the most recent
       if (previousLatest) {
         Common.listForEach(previousLatest, function(element) {
@@ -173,7 +173,7 @@ var ConversationPanel = (function() {
 
     // Scroll to the latest message sent by the user
     var scrollEl = scrollingChat.querySelector(settings.selectors.fromUser
-      + settings.selectors.latest);
+            + settings.selectors.latest);
     if (scrollEl) {
       scrollingChat.scrollTop = scrollEl.offsetTop;
     }
