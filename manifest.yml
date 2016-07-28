@@ -1,6 +1,15 @@
 ---
+declared-services:
+  conversation-service:
+    label: conversation
+    plan: free
 applications:
-- command: npm start
+- name: car-dashboard
+  command: npm start
   path: .
+  memory: 256M
   instances: 1
-  memory: 512MB
+  services:
+  - conversation-service
+  env:
+    NPM_CONFIG_PRODUCTION: false
