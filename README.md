@@ -111,7 +111,7 @@ To build the application:
 
  ```sh
 
- $ cf login -u \<your user ID\>
+ $ cf login -u <your user ID>
 
  ```
 
@@ -130,7 +130,7 @@ To build the application:
  $ cf push <application-name>
 
  ``` 
- The name you use determinates your application URL initially, such as `\<application-name\>.mybluemix.net`.
+ The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
  
 ## Running locally
 
