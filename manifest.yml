@@ -4,7 +4,7 @@ declared-services:
     label: conversation
     plan: free
 applications:
-- name: car-dashboard
+- name: car-simple
   command: npm start
   path: .
   memory: 256M
