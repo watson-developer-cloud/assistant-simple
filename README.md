@@ -144,7 +144,7 @@ The name you use determinates your application URL initially, such as `<applicat
 
 6 Open `http://localhost:3000` in a browser.
 
-_Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, skip to [this section](#usingCloudfoundry)_
+_Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, go to [this section](#usingCloudfoundry)_
 
 <a name="credentials">
 # Service Credentials
