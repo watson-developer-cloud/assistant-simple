@@ -74,24 +74,9 @@ understands that in both cases your intent is the same and responds accordingly.
 
 6 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
 
-<a name="local">
-# Getting Started locally
+<a name="usingCloudfoundry">
+## Using Cloudfoundry CLI tool to deploy your application
 </a>
-
-## Before you begin
-
-1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/). While you can do part of this deployment locally, you must still use Bluemix.
-
-<a name="returnlocal">
-2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
-- [Import a workspace](#workspace)
-- Copy the [Service Credentials](#credentials) for later use.
-- <b>Return to these steps</b>
-</a>
-
-## Building locally
-
-To build the application:
 
 1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
 
@@ -99,20 +84,7 @@ To build the application:
 
 3 Navigate to the `conversation-simple` folder
 
-4 Edit the `manifest.yml` file, and change the `<application-name>` to something unique.
-  ```none
-  applications:git 
-  - services:
-    - conversation-service
-    name: <application-name>
-    command: npm start
-    path: .
-    memory: 256M
-  ```
-
-  The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
-
-5 Connect to Bluemix in the command-line tool:
+4 Connect to Bluemix in the command-line tool:
   For US Region
   ```sh
   $ cf api https://api.ng.bluemix.net
@@ -131,8 +103,25 @@ To build the application:
 7 Push it live:
 
   ```sh
-  $ cf push
+  $ cf push <application-name>
   ```  
+The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
+
+<a name="local">
+# Getting Started locally
+</a>
+
+## Before you begin
+
+1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/). While you can do part of this deployment locally, you must still use Bluemix.
+
+<a name="returnlocal">
+2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
+- [Import a workspace](#workspace)
+- Copy the [Service Credentials](#credentials) for later use.
+- <b>Return to these steps</b>
+</a>
+
 ## Running locally
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
@@ -154,6 +143,8 @@ To build the application:
     ```
 
 6 Open `http://localhost:3000` in a browser.
+
+_Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, go to [this section](#usingCloudfoundry)_
 
 <a name="credentials">
 # Service Credentials
