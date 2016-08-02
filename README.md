@@ -99,40 +99,39 @@ To build the application:
 
 3 Navigate to the `conversation-simple` folder
 
-4 Edit the `manifest.yml` file, and change the `<application-name>` to something unique.
-  ```none
-  applications:git 
-  - services:
-    - conversation-service
-    name: <application-name>
-    command: npm start
-    path: .
-    memory: 256M
-  ```
+4 Connect to Bluemix in the command-line tool:
 
-  The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
+ For US Region
 
-5 Connect to Bluemix in the command-line tool:
-  For US Region
-  ```sh
-  $ cf api https://api.ng.bluemix.net
-  ```
+ ```sh
 
-  ```sh
-  $ cf login -u <your user ID>
-  ```
+ $ cf api https://api.ng.bluemix.net
 
-6 Create the Conversation service in Bluemix:
+ ```
 
-  ```sh
-  $ cf create-service conversation free conversation-service
-  ```
+ ```sh
 
-7 Push it live:
+ $ cf login -u <your user ID>
 
-  ```sh
-  $ cf push
-  ```  
+ ```
+
+5 Create the Conversation service in Bluemix:
+
+ ```sh
+
+ $ cf create-service conversation free conversation-service
+
+ ```
+
+6 Push it live:
+
+ ```sh
+
+ $ cf push <application-name>
+
+ ``` 
+ The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
+ 
 ## Running locally
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
