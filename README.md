@@ -23,7 +23,7 @@ JSON that the JavaScript code receives from the server is on the right. Your que
 
 These intents help the system to understand variations of questions and commands that you might submit.
 
-Example commands that can be executed by the Conversation service are: 
+Example commands that can be executed by the Conversation service are:
 
     turn on windshield wipers
     play music
@@ -74,22 +74,9 @@ understands that in both cases your intent is the same and responds accordingly.
 
 6 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
 
-<a name="local">
-# Getting Started locally
+<a name="usingCloudfoundry">
+## Using Cloudfoundry CLI tool to deploy your application
 </a>
-
-## Before you begin
-
-1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/). While you can do part of this deployment locally, you must still use Bluemix.
-
-<a name="returnlocal">
-2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
-- [Import a workspace](#workspace)
-- Copy the [Service Credentials](#credentials) for later use.
-- <b>Return to these steps</b>
-</a>
-
-## Building locally
 
 To build the application:
 
@@ -129,9 +116,24 @@ To build the application:
 
  $ cf push <application-name>
 
- ``` 
+ ```
  The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
- 
+
+<a name="local">
+# Getting Started locally
+</a>
+
+## Before you begin
+
+1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/). While you can do part of this deployment locally, you must still use Bluemix.
+
+<a name="returnlocal">
+2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
+- [Import a workspace](#workspace)
+- Copy the [Service Credentials](#credentials) for later use.
+- <b>Return to these steps</b>
+</a>
+
 ## Running locally
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
@@ -153,6 +155,8 @@ To build the application:
     ```
 
 6 Open `http://localhost:3000` in a browser.
+
+_Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, go to [this section](#usingCloudfoundry)_
 
 <a name="credentials">
 # Service Credentials
@@ -247,7 +251,7 @@ In the Details UI, copy the 36 character UNID **ID** field. This is the **Worksp
 To see the logs, run the command
 
 `$ cf logs < application-name > --recent`
- 
+
 # License
 
   This sample code is licensed under Apache 2.0.
