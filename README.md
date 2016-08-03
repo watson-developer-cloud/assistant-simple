@@ -23,7 +23,7 @@ JSON that the JavaScript code receives from the server is on the right. Your que
 
 These intents help the system to understand variations of questions and commands that you might submit.
 
-Example commands that can be executed by the Conversation service are: 
+Example commands that can be executed by the Conversation service are:
 
     turn on windshield wipers
     play music
@@ -74,6 +74,51 @@ understands that in both cases your intent is the same and responds accordingly.
 
 6 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
 
+<a name="usingCloudfoundry">
+## Using Cloudfoundry CLI tool to deploy your application
+</a>
+
+To build the application:
+
+1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
+
+2 Git clone the project `https://github.com/watson-developer-cloud/conversation-simple`
+
+3 Navigate to the `conversation-simple` folder
+
+4 Connect to Bluemix in the command-line tool:
+
+ For US Region
+
+ ```sh
+
+ $ cf api https://api.ng.bluemix.net
+
+ ```
+
+ ```sh
+
+ $ cf login -u <your user ID>
+
+ ```
+
+5 Create the Conversation service in Bluemix:
+
+ ```sh
+
+ $ cf create-service conversation free conversation-service
+
+ ```
+
+6 Push it live:
+
+ ```sh
+
+ $ cf push <application-name>
+
+ ```
+ The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
+
 <a name="local">
 # Getting Started locally
 </a>
@@ -89,50 +134,6 @@ understands that in both cases your intent is the same and responds accordingly.
 - <b>Return to these steps</b>
 </a>
 
-## Building locally
-
-To build the application:
-
-1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
-
-2 Git clone the project `https://github.com/watson-developer-cloud/conversation-simple`
-
-3 Navigate to the `conversation-simple` folder
-
-4 Edit the `manifest.yml` file, and change the `<application-name>` to something unique.
-  ```none
-  applications:git 
-  - services:
-    - conversation-service
-    name: <application-name>
-    command: npm start
-    path: .
-    memory: 256M
-  ```
-
-  The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
-
-5 Connect to Bluemix in the command-line tool:
-  For US Region
-  ```sh
-  $ cf api https://api.ng.bluemix.net
-  ```
-
-  ```sh
-  $ cf login -u <your user ID>
-  ```
-
-6 Create the Conversation service in Bluemix:
-
-  ```sh
-  $ cf create-service conversation free conversation-service
-  ```
-
-7 Push it live:
-
-  ```sh
-  $ cf push
-  ```  
 ## Running locally
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
@@ -154,6 +155,8 @@ To build the application:
     ```
 
 6 Open `http://localhost:3000` in a browser.
+
+_Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, go to [this section](#usingCloudfoundry)_
 
 <a name="credentials">
 # Service Credentials
@@ -248,7 +251,7 @@ In the Details UI, copy the 36 character UNID **ID** field. This is the **Worksp
 To see the logs, run the command
 
 `$ cf logs < application-name > --recent`
- 
+
 # License
 
   This sample code is licensed under Apache 2.0.
