@@ -205,7 +205,7 @@ div {
 }
 
 #textInput.underline {
-  border-bottom: 0.125rem solid #00B4A0;
+  border-bottom: 2px solid #00B4A0;
 }
 
 ::-webkit-input-placeholder {
