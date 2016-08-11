@@ -2282,11 +2282,12 @@
       "entity": "appliance",
       "values": [
         {
-          "value": "ac",
+          "value": "AC",
           "created": "2016-07-22T04:55:54.661Z",
           "metadata": null,
           "synonyms": [
             "acs",
+            "ac",
             "air conditioner",
             "air conditioners",
             "air conditioning"
@@ -3382,7 +3383,7 @@
     {
       "go_to": null,
       "output": {
-        "text": "I understand you want me to turn off something. You can say turn off the wipers or switch off the ac."
+        "text": "I understand you want me to turn off something. You can say turn off the wipers or switch off the AC."
       },
       "parent": "node_7_1467232789215",
       "context": {
@@ -3412,7 +3413,7 @@
     {
       "go_to": null,
       "output": {
-        "text": "I understand you want me to turn up something. You can say increase the volume or turn up the ac."
+        "text": "I understand you want me to turn up something. You can say increase the volume or turn up the AC."
       },
       "parent": "node_10_1467233003109",
       "context": {
