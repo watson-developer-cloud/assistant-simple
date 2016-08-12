@@ -2282,11 +2282,12 @@
       "entity": "appliance",
       "values": [
         {
-          "value": "ac",
+          "value": "AC",
           "created": "2016-07-22T04:55:54.661Z",
           "metadata": null,
           "synonyms": [
             "acs",
+            "ac",
             "air conditioner",
             "air conditioners",
             "air conditioning"
@@ -3182,7 +3183,7 @@
     {
       "go_to": null,
       "output": {
-        "text": "Hello! I'm doing good. I'm here to help you... just say the word."
+        "text": "Hello! I'm doing good. I'm here to help you. Just say the word."
       },
       "parent": null,
       "context": null,
@@ -3284,7 +3285,7 @@
     {
       "go_to": null,
       "output": {
-        "text": "I don't know much about traffic... just that it gets a little heavier downtown, but your route isn't affected."
+        "text": "I don't know much about traffic. I only know that it gets a little heavier downtown, but your route isn't affected."
       },
       "parent": null,
       "context": null,
@@ -3382,7 +3383,7 @@
     {
       "go_to": null,
       "output": {
-        "text": "I understand you want me to turn off something. You can say turn off the wipers or switch off the ac."
+        "text": "I understand you want me to turn off something. You can say turn off the wipers or switch off the AC."
       },
       "parent": "node_7_1467232789215",
       "context": {
@@ -3412,7 +3413,7 @@
     {
       "go_to": null,
       "output": {
-        "text": "I understand you want me to turn up something. You can say increase the volume or turn up the ac."
+        "text": "I understand you want me to turn up something. You can say increase the volume or turn up the AC."
       },
       "parent": "node_10_1467233003109",
       "context": {
@@ -3670,7 +3671,7 @@
     {
       "go_to": null,
       "output": {
-        "text": "Sure thing! Which genre would you prefer? Jazz is my personal favorite.."
+        "text": "Sure thing! Which genre would you prefer? Jazz is my personal favorite."
       },
       "parent": "node_2_1467232480480",
       "context": {
@@ -3746,7 +3747,7 @@
     {
       "go_to": null,
       "output": {
-        "text": "Unfortunately I don't know much about the weather... I'm still learning."
+        "text": "Unfortunately I don't know much about the weather. I'm still learning."
       },
       "parent": null,
       "context": null,
@@ -4004,7 +4005,7 @@
         "dialog_node": "node_13_1467234287024"
       },
       "output": {
-        "text": "I see a few nearby restaurants serving tacos, burgers, seafood and pasta. You can select one of these.."
+        "text": "I see a few nearby restaurants serving tacos, burgers, seafood and pasta. You can select one of these."
       },
       "parent": "node_10_1467233806357",
       "context": {
@@ -4042,7 +4043,7 @@
         "dialog_node": "node_15_1467234349255"
       },
       "output": {
-        "text": "Which option would you like? You can say first, third, nearest and so on.."
+        "text": "Which option would you like? You can say first, third, nearest and so on."
       },
       "parent": "node_13_1467234287024",
       "context": {
@@ -4062,7 +4063,7 @@
         "dialog_node": "node_17_1467234455512"
       },
       "output": {
-        "text": "Which option would you like? You can say first, third, nearest and so on.."
+        "text": "Which option would you like? You can say first, third, nearest and so on."
       },
       "parent": "node_9_1467233775768",
       "context": {
@@ -4082,7 +4083,7 @@
         "dialog_node": "node_19_1467234523021"
       },
       "output": {
-        "text": "Which option would you like? You can say first, third, nearest and so on.."
+        "text": "Which option would you like? You can say first, third, nearest and so on."
       },
       "parent": "node_11_1467233815579",
       "context": {
