@@ -21,6 +21,7 @@ require( 'dotenv' ).config( {silent: true} );
 var express = require( 'express' );  // app server
 var bodyParser = require( 'body-parser' );  // parser for post requests
 var watson = require( 'watson-developer-cloud' );  // watson sdk
+var csv = require( 'express-csv' ); // csv output streamer
 
 // The following requires are needed for logging purposes
 var uuid = require( 'uuid' );
