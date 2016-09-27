@@ -49,25 +49,26 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 ![](readme_images/Deploy on Bluemix - simple app.png)
 
-### Deploy the App
-1 Select Deploy to Bluemix.
+### Deploy the Application
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
+1. Click here to deploy the application directly from GitHub to Bluemix: [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
 
-2 Log in with an existing Bluemix account or sign up.
+1. When prompted, log in with an existing Bluemix account or sign up for a new account.
 
-3 Name your app and select your REGION, ORGINIZATION, and SPACE. Then select DEPLOY.
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](readme_images/deploy.PNG)
+1. Verify the values in the **APP NAME**, **REGION**, **ORGANIZATION**, and **SPACE** fields. You can accept the default values or modify them.
 
-* This performs two actions:
-  - Creates the app
-  - Creates a Conversation service instance that the user needs for workspace creation
+   ![](readme_images/deploy.PNG)
 
-* The status of the deployment is shown. This can take some time.
+1. Click **DEPLOY**. This performs two actions:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](readme_images/createproject.PNG)
+  - Deploys the application from GitHub to Bluemix
+  - Creates an instance of the Conversation service to be used by the application
 
-4 Once your app has deployed, select VIEW YOUR APP.
+  The Bluemix interface shows you the progress of the deployment process, which can take several minutes.
+
+  ![](readme_images/createproject.PNG)
+
+1. Once your app has deployed, select VIEW YOUR APP.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](readme_images/viewyourapp.PNG)
 
