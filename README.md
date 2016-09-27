@@ -37,16 +37,17 @@ There are two ways you can deploy the application:
 **Note:** Regardless of which method you choose, you must have a Bluemix account and run some steps using the Bluemix web interface.
 
 <a name="bluemix">
-# Deploying on Bluemix
-</a>
-
-![](readme_images/Deploy on Bluemix - simple app.png)
 
 ## Before you begin
 
 Make sure that you have a Bluemix account, and that your account has available space for at least 1 application and 1 service. To register for a Bluemix account, go to https://console.ng.bluemix.net/registration/. Your Bluemix console shows your available space:
 
 ![Screen capture of console showing Services](readme_images/services.png)
+
+# Deploying on Bluemix
+</a>
+
+![](readme_images/Deploy on Bluemix - simple app.png)
 
 ## Deploy the App
 1 Select Deploy to Bluemix.
@@ -125,9 +126,6 @@ To build the application:
 # Deploying locally
 </a>
 
-## Before you begin
-
-1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/). While you can do part of this deployment locally, you must still use Bluemix.
 
 <a name="returnlocal">
 2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
