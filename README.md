@@ -26,7 +26,7 @@ Example commands that can be executed by the Conversation service are:
 If you type `Wipers on` or `I want to turn on the windshield wipers`, the system
 understands that in both cases your intent is the same and responds accordingly.
 
-## Deploying the application
+# Deploying the application
 
 There are two ways you can deploy the application:
 
@@ -44,12 +44,12 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 ![Screen capture of console showing Services](readme_images/services.png)
 
-# Deploying on Bluemix
+## Deploying on Bluemix
 </a>
 
 ![](readme_images/Deploy on Bluemix - simple app.png)
 
-## Deploy the App
+### Deploy the App
 1 Select Deploy to Bluemix.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
@@ -78,7 +78,7 @@ Make sure that you have a Bluemix account, and that your account has available s
 6 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
 
 <a name="usingCloudfoundry">
-## Using Cloudfoundry CLI tool to deploy your application
+### Using Cloudfoundry CLI tool to deploy your application
 </a>
 
 To build the application:
@@ -123,7 +123,7 @@ To build the application:
  The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
 
 <a name="local">
-# Deploying locally
+## Deploying locally
 </a>
 
 
@@ -134,7 +134,7 @@ To build the application:
 - <b>Return to these steps</b>
 </a>
 
-## Running locally
+### Running locally
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
 
@@ -159,7 +159,7 @@ To build the application:
 _Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, go to [this section](#usingCloudfoundry)_
 
 <a name="credentials">
-# Service Credentials
+### Service Credentials
 </a>
 
 1 Go to the Bluemix Dashboard and select the Conversation service instance. Once there, select the **Service Credentials** menu item.
@@ -172,7 +172,7 @@ _Note: If you are interested in deploying you local application or the changes y
 
 
 <a name="workspace">
-# Import a workspace
+### Import a workspace
 </a>
 
 To use the app you're creating, you need to add a worksapce to your Conversation service. A workspace is a container for all the artifacts that define the behavior of your service (ie: intents, entities and chat flows). For this sample app, a workspace is provided.
@@ -202,7 +202,7 @@ In the Details UI, copy the 36 character UNID **ID** field. This is the **Worksp
 - For Bluemix - [return to step 5](#returnbluemix)
 
 <a name="env">
-# Adding environment variables in Bluemix
+### Adding environment variables in Bluemix
 </a>
 
 1 In Bluemix, open the application from the Dashboard. Select **Environment Variables**.
