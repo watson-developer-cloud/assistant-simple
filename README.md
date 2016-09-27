@@ -43,13 +43,10 @@ There are two ways you can deploy the application:
 ![](readme_images/Deploy on Bluemix - simple app.png)
 
 ## Before you begin
-1 Ensure that you have a [Bluemix account](https://console.ng.bluemix.net/registration/).
 
-2 Ensure that you have the necessary space available in your Bluemix account. This action deploys 1 application and 1 service.
-   * You can view this on your Bluemix Dashboard. Tiles will show what space you have available.
-   * For example, for Services & APIS
+Make sure that you have a Bluemix account, and that your account has available space for at least 1 application and 1 service. To register for a Bluemix account, go to https://console.ng.bluemix.net/registration/. Your Bluemix console shows your available space:
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](readme_images/services.PNG)
+![Screen capture of console showing Services](readme_images/services.png)
 
 ## Deploy the App
 1 Select Deploy to Bluemix.
