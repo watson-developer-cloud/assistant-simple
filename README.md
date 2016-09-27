@@ -2,20 +2,15 @@
 [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
 [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
-This application demonstrates how the Conversation service uses intent capabilities in a simple chat interface.
+This Node.js application demonstrates how the Conversation service uses intent capabilities in a simple chat interface.
 
-[See the app demo](http://conversation-simple.mybluemix.net/).
+[See the application demo](http://conversation-simple.mybluemix.net/).
 
 For more information about Conversation, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/overview.shtml).
 
-
-<b>Either way you deploy this app, you must have a Bluemix account and run some steps within Bluemix.</b>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="readme_images/bluemix.png" width="200"/>](#bluemix)     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<img src="readme_images/local.png" width="200"/>](#local)
-
-## How the app works
-The app interface is designed and trained for chatting with a cognitive car. The chat interface is on the left, and the
-JSON that the JavaScript code receives from the server is on the right. Your questions and commands are run against a small set of sample data trained with intents like these:
+## How the application works
+The application interface is designed and trained for chatting with a cognitive car. The chat interface is on the left, and the
+JSON that the JavaScript code receives from the server is on the right. Your questions and commands are interpreted using a small set of sample data trained with intents like these:
 
     turn_on
     weather
@@ -28,11 +23,21 @@ Example commands that can be executed by the Conversation service are:
     turn on windshield wipers
     play music
 
-If you say *"Wipers on"* or *"I want to turn on the windshield wipers"*, the system
+If you type `Wipers on` or `I want to turn on the windshield wipers`, the system
 understands that in both cases your intent is the same and responds accordingly.
 
+## Deploying the application
+
+There are two ways you can deploy the application:
+
+ * [**Deploying on Bluemix.**](#bluemix) You can use the IBM Bluemix web interface to set up the Conversation service and deploy the application in the IBM cloud. No software prerequisites are required; both the Conversation service and the demo application run in the Bluemix environment. Use this method if you want to get your instance of the application up and running quickly. You can subsequently make changes to the application using the Bluemix web interface.
+
+ * [**Deploying locally.**](#local) You can use command-line tools to set up the Conversation service in the IBM cloud and then deploy the application in a local runtime environment. To use this method, you must have Node.js and Cloud Foundry installed locally. Use this method if you want to host the application on your system, or if you want to modify the application locally before deploying it to the Bluemix cloud.
+
+**Note:** Regardless of which method you choose, you must have a Bluemix account and run some steps using the Bluemix web interface.
+
 <a name="bluemix">
-# Getting Started using Bluemix
+# Deploying on Bluemix
 </a>
 
 ![](readme_images/Deploy on Bluemix - simple app.png)
@@ -120,7 +125,7 @@ To build the application:
  The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
 
 <a name="local">
-# Getting Started locally
+# Deploying locally
 </a>
 
 ## Before you begin
