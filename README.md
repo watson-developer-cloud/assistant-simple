@@ -33,19 +33,18 @@ There are two ways you can deploy the application:
  * [**Deploying on Bluemix.**](#bluemix) You can use the IBM Bluemix web interface to set up the Conversation service and deploy the application in the IBM cloud. No software prerequisites are required; both the Conversation service and the demo application run in the Bluemix environment. Use this method if you want to get your instance of the application up and running quickly. You can subsequently make changes to the application using the Bluemix web interface.
 
  * [**Deploying locally.**](#local) You can use command-line tools to set up the Conversation service in the IBM cloud and then deploy the application in a local runtime environment. To use this method, you must have Node.js and Cloud Foundry installed locally. Use this method if you want to host the application on your system, or if you want to modify the application locally before deploying it to the Bluemix cloud.
+ 
+  **Note:** Even if you are deploying locally, some steps currently require using the Bluemix web interface.
 
-**Note:** Regardless of which method you choose, you must have a Bluemix account and run some steps using the Bluemix web interface.
-
-<a name="bluemix">
-
-## Before you begin
-
-Make sure that you have a Bluemix account, and that your account has available space for at least 1 application and 1 service. To register for a Bluemix account, go to https://console.ng.bluemix.net/registration/. Your Bluemix console shows your available space:
+Regardless of which method you choose, you must have a Bluemix account, and your account must have available space for at least 1 application and 1 service. To register for a Bluemix account, go to https://console.ng.bluemix.net/registration/. Your Bluemix console shows your available space:
 
 ![Screen capture of console showing Services](readme_images/services.png)
 
+<a name="bluemix">
 ## Deploying on Bluemix
 </a>
+
+This procedure deploys the application code in the IBM cloud using the Bluemix web interface.
 
 ![Overview diagram of deploying on Bluemix](readme_images/Deploy on Bluemix - simple app.png)
 
@@ -126,9 +125,73 @@ The application is now deployed and fully functional. Click **View App** or go t
 
 ## Deploying locally
 
-  The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
+This procedure deploys the application code on your system and configures it to access Watson services in the IBM cloud.
 
-1 Copy the credentials from your `conversation-service` service in Bluemix to a `.env` file in the root.
+**Note:** To deploy the application locally, you must have the following prerequisites installed:
+
+* the [Node.js](http://nodejs.org/) runtime (including the npm package manager)
+* the [Cloud Foundry command-line client](https://github.com/cloudfoundry/cli#downloads)
+
+## Getting the files
+
+1. Download the application code to your computer. You can do this in either of the following ways:
+
+   * [Download the .zip file](https://github.com/watson-developer-cloud/conversation-simple/archive/master.zip) of the GitHub repository and extract the files to a local directory
+   
+   * Use GitHub to clone the repository locally
+   
+1. At the command line, go to the local project directory (`conversation-simple`).
+
+## Setting up the service
+
+1. Use the `cf login` command to log in to your Bluemix account.
+
+1. Create an instance of the Conversation service in the IBM cloud:
+
+   `cf create-service Conversation <service_plan> <service_instance>`
+   
+   For example:
+   
+   `cf create-service Conversation free conversation-simple-demo-test1`
+
+1. Create a service key:
+
+   `cf create-service-key <service_instance> <service_key>`   
+   
+   For example:
+
+   `cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1`
+
+## Setting up the application
+
+1. Copy the `.env.example` file to a new `.env` file.
+
+1. Retrieve the credentials from the service key:
+
+   `cf service-key <service_instance> <service_key>`
+   
+   For example:
+
+   `cf service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1`
+
+   The output from this command is a JSON object.
+   
+1. In the JSON output, find the values for the `password` and `username` keys:
+
+   ```javascript
+   {
+     "password": "87iT7aqpvU7l",
+     "url": "https://gateway.watsonplatform.net/conversation/api",
+     "username": "ca2905e6-7b5d-4408-9192-e4d54d83e604"
+   }
+   ```
+   
+   Paste these values (not including the quotation marks) into the `CONVERSATION_PASSWORD` and `CONVERSATION_USERNAME` variables in the `.env` file:
+   
+   ```
+   CONVERSATION_USERNAME=ca2905e6-7b5d-4408-9192-e4d54d83e604
+   CONVERSATION_PASSWORD=87iT7aqpvU7l
+   ```
 
 2 Use the Conversation tooling app to [import a workspace](#workspace) and add the workspace ID environment variable to the `.env` file. For details about obtaining the workspace ID, see Step 5 in the workspace section.
 
