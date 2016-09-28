@@ -121,7 +121,7 @@ This procedure deploys the application code in the IBM cloud using the Bluemix w
 
 1. Click the ![Restart](readme_images/restart_icon.png) icon at the top of the page to restart the application.
 
-The application is now deployed and fully functional. Click **View App** or go to the application route URL to try it out.
+The application is now deployed in Bluemix and ready to use. Click **View App** or go to the application route URL to try it out.
 
 ## Deploying locally
 
@@ -164,7 +164,7 @@ This procedure deploys the application code on your system and configures it to 
 
 ## Setting up the application
 
-1. Copy the `.env.example` file to a new `.env` file.
+1. Copy the `.env.example` file to a new `.env` file. Open this file in a text editor.
 
 1. Retrieve the credentials from the service key:
 
@@ -193,21 +193,51 @@ This procedure deploys the application code on your system and configures it to 
    CONVERSATION_PASSWORD=87iT7aqpvU7l
    ```
 
-2 Use the Conversation tooling app to [import a workspace](#workspace) and add the workspace ID environment variable to the `.env` file. For details about obtaining the workspace ID, see Step 5 in the workspace section.
+### Import the workspace
 
-3 Install [Node.js](http://nodejs.org/).
+1. In your browser, navigate to your Bluemix console.
 
-4 Open the terminal, go to the project folder, and run this command:
-    ```
-    npm install
-    ```
+1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
 
-5  Start the application by running this command:
-    ```
-    npm start
-    ```
+   ![Screen capture of Services list](readme_images/conversation_service.png)
 
-6 Open `http://localhost:3000` in a browser.
+   The Service Details page opens.
+
+1. Click **Launch tool**. 
+
+   ![Launch tool button](readme_images/launch_tool_button.png)
+
+   The Conversation service tool opens.
+
+1. Click **Import**. When prompted, specify the location of the workspace JSON file in your local copy of the application project:
+
+   `<project_root>/training/car_workspace.json`
+
+1. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
+
+### Configure the workspace ID
+
+1. Click the menu icon in the upper right corner of the workspace tile, and then select **View details**.
+
+   ![Screen capture of workspace tile menu](readme_images/workspace_details.png)
+   
+   The tile shows the workspace details.
+   
+1. Click the ![Copy](readme_images/copy_icon.png) icon to copy the workspace ID to the clipboard.
+
+1. On the local system, paste the workspace ID into the WORKSPACE_ID variable in the `.env` file. Save and close the file.
+
+1. Install the demo application package into the local Node.js runtime environment:
+   
+   `npm install`
+
+1. Start the application:
+
+    `npm start`
+
+The application is now deployed on the local system and ready to use. Go to `http://localhost:3000` in your browser to try it out.
+
+### Optional: deploying from the local system to Bluemix
 
 _Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, go to [this section](#usingCloudfoundry)_
 
