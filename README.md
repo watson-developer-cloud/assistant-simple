@@ -51,7 +51,9 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 ### Deploy the application and create the service
 
-1. Click here to deploy the application directly from GitHub to Bluemix: [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
+1. Click here to deploy the application directly from GitHub to Bluemix:
+
+   [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
 
 1. When prompted, log in with an existing Bluemix account or sign up for a new account.
 
@@ -82,7 +84,7 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 1. Click **Launch tool**. 
 
-   ![Launch tool button](readme_images/launch_tool.png)
+   ![Launch tool button](readme_images/launch_tool_button.png)
 
    The Conversation service tool opens.
 
@@ -92,7 +94,31 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 ### Configure the workspace ID
 
-6 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
+1. Click the menu icon in the upper right corner of the workspace tile, and then select **View details**.
+
+   ![Screen capture of workspace tile menu](readme_images/workspace_details.png)
+   
+   The tile shows the workspace details.
+   
+1. Click the ![Copy](readme_images/copy_icon.png) icon to copy the workspace ID to the clipboard.
+
+1. Close the Conversation tool and return to your Bluemix console.
+
+1. From the **All Items** tab, click the demo application in the **Cloud Foundry Applications** list.
+
+   ![Screen capture of Applications list](readme_images/application_list.png)
+
+   The Application Details page opens.
+
+1. On the **Runtime** tab, click **Environment Variables**.
+
+1. In the **User Defined** section, click **Add**.
+
+1. In the **Name** field, type `WORKSPACE_ID`.
+
+1. In the **Value** field, paste the workspace ID from the clipboard.
+
+1. Click **Save**.
 
 <a name="usingCloudfoundry">
 ### Using Cloudfoundry CLI tool to deploy your application
