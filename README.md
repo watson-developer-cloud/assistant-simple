@@ -132,7 +132,7 @@ This procedure deploys the application code on your system and configures it to 
 * the [Node.js](http://nodejs.org/) runtime (including the npm package manager)
 * the [Cloud Foundry command-line client](https://github.com/cloudfoundry/cli#downloads)
 
-## Getting the files
+### Getting the files
 
 1. Download the application code to your computer. You can do this in either of the following ways:
 
@@ -142,7 +142,7 @@ This procedure deploys the application code on your system and configures it to 
    
 1. At the command line, go to the local project directory (`conversation-simple`).
 
-## Setting up the service
+### Setting up the service
 
 1. Use the `cf login` command to log in to your Bluemix account.
 
@@ -162,7 +162,7 @@ This procedure deploys the application code on your system and configures it to 
 
    `cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1`
 
-## Setting up the application
+### Setting up the application
 
 1. Copy the `.env.example` file to a new `.env` file. Open this file in a text editor.
 
@@ -240,19 +240,6 @@ The application is now deployed on the local system and ready to use. Go to `htt
 ### Optional: deploying from the local system to Bluemix
 
 _Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, go to [this section](#usingCloudfoundry)_
-
-<a name="credentials">
-### Service Credentials
-</a>
-
-1 Go to the Bluemix Dashboard and select the Conversation service instance. Once there, select the **Service Credentials** menu item.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](readme_images/credentials.PNG)
-
-2 Select **ADD CREDENTIALS**. Name your credentials then select **ADD**.
-
-3 Copy the credentials (or remember this location) for later use.
-
 
 <a name="workspace">
 ### Import a workspace
