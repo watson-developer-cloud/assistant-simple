@@ -239,58 +239,6 @@ The application is now deployed on the local system and ready to use. Go to `htt
 
 ### Optional: deploying from the local system to Bluemix
 
-_Note: If you are interested in deploying you local application or the changes you have made locally to Bluemix, go to [this section](#usingCloudfoundry)_
-
-<a name="workspace">
-### Import a workspace
-</a>
-
-To use the app you're creating, you need to add a worksapce to your Conversation service. A workspace is a container for all the artifacts that define the behavior of your service (ie: intents, entities and chat flows). For this sample app, a workspace is provided.
-
-For more information on workspaces, see the full  [Conversation service  documentation](https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/conversation/overview.shtml).
-
-1 Navigate to the Bluemix dashboard, select the Conversation service that you created.
-
-2 Go to the **Manage** menu item and select **Launch Tool**. This opens a new tab in your browser, where you are prompted to login if you have not done so before. Use your Bluemix credentials.
-
-3 If you are deploying through Bluemix, download the [exported JSON file](https://raw.githubusercontent.com/watson-developer-cloud/conversation-simple/master/training/car_workspace.json) that contains the Workspace contents. If deploying locally,  this was cloned and is in the training folder (training/car_workspace.json).
-
-4 Select the import icon: ![](readme_images/importGA.PNG). Browse to (or drag and drop) the JSON file. Choose to import **Everything(Intents, Entities, and Dialog)**. Then select **Import** to finish importing the workspace.
-
-5 Refresh your browser. A new workspace tile is created within the tooling. Select the _menu_ button within the workspace tile, then select **View details**:
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Workpsace Details](readme_images/details.PNG)
-
-<a name="workspaceID">
-In the Details UI, copy the 36 character UNID **ID** field. This is the **Workspace ID**.
-</a>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![](readme_images/workspaceid.PNG)
-
-6 Return to the deploy steps that you were following:
-- For Local - [return to step 2](#returnlocal)
-- For Bluemix - [return to step 5](#returnbluemix)
-
-<a name="env">
-### Adding environment variables in Bluemix
-</a>
-
-1 In Bluemix, open the application from the Dashboard. Select **Environment Variables**.
-
-2 Select **USER-DEFINED**.
-
-3 Select **ADD**.
-
-4 Add a variable with the name **WORKSPACE_ID**. For the value, paste in the Workspace ID you [copied earlier](#workspaceID). Select **SAVE**.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](readme_images/env.PNG)
-
-5 Restart your application.
-
-<a name="usingCloudfoundry">
-### Using Cloudfoundry CLI tool to deploy your application
-</a>
-
 To build the application:
 
 1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
@@ -331,18 +279,6 @@ To build the application:
 
  ```
  The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
-
-<a name="local">
-## Deploying locally
-</a>
-
-
-<a name="returnlocal">
-2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
-- [Import a workspace](#workspace)
-- Copy the [Service Credentials](#credentials) for later use.
-- <b>Return to these steps</b>
-</a>
 
 # Troubleshooting in Bluemix
 
