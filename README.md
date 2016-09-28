@@ -144,7 +144,7 @@ This procedure deploys the application code on your system and configures it to 
 
 ### Setting up the service
 
-1. Make sure you have logged in to your Bluemix account using Cloud Foundry. For more information, see <a href="https://www.ibm.com/watson/developercloud/doc/getting_started/gs-cf.shtml" target="_blank">https://www.ibm.com/watson/developercloud/doc/getting_started/gs-cf.shtml</a>.
+1. Make sure you have logged in to your Bluemix account using Cloud Foundry. For more information, see [the Watson Developer Cloud documentation](https://www.ibm.com/watson/developercloud/doc/getting_started/gs-cf.shtml).
 
 1. Create an instance of the Conversation service in the IBM cloud:
 
@@ -238,8 +238,6 @@ This procedure deploys the application code on your system and configures it to 
 The application is now deployed on the local system and ready to use. Go to `http://localhost:3000` in your browser to try it out.
 
 ### Optional: deploying from the local system to Bluemix
-
-
 
 To build the application:
 
