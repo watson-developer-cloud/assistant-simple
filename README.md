@@ -49,7 +49,7 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 ![](readme_images/Deploy on Bluemix - simple app.png)
 
-### Deploy the Application
+### Deploy the application and create the service
 
 1. Click here to deploy the application directly from GitHub to Bluemix: [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/conversation-simple)
 
@@ -61,20 +61,28 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 1. Click **DEPLOY**. This performs two actions:
 
-  - Deploys the application from GitHub to Bluemix
-  - Creates an instance of the Conversation service to be used by the application
+  - Deploying the JavaScript application code from GitHub to Bluemix
+  - Creating an instance of the Conversation service to be used by the application
 
   The Bluemix interface shows you the progress of the deployment process, which can take several minutes.
 
   ![](readme_images/createproject.PNG)
 
-1. Once your app has deployed, select VIEW YOUR APP.
+### Import the workspace
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](readme_images/viewyourapp.PNG)
+1. Download the workspace [JSON file](https://raw.githubusercontent.com/watson-developer-cloud/conversation-simple/master/training/car_workspace.json) to your computer. This file defines all of the artifacts used by the service, including intents, entities, and dialog flow.
 
-<a name="returnbluemix">
-5 Navigate to your Bluemix Dashboard and [import a workspace](#workspace). Setup your workspace then <b>return to these steps</b>.
-</a>
+1. In your browser, navigate to your Bluemix console.
+
+1. From the **All Items** tab, click the newly created Conversation service in the **Services** list. The Service Details page opens.
+
+1. Click **Launch tool**. The Conversation service tool opens.
+
+1. Click **Import**. When prompted, specify the location of the workspace JSON file you downloaded.
+
+1. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
+
+### Configure the workspace ID
 
 6 After you have set up a workspace, [add the WORKSPACE_ID environment variable](#env).
 
