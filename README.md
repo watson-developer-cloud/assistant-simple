@@ -47,7 +47,7 @@ Make sure that you have a Bluemix account, and that your account has available s
 ## Deploying on Bluemix
 </a>
 
-![](readme_images/Deploy on Bluemix - simple app.png)
+![Overview diagram of deploying on Bluemix](readme_images/Deploy on Bluemix - simple app.png)
 
 ### Deploy the application and create the service
 
@@ -57,7 +57,7 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 1. Verify the values in the **APP NAME**, **REGION**, **ORGANIZATION**, and **SPACE** fields. You can accept the default values or modify them.
 
-   ![](readme_images/deploy.PNG)
+   ![Screen capture of app deployment page](readme_images/deploy.PNG)
 
 1. Click **DEPLOY**. This performs two actions:
 
@@ -66,7 +66,7 @@ Make sure that you have a Bluemix account, and that your account has available s
 
   The Bluemix interface shows you the progress of the deployment process, which can take several minutes.
 
-  ![](readme_images/createproject.PNG)
+  ![Screen capture of deployment progress](readme_images/createproject.PNG)
 
 ### Import the workspace
 
@@ -74,9 +74,17 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 1. In your browser, navigate to your Bluemix console.
 
-1. From the **All Items** tab, click the newly created Conversation service in the **Services** list. The Service Details page opens.
+1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
 
-1. Click **Launch tool**. The Conversation service tool opens.
+   ![Screen capture of Services list](readme_images/conversation_service.png)
+
+   The Service Details page opens.
+
+1. Click **Launch tool**. 
+
+   ![Launch tool button](readme_images/launch_tool.png)
+
+   The Conversation service tool opens.
 
 1. Click **Import**. When prompted, specify the location of the workspace JSON file you downloaded.
 
