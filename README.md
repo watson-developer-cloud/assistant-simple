@@ -174,9 +174,7 @@ This procedure deploys the application code on your system and configures it to 
 
    `cf service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1`
 
-   The output from this command is a JSON object.
-   
-1. In the JSON output, find the values for the `password` and `username` keys:
+   The output from this command is a JSON object, as in this example:
 
    ```javascript
    {
@@ -185,13 +183,15 @@ This procedure deploys the application code on your system and configures it to 
      "username": "ca2905e6-7b5d-4408-9192-e4d54d83e604"
    }
    ```
-   
-   Paste these values (not including the quotation marks) into the `CONVERSATION_PASSWORD` and `CONVERSATION_USERNAME` variables in the `.env` file:
+
+1. In the JSON output, find the values for the `password` and `username` keys. Paste these values (not including the quotation marks) into the `CONVERSATION_PASSWORD` and `CONVERSATION_USERNAME` variables in the `.env` file:
    
    ```
    CONVERSATION_USERNAME=ca2905e6-7b5d-4408-9192-e4d54d83e604
    CONVERSATION_PASSWORD=87iT7aqpvU7l
    ```
+
+   Leave the `.env` file open in your text editor.
 
 ### Import the workspace
 
