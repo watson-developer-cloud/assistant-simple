@@ -120,64 +120,11 @@ Make sure that you have a Bluemix account, and that your account has available s
 
 1. Click **Save**.
 
-<a name="usingCloudfoundry">
-### Using Cloudfoundry CLI tool to deploy your application
-</a>
+1. Click the ![Restart](readme_images/restart_icon.png) icon at the top of the page to restart the application.
 
-To build the application:
+The application is now deployed and fully functional. Click **View App** or go to the application route URL to try it out.
 
-1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
-
-2 Git clone the project `https://github.com/watson-developer-cloud/conversation-simple`
-
-3 Navigate to the `conversation-simple` folder
-
-4 Connect to Bluemix in the command-line tool:
-
- For US Region
-
- ```sh
-
- $ cf api https://api.ng.bluemix.net
-
- ```
-
- ```sh
-
- $ cf login -u <your user ID>
-
- ```
-
-5 Create the Conversation service in Bluemix:
-
- ```sh
-
- $ cf create-service conversation free conversation-service
-
- ```
-
-6 Push it live:
-
- ```sh
-
- $ cf push <application-name>
-
- ```
- The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
-
-<a name="local">
 ## Deploying locally
-</a>
-
-
-<a name="returnlocal">
-2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
-- [Import a workspace](#workspace)
-- Copy the [Service Credentials](#credentials) for later use.
-- <b>Return to these steps</b>
-</a>
-
-### Running locally
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
 
@@ -260,6 +207,62 @@ In the Details UI, copy the 36 character UNID **ID** field. This is the **Worksp
 
 5 Restart your application.
 
+<a name="usingCloudfoundry">
+### Using Cloudfoundry CLI tool to deploy your application
+</a>
+
+To build the application:
+
+1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
+
+2 Git clone the project `https://github.com/watson-developer-cloud/conversation-simple`
+
+3 Navigate to the `conversation-simple` folder
+
+4 Connect to Bluemix in the command-line tool:
+
+ For US Region
+
+ ```sh
+
+ $ cf api https://api.ng.bluemix.net
+
+ ```
+
+ ```sh
+
+ $ cf login -u <your user ID>
+
+ ```
+
+5 Create the Conversation service in Bluemix:
+
+ ```sh
+
+ $ cf create-service conversation free conversation-service
+
+ ```
+
+6 Push it live:
+
+ ```sh
+
+ $ cf push <application-name>
+
+ ```
+ The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
+
+<a name="local">
+## Deploying locally
+</a>
+
+
+<a name="returnlocal">
+2 In Bluemix, [create a Conversation Service](http://www.ibm.com/watson/developercloud/doc/conversation/convo_getstart.shtml).
+- [Import a workspace](#workspace)
+- Copy the [Service Credentials](#credentials) for later use.
+- <b>Return to these steps</b>
+</a>
 
 # Troubleshooting in Bluemix
 
