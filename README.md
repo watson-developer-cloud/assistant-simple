@@ -101,7 +101,7 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
    Leave the `.env` file open in your text editor.
 
-## Import the workspace
+## Importing the workspace
 
 1. In your browser, navigate to your Bluemix console.
 
@@ -123,7 +123,7 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
 1. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
 
-## Configure the workspace ID
+## Configuring the workspace ID
 
 1. Click the menu icon in the upper right corner of the workspace tile, and then select **View details**.
 
@@ -145,7 +145,7 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
 The application is now deployed on the local system and ready to use. Go to `http://localhost:3000` in your browser to try it out.
 
-## Optional: deploying from the local system to Bluemix
+## Optional: Deploying from the local system to Bluemix
 
 To build the application:
 
@@ -197,7 +197,7 @@ This procedure deploys the application code in the IBM cloud using the Bluemix w
 
 ![Overview diagram of deploying on Bluemix](readme_images/Deploy on Bluemix - simple app.png)
 
-### Deploy the application and create the service
+### Deploying the application and creating the service
 
 1. Click here to deploy the application directly from GitHub to Bluemix:
 
@@ -218,7 +218,7 @@ This procedure deploys the application code in the IBM cloud using the Bluemix w
 
   ![Screen capture of deployment progress](readme_images/createproject.PNG)
 
-### Import the workspace
+### Importing the workspace
 
 1. Download the workspace [JSON file](https://raw.githubusercontent.com/watson-developer-cloud/conversation-simple/master/training/car_workspace.json) to your computer. This file defines all of the artifacts used by the service, including intents, entities, and dialog flow.
 
@@ -240,7 +240,7 @@ This procedure deploys the application code in the IBM cloud using the Bluemix w
 
 1. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
 
-### Configure the workspace ID
+### Configuring the workspace ID
 
 1. Click the menu icon in the upper right corner of the workspace tile, and then select **View details**.
 
