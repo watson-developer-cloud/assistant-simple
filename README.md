@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
 [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
-This Node.js application demonstrates how the Conversation service uses intent capabilities in a simple chat interface simulating a cognitive car dashboard.
+This Node.js application demonstrates the Conversation service in a simple chat interface simulating a cognitive car dashboard.
 
 To see a running instance of the application demo, [click here](http://conversation-simple.mybluemix.net/).
 
