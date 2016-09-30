@@ -28,8 +28,6 @@ understands that in both cases your intent is the same and responds accordingly.
 
 # Deploying the application
 
-![Screen capture of console showing Services](readme_images/services.png)
-
 You can use command-line tools to set up the Conversation service in the IBM cloud and then deploy the application code in a local runtime environment. To use this method, you must have Node.js and Cloud Foundry installed locally. Use this method if you want to host the application on your system, or if you want to modify the application locally before deploying it to the Bluemix cloud.
 
 ## Before you begin
@@ -50,7 +48,7 @@ You can use command-line tools to set up the Conversation service in the IBM clo
    
 1. At the command line, go to the local project directory (`conversation-simple`).
 
-## Setting up the service
+## Setting up the Conversation service
 
 1. Make sure you have logged in to your Bluemix account using Cloud Foundry. For more information, see [the Watson Developer Cloud documentation](https://www.ibm.com/watson/developercloud/doc/getting_started/gs-cf.shtml).
 
@@ -70,7 +68,29 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
    `cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1`
 
-## Setting up the application
+### Importing the Conversation workspace
+
+1. In your browser, navigate to your Bluemix console.
+
+1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
+
+   ![Screen capture of Services list](readme_images/conversation_service.png)
+
+   The Service Details page opens.
+
+1. Click **Launch tool**. 
+
+   ![Launch tool button](readme_images/launch_tool_button.png)
+
+   The Conversation service tool opens.
+
+1. Click **Import**. When prompted, specify the location of the workspace JSON file in your local copy of the application project:
+
+   `<project_root>/training/car_workspace.json`
+
+1. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
+
+## Configuring the application environmnet
 
 1. Copy the `.env.example` file to a new `.env` file. Open this file in a text editor.
 
@@ -101,29 +121,7 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
    Leave the `.env` file open in your text editor.
 
-## Importing the workspace
-
-1. In your browser, navigate to your Bluemix console.
-
-1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
-
-   ![Screen capture of Services list](readme_images/conversation_service.png)
-
-   The Service Details page opens.
-
-1. Click **Launch tool**. 
-
-   ![Launch tool button](readme_images/launch_tool_button.png)
-
-   The Conversation service tool opens.
-
-1. Click **Import**. When prompted, specify the location of the workspace JSON file in your local copy of the application project:
-
-   `<project_root>/training/car_workspace.json`
-
-1. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
-
-## Configuring the workspace ID
+1. In your Bluemix console, open the Conversation service instance where you imported the workspace.
 
 1. Click the menu icon in the upper right corner of the workspace tile, and then select **View details**.
 
@@ -143,50 +141,45 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
     `npm start`
 
-The application is now deployed on the local system and ready to use. Go to `http://localhost:3000` in your browser to try it out.
+The application is now deployed and running on the local system. Go to `http://localhost:3000` in your browser to try it out.
 
 ## Optional: Deploying from the local system to Bluemix
 
-To build the application:
+If you want to subsequently deploy your local version of the application to the Bluemix cloud, you can use Cloud Foundry to do so.
 
-1 Download and install the [Cloudfoundry CLI](https://github.com/cloudfoundry/cli) tool.
+1. In the project root directory, open the `.env` and `manifest.yml` files in a text editor.
 
-2 Git clone the project `https://github.com/watson-developer-cloud/conversation-simple`
+1. In the `applications` section of the `manifest.yml` file, change the `name` value to a unique name for your version of the demo application, as in this example:
 
-3 Navigate to the `conversation-simple` folder
+   ```YAML
+   applications:
+   - name: conversation-simple-app-test1
+   ```
 
-4 Connect to Bluemix in the command-line tool:
+1. In the `manifest.yml` file, modify the value under `services` to be the name of the Conversation service instance you are using, as in this example:
 
- For US Region
+   ```YAML
+     services:
+     - conversation-simple-demo-test1
+   ```
 
- ```sh
+   If you do not remember the service name, you can use the `cf services` command to list all services you have created.
 
- $ cf api https://api.ng.bluemix.net
+1. Copy the value of the `WORKSPACE_ID` variable in the `.env` file to the `env` section of the `manifest.yml` file, as in this example:
 
- ```
+   ```YAML
+   env:
+     NPM_CONFIG_PRODUCTION: false
+     WORKSPACE_ID: fdeab5e4-0ebe-4183-8d10-6e5557a6d842
+   ```
+   
+1. Save and close the `manifest.yml` file.
 
- ```sh
+1. Push the application to Bluemix:
 
- $ cf login -u <your user ID>
+   `cf push`
 
- ```
 
-5 Create the Conversation service in Bluemix:
-
- ```sh
-
- $ cf create-service conversation free conversation-service
-
- ```
-
-6 Push it live:
-
- ```sh
-
- $ cf push <application-name>
-
- ```
- The name you use determinates your application URL initially, such as `<application-name>.mybluemix.net`.
 
 # Troubleshooting
 
