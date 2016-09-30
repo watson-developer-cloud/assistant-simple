@@ -2,33 +2,15 @@
 [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
 [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
-This Node.js application demonstrates how the Conversation service uses intent capabilities in a simple chat interface.
+This Node.js application demonstrates how the Conversation service uses intent capabilities in a simple chat interface simulating a cognitive car dashboard.
 
 [See the application demo](http://conversation-simple.mybluemix.net/).
 
 For more information about Conversation, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/overview.shtml).
 
-## How the application works
-The application interface is designed and trained for chatting with a cognitive car. The chat interface is on the left, and the
-JSON that the JavaScript code receives from the server is on the right. Your questions and commands are interpreted using a small set of sample data trained with intents like these:
-
-    turn_on
-    weather
-    capabilities
-
-These intents help the system to understand variations of questions and commands that you might submit.
-
-Example commands that can be executed by the Conversation service are:
-
-    turn on windshield wipers
-    play music
-
-If you type `Wipers on` or `I want to turn on the windshield wipers`, the system
-understands that in both cases your intent is the same and responds accordingly.
-
 # Deploying the application
 
-You can use command-line tools to set up the Conversation service in the IBM cloud and then deploy the application code in a local runtime environment. To use this method, you must have Node.js and Cloud Foundry installed locally. Use this method if you want to host the application on your system, or if you want to modify the application locally before deploying it to the Bluemix cloud.
+If you want to experiment with modifying the application or use it as a basis for building your own application, you need to deploy it in your own environment. You can then explore the files, make changes, and see how those changes affect the running application. You can then deploy your modified version of the application to the Bluemix cloud.
 
 ## Before you begin
 
@@ -203,6 +185,39 @@ If you want to subsequently deploy your local version of the application to the 
    ```
 
 When the command finishes processing, your application is deployed and running on Bluemix. You can access it using the URL specified in the command output.
+
+# What to do next
+
+After you have the application installed and running, experiment with it to see how it responds to your input.
+
+The application interface is designed and trained for chatting with a cognitive car. The chat interface is on the left, and the
+JSON that the JavaScript code receives from the server is on the right. Your questions and commands are interpreted using a small set of sample data trained with the following intents:
+
+    turn_on
+    turn_off
+    turn_up
+    turn_down
+    traffic_update
+    locate_amenity
+    weather
+    phone
+    capabilities
+    greetings
+    goodbyes
+    
+To see details of how these intents are defined, including sample input for each intent, open the workspace in the Conversation tooling on Bluemix, and go to the **Intents** tab. (For more information about intents, see the [Conversation service documentation](http://www.ibm.com/watson/developercloud/doc/conversation/intent_ovw.shtml).)
+
+If you type a request such as `music on` or `I want to turn on the windshield wipers`, the system understands your intent and responds accordingly. You can see the details of how your input was understood by examining the JSON data in the `Watson understands` section on the right side. For example, if you type `Turn on some music`, the JSON data shows that the system understood the `turn_on` intent with a high level of confidence, along with the `appliance` entity with a value of `music`.
+
+## Modifying the application
+
+After you have the application deployed and running, you can explore the source files and make changes. Try the following:
+
+   * Modify the .js files to change the application logic.
+   
+   * Modify the .html file to change the appearance of the application page.
+   
+   * Use the Conversation tool to train the service for new intents, or to modify the dialog flow. For more information, see the [Conversation service documentation](http://www.ibm.com/watson/developercloud/doc/conversation/index.shtml).
 
 # Troubleshooting
 
