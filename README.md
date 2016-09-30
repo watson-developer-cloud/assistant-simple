@@ -4,9 +4,9 @@
 
 This Node.js application demonstrates how the Conversation service uses intent capabilities in a simple chat interface simulating a cognitive car dashboard.
 
-[See the application demo](http://conversation-simple.mybluemix.net/).
+To see a running instance of the application demo, [click here](http://conversation-simple.mybluemix.net/).
 
-For more information about Conversation, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/overview.shtml).
+For more information about the Conversation service, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/overview.shtml).
 
 # Deploying the application
 
