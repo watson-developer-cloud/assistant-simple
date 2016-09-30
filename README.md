@@ -10,7 +10,7 @@ For more information about the Conversation service, see the [detailed documenta
 
 # Deploying the application
 
-If you want to experiment with modifying the application or use it as a basis for building your own application, you need to deploy it in your own environment. You can then explore the files, make changes, and see how those changes affect the running application. You can then deploy your modified version of the application to the Bluemix cloud.
+If you want to experiment with modifying the application or use it as a basis for building your own application, you need to deploy it in your own environment. You can then explore the files, make changes, and see how those changes affect the running application. After making modifications, you can deploy your modified version of the application to the Bluemix cloud.
 
 ## Before you begin
 
@@ -68,9 +68,7 @@ If you want to experiment with modifying the application or use it as a basis fo
 
    The Service Details page opens.
 
-1. Click **Launch tool**. 
-
-   ![Launch tool button](readme_images/launch_tool_button.png)
+1. Click the **Launch tool** button. 
 
    The Conversation service tool opens.
 
