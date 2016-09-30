@@ -54,19 +54,27 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
 1. Create an instance of the Conversation service in the IBM cloud:
 
-   `cf create-service Conversation <service_plan> <service_instance>`
+   ```bash
+   cf create-service Conversation <service_plan> <service_instance>
+   ```
    
    For example:
    
-   `cf create-service Conversation free conversation-simple-demo-test1`
+   ```bash
+   cf create-service Conversation free conversation-simple-demo-test1
+   ```
 
 1. Create a service key:
 
-   `cf create-service-key <service_instance> <service_key>`   
+   ```bash
+   cf create-service-key <service_instance> <service_key>
+   ```
    
    For example:
 
-   `cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1`
+   ```bash
+   cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1
+   ```
 
 ### Importing the Conversation workspace
 
@@ -96,11 +104,15 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
 1. Retrieve the credentials from the service key:
 
-   `cf service-key <service_instance> <service_key>`
+   ```bash
+   cf service-key <service_instance> <service_key>
+   ```
    
    For example:
 
-   `cf service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1`
+   ```bash
+   cf service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1
+   ```
 
    The output from this command is a JSON object, as in this example:
 
@@ -135,11 +147,15 @@ You can use command-line tools to set up the Conversation service in the IBM clo
 
 1. Install the demo application package into the local Node.js runtime environment:
    
-   `npm install`
+   ```bash
+   npm install
+   ```
 
 1. Start the application:
 
-    `npm start`
+    ```bash
+    npm start
+    ```
 
 The application is now deployed and running on the local system. Go to `http://localhost:3000` in your browser to try it out.
 
@@ -147,45 +163,54 @@ The application is now deployed and running on the local system. Go to `http://l
 
 If you want to subsequently deploy your local version of the application to the Bluemix cloud, you can use Cloud Foundry to do so.
 
-1. In the project root directory, open the `.env` and `manifest.yml` files in a text editor.
+1. In the project root directory, open the `manifest.yml` file in a text editor.
 
-1. In the `applications` section of the `manifest.yml` file, change the `name` value to a unique name for your version of the demo application, as in this example:
+1. Specify the following values in the file:
+
+   * In the `applications` section of the `manifest.yml` file, change the `name` value to a unique name for your version of the demo application.
+   
+   * In the `services` section, specify the name of the Conversation service instance you created for the demo application. If you do not remember the service name, use the `cf services` command to list all services you have created.
+   
+   * In the `env` section, add the `WORKSPACE_ID` environment variable, specifying the value from the `.env` file.
+   
+   The following example shows a modified `manifest.yml` file:   
 
    ```YAML
+   ---
+   declared-services:
+     conversation-service:
+       label: conversation
+       plan: free
    applications:
    - name: conversation-simple-app-test1
-   ```
-
-1. In the `manifest.yml` file, modify the value under `services` to be the name of the Conversation service instance you are using, as in this example:
-
-   ```YAML
+     command: npm start
+     path: .
+     memory: 256M
+     instances: 1
      services:
      - conversation-simple-demo-test1
-   ```
-
-   If you do not remember the service name, you can use the `cf services` command to list all services you have created.
-
-1. Copy the value of the `WORKSPACE_ID` variable in the `.env` file to the `env` section of the `manifest.yml` file, as in this example:
-
-   ```YAML
-   env:
-     NPM_CONFIG_PRODUCTION: false
-     WORKSPACE_ID: fdeab5e4-0ebe-4183-8d10-6e5557a6d842
-   ```
+     env:
+       NPM_CONFIG_PRODUCTION: false
+       WORKSPACE_ID: fdeab5e4-0ebe-4183-8d10-6e5557a6d842
+    ```
    
 1. Save and close the `manifest.yml` file.
 
 1. Push the application to Bluemix:
 
-   `cf push`
+   ```bash
+   cf push
+   ```
 
-
+When the command finishes processing, your application is deployed and running on Bluemix. You can access it using the URL specified in the command output.
 
 # Troubleshooting
 
-To see the logs, run the command
+If you encounter a problem, you can check the logs for more information. To see the logs, run the `cf logs` command:
 
-`$ cf logs < application-name > --recent`
+   ```bash
+   cf logs <application-name> --recent
+   ```
 
 # License
 
@@ -195,7 +220,6 @@ To see the logs, run the command
 # Contributing
 
   See [CONTRIBUTING](CONTRIBUTING.md).
-
 
 ## Open Source @ IBM
 
