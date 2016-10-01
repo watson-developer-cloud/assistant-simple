@@ -6,7 +6,7 @@ This application demonstrates how the Conversation service uses intent capabilit
 
 [See the app demo](http://conversation-simple.mybluemix.net/).
 
-For more information about Conversation, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/overview.shtml).
+For more information about Conversation, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/).
 
 
 <b>Either way you deploy this app, you must have a Bluemix account and run some steps within Bluemix.</b>
