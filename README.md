@@ -6,7 +6,7 @@ This Node.js application demonstrates the Conversation service in a simple chat 
 
 To see a running instance of the application demo, [click here](http://conversation-simple.mybluemix.net/).
 
-For more information about the Conversation service, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/overview.shtml).
+For more information about the Conversation service, see the [detailed documentation](http://www.ibm.com/watson/developercloud/doc/conversation/).
 
 # Deploying the application
 
