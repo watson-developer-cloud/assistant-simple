@@ -16,7 +16,7 @@
     "dotenv": "^2.0.0",
     "express": "4.13.4",
     "body-parser": "1.15.1",
-    "watson-developer-cloud": "^1.12.2",
+    "watson-developer-cloud": "^2.4.6",
     "cloudant": "1.4.1",
     "express-csv": "0.6.0",
     "nano" : "*",
