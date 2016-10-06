@@ -20,7 +20,7 @@ require( 'dotenv' ).config( {silent: true} );
 
 var express = require( 'express' );  // app server
 var bodyParser = require( 'body-parser' );  // parser for post requests
-var watson = require( 'watson-developer-cloud' );  // watson sdk
+var watson = require( 'watson-developer-cloud/conversation/v1' );  // watson sdk
 
 // The following requires are needed for logging purposes
 var uuid = require( 'uuid' );
@@ -45,7 +45,7 @@ app.use( express.static( './public' ) ); // load UI from public folder
 app.use( bodyParser.json() );
 
 // Create the service wrapper
-var conversation = watson.conversation( {
+var conversation = new watson( {
   url: 'https://gateway.watsonplatform.net/conversation/api',
   username: process.env.CONVERSATION_USERNAME || '<username>',
   password: process.env.CONVERSATION_PASSWORD || '<password>',
