@@ -34,12 +34,6 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
     cf create-service Conversation free conversation-simple-demo-test1
     ```
 
-1. Create a service key in the format `cf create-service-key <service_instance> <service_key>`. For example:
-
-    ```bash
-    cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1
-    ```
-
 #### Importing the Conversation workspace
 
 1. In your browser, navigate to your Bluemix console.
@@ -57,6 +51,12 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 1. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
 
 #### Configuring the app environment
+
+1. Create a service key in the format `cf create-service-key <service_instance> <service_key>`. For example:
+
+    ```bash
+    cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1
+    ```
 
 1. Copy the `.env.example` file to a new `.env` file.
 
