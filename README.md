@@ -93,7 +93,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 1. On the local system, paste the workspace ID into the WORKSPACE_ID variable in the `.env` file. Save and close the file.
 
-### Installing and running
+### Installing and starting the app
 
 1. Install the demo app package into the local Node.js runtime environment:
 
@@ -127,7 +127,7 @@ The chat interface is on the left, and the JSON that the JavaScript code receive
     greetings
     goodbyes
     
-Type a request, such as `music on` or `I want to turn on the windshield wipers`; the system understands your intent and responds. You can see the details of how your input was understood by examining the JSON data in the `Watson understands` section on the right side.
+Type a request, such as `music on` or `I want to turn on the windshield wipers`. The system understands your intent and responds. You can see the details of how your input was understood by examining the JSON data in the `Watson understands` section on the right side.
 
 For example, if you type `Turn on some music`, the JSON data shows that the system understood the `turn_on` intent with a high level of confidence, along with the `appliance` entity with a value of `music`.
 
@@ -195,11 +195,11 @@ cf logs <application-name> --recent
   This sample code is licensed under Apache 2.0.
   Full license text is available in [LICENSE](LICENSE).
 
-### Contributing
+## Contributing
 
   See [CONTRIBUTING](CONTRIBUTING.md).
 
-### Open Source @ IBM
+## Open Source @ IBM
 
   Find more open source projects on the
   [IBM Github Page](http://ibm.github.io/).
