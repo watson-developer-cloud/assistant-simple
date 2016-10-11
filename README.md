@@ -34,7 +34,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
     cf create-service Conversation free conversation-simple-demo-test1
     ```
 
-#### Importing the Conversation workspace
+### Importing the Conversation workspace
 
 1. In your browser, navigate to your Bluemix console.
 
@@ -50,15 +50,15 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 1. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
 
-#### Configuring the app environment
+### Configuring the app environment
+
+1. Copy the `.env.example` file to a new `.env` file.
 
 1. Create a service key in the format `cf create-service-key <service_instance> <service_key>`. For example:
 
     ```bash
     cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1
     ```
-
-1. Copy the `.env.example` file to a new `.env` file.
 
 1. Retrieve the credentials from the service key using the command `cf service-key <service_instance> <service_key>`. For example:
 
@@ -93,7 +93,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 1. On the local system, paste the workspace ID into the WORKSPACE_ID variable in the `.env` file. Save and close the file.
 
-#### Installing and running
+### Installing and running
 
 1. Install the demo app package into the local Node.js runtime environment:
 
@@ -109,7 +109,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 1. Point your browser to http://localhost:3000 to try out the app.
 
-### Test the app
+## Testing the app
 
 After your app is installed and running, experiment with it to see how it responds.
 
@@ -135,7 +135,7 @@ For more information about intents, see the [Conversation service documentation]
 
 To see details of how these intents are defined, including sample input for each intent, launch the Conversation tool.
 
-### Modify the app
+## Modifying the app
 
 After you have the app deployed and running, you can explore the source files and make changes. Try the following:
 
@@ -182,7 +182,7 @@ You can use Cloud Foundry to deploy your local version of the app to Bluemix.
 
     Access your app on Bluemix at the URL specified in the command output.
 
-# Troubleshooting
+## Troubleshooting
 
 If you encounter a problem, you can check the logs for more information. To see the logs, run the `cf logs` command:
 
@@ -190,16 +190,16 @@ If you encounter a problem, you can check the logs for more information. To see 
 cf logs <application-name> --recent
 ```
 
-# License
+## License
 
   This sample code is licensed under Apache 2.0.
   Full license text is available in [LICENSE](LICENSE).
 
-# Contributing
+### Contributing
 
   See [CONTRIBUTING](CONTRIBUTING.md).
 
-## Open Source @ IBM
+### Open Source @ IBM
 
   Find more open source projects on the
   [IBM Github Page](http://ibm.github.io/).
