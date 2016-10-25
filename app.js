@@ -47,8 +47,6 @@ app.use( bodyParser.json() );
 // Create the service wrapper
 var conversation = new Watson( {
   url: 'https://gateway.watsonplatform.net/conversation/api',
-  username: process.env.CONVERSATION_USERNAME || '<username>',
-  password: process.env.CONVERSATION_PASSWORD || '<password>',
   version_date: '2016-09-20',
   version: 'v1'
 } );
