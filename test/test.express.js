@@ -16,6 +16,8 @@
 
 'use strict';
 
+require('dotenv').load({path: './test/.env'});
+
 var app = require('../app');
 var bodyParser = require('body-parser');
 var request = require('supertest');
