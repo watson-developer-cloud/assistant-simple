@@ -15,7 +15,7 @@ div {
   line-height: 1.25rem;
 }
 
-#view-change-button {
+#hide-button {
   display: inline-block;
   position: absolute;
   width: 3.125rem;
@@ -28,18 +28,18 @@ div {
   vertical-align: middle;
 }
 
-#view-change-button img {
+#hide-button img {
   display: none;
   width: 100%;
   height: 100%;
   vertical-align: middle;
 }
 
-#view-change-button:not(.full) .not-full {
+#hide-button:not(.hide) .not-hide {
   display: inline-block;
 }
 
-#view-change-button.full .full {
+#hide-button.hide .hide {
   display: inline-block;
 }
 
@@ -259,10 +259,8 @@ input:-moz-placeholder {
   min-width: 29.6875rem;
 }
 
-#payload-column.full {
-  width: 100%;
-  max-width: none;
-  min-width: initial;
+#payload-column.hide {
+  display: none;
 }
 
 #payload-column .header-text, #payload-column #payload-initial-message {
