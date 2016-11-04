@@ -126,7 +126,7 @@ The chat interface is on the left, and the JSON that the JavaScript code receive
     capabilities
     greetings
     goodbyes
-    
+
 Type a request, such as `music on` or `I want to turn on the windshield wipers`. The system understands your intent and responds. You can see the details of how your input was understood by examining the JSON data in the `Watson understands` section on the right side.
 
 For example, if you type `Turn on some music`, the JSON data shows that the system understood the `turn_on` intent with a high level of confidence, along with the `appliance` entity with a value of `music`.
@@ -142,7 +142,7 @@ After you have the app deployed and running, you can explore the source files an
 * Modify the .js files to change the app logic.
 * Modify the .html file to change the appearance of the app page.
 * Use the Conversation tool to train the service for new intents, or to modify the dialog flow. For more information, see the [Conversation service documentation][docs_landing].
-    
+
 ## Deploying to Bluemix
 
 You can use Cloud Foundry to deploy your local version of the app to Bluemix.
@@ -151,7 +151,6 @@ You can use Cloud Foundry to deploy your local version of the app to Bluemix.
 
     * In the `applications` section of the `manifest.yml` file, change the `name` value to a unique name for your version of the demo app.
     * In the `services` section, specify the name of the Conversation service instance you created for the demo app. If you do not remember the service name, use the `cf services` command to list all services you have created.
-    * In the `env` section, add `WORKSPACE_ID` and specify the value from the `.env` file.
 
     The following example shows a modified `manifest.yml` file:
 
@@ -171,7 +170,6 @@ You can use Cloud Foundry to deploy your local version of the app to Bluemix.
      - conversation-simple-demo-test1
      env:
        NPM_CONFIG_PRODUCTION: false
-       WORKSPACE_ID: fdeab5e4-0ebe-4183-8d10-6e5557a6d842
     ```
 
 1. Push the app to Bluemix:
@@ -213,4 +211,4 @@ cf logs <application-name> --recent
 [docs_landing]: (http://www.ibm.com/watson/developercloud/doc/conversation/index.shtml)
 [node_link]: (http://nodejs.org/)
 [npm_link]: (https://www.npmjs.com/)
-[sign_up]: https://apps.admin.ibmcloud.com/manage/trial/bluemix.html?cm_mmc=WatsonDeveloperCloud-_-LandingSiteGetStarted-_-x-_-CreateAnAccountOnBluemixCLI
+[sign_up]: bluemix.net/registration

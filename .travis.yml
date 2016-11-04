@@ -1,20 +1,25 @@
 language: node_js
 sudo: true
+node_js: stable
 cache:
   directories:
   - node_modules
-node_js: stable
+before_install:
+- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && openssl aes-256-cbc -K $encrypted_047d2e62ea22_key -iv $encrypted_047d2e62ea22_iv -in .env.enc -out .env -d || true'
 script:
-  - npm run lint
-  - npm run codecov
+- npm test
+env:
+  global:
+  - CF_APP=conversation-simple
+  - CF_API=https://api.ng.bluemix.net
+  - CF_ORGANIZATION=WatsonPlatformServices
+  - CF_SPACE=appgallery
+before_deploy: npm install -g cf-blue-green
 deploy:
-  provider: cloudfoundry
-  api: https://api.ng.bluemix.net
-  username: $CF_USERNAME
-  password: $CF_PASSWORD
-  name: conversation-simple
-  organization: WatsonPlatformServices
-  space: demos
+  provider: script
+  script:
+  - cf-blue-green-travis
   on:
-    repo: watson-developer-cloud/conversation-simple
     branch: release
+    repo: watson-developer-cloud/conversation-simple
+  skip_cleanup: true

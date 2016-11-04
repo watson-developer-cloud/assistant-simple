@@ -147,9 +147,7 @@ if ( cloudantUrl ) {
   // add a new API which allows us to retrieve the logs (note this is not secure)
   nano.db.get( 'car_logs', function(err) {
     if ( err ) {
-      console.error(err);
-      nano.db.create( 'car_logs', function(errCreate) {
-        console.error(errCreate);
+      nano.db.create( 'car_logs', function() {
         logs = nano.db.use( 'car_logs' );
       } );
     } else {
@@ -170,7 +168,6 @@ if ( cloudantUrl ) {
   // Endpoint which allows conversation logs to be fetched
   app.get( '/chats', auth, function(req, res) {
     logs.list( {include_docs: true, 'descending': true}, function(err, body) {
-      console.error(err);
       // download as CSV
       var csv = [];
       csv.push( ['Question', 'Intent', 'Confidence', 'Entity', 'Output', 'Time'] );
