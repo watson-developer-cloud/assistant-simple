@@ -27,7 +27,6 @@ var uuid = require( 'uuid' );
 var vcapServices = require( 'vcap_services' );
 var basicAuth = require( 'basic-auth-connect' );
 
-
 // If logging is enabled the app must also enable basic auth to secure logging
 // endpoints
 
