@@ -22,15 +22,8 @@ var express = require( 'express' );  // app server
 var bodyParser = require( 'body-parser' );  // parser for post requests
 var Watson = require( 'watson-developer-cloud/conversation/v1' );  // watson sdk
 
-// The following requires are needed for logging purposes
-var uuid = require( 'uuid' );
 var vcapServices = require( 'vcap_services' );
-var basicAuth = require( 'basic-auth-connect' );
 
-// If logging is enabled the app must also enable basic auth to secure logging
-// endpoints
-
-var logs = null;
 var app = express();
 
 // Bootstrap application settings
@@ -96,11 +89,6 @@ function updateMessage(input, response) {
   if ( !response.output ) {
     response.output = {};
   } else {
-    if ( logs ) {
-      // If the logs db is set, then we want to record all input and responses
-      id = uuid.v4();
-      logs.insert( {'_id': id, 'request': input, 'response': response, 'time': new Date()});
-    }
     return response;
   }
   if ( response.intents && response.intents[0] ) {
@@ -119,14 +107,8 @@ function updateMessage(input, response) {
     }
   }
   response.output.text = responseText;
-  if ( logs ) {
-    // If the logs db is set, then we want to record all input and responses
-    id = uuid.v4();
-    logs.insert( {'_id': id, 'request': input, 'response': response, 'time': new Date()});
-  }
+
   return response;
 }
-
-
 
 module.exports = app;
