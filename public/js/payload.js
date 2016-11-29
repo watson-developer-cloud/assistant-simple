@@ -20,7 +20,7 @@ var PayloadPanel = (function() {
   // Publicly accessible methods defined
   return {
     init: init,
-    togglePanel: togglePanel
+    hidePanel: hidePanel
   };
 
   // Initialize the module
@@ -28,18 +28,15 @@ var PayloadPanel = (function() {
     payloadUpdateSetup();
   }
 
-  // Toggle panel between being:
-  //    reduced width (default for large resolution apps)
-  //    hidden (default for small/mobile resolution apps)
-  //    full width (regardless of screen size)
-  function togglePanel(event, element) {
+  // Toggle between showing and hiding the payload column
+  function hidePanel(event, element) {
     var payloadColumn = document.querySelector(settings.selectors.payloadColumn);
-    if (element.classList.contains('full')) {
-      element.classList.remove('full');
-      payloadColumn.classList.remove('full');
+    if (element.classList.contains('hide')) {
+      element.classList.remove('hide');
+      payloadColumn.classList.remove('hide');
     } else {
-      element.classList.add('full');
-      payloadColumn.classList.add('full');
+      element.classList.add('hide');
+      payloadColumn.classList.add('hide');
     }
   }
 
