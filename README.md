@@ -2,6 +2,8 @@
 
 This Node.js app demonstrates the Conversation service in a simple chat interface simulating a cognitive car dashboard.
 
+![Demo](readme_images/demo.gif)
+
 You can view a [demo][demo_url] of this app.
 
 ## Before you begin
