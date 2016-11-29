@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * Copyright 2015 IBM Corp. All Rights Reserved.
  *
@@ -15,14 +14,20 @@
  * limitations under the License.
  */
 
-'use strict';
+var path = require('path');
+// load default variables for testing
+require('dotenv').config({ path: path.join(__dirname, '../../.env.example') });
 
-require('dotenv').config({silent: true});
+var app = require('../../app');
+var request = require('supertest');
 
-var server = require('./app');
-var port = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
+describe('express', function() {
+  it('load home page when GET /', function() {
+    request(app).get('/').expect(200);
+  });
 
-server.listen(port, function() {
-  // eslint-disable-next-line
-  console.log('Server running on port: %d', port);
+  it('404 when page not found', function() {
+    request(app).get('/foo/bar').expect(404);
+  });
+
 });
