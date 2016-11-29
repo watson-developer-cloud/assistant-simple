@@ -1,5 +1,6 @@
 node_modules/
 .idea/
 coverage
-.env
 npm-debug.log
+readme_images
+test
