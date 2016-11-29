@@ -1,5 +1,4 @@
-# Conversation Sample Application
-[![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
+# Conversation Sample Application [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple)
 [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
 This Node.js app demonstrates the Conversation service in a simple chat interface simulating a cognitive car dashboard.
@@ -31,7 +30,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 1. Create an instance of the Conversation service in Bluemix. For example:
 
     ```bash
-    cf create-service Conversation free conversation-simple-demo-test1
+    cf create-service conversation free my-conversation-service
     ```
 
 ### Importing the Conversation workspace
@@ -57,13 +56,13 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 1. Create a service key in the format `cf create-service-key <service_instance> <service_key>`. For example:
 
     ```bash
-    cf create-service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1
+    cf create-service-key my-conversation-service myKey
     ```
 
 1. Retrieve the credentials from the service key using the command `cf service-key <service_instance> <service_key>`. For example:
 
     ```bash
-    cf service-key conversation-simple-demo-test1 conversation-simple-demo-test1-key1
+    cf service-key my-conversation-service myKey
     ```
 
    The output from this command is a JSON object, as in this example:
@@ -149,58 +148,58 @@ You can use Cloud Foundry to deploy your local version of the app to Bluemix.
 
 1. In the project root directory, open the `manifest.yml` file:
 
-    * In the `applications` section of the `manifest.yml` file, change the `name` value to a unique name for your version of the demo app.
-    * In the `services` section, specify the name of the Conversation service instance you created for the demo app. If you do not remember the service name, use the `cf services` command to list all services you have created.
+  * In the `applications` section of the `manifest.yml` file, change the `name` value to a unique name for your version of the demo app.
+  * In the `services` section, specify the name of the Conversation service instance you created for the demo app. If you do not remember the service name, use the `cf services` command to list all services you have created.
 
-    The following example shows a modified `manifest.yml` file:
+  The following example shows a modified `manifest.yml` file:
 
-    ```YAML
-    ---
-    declared-services:
-     conversation-service:
-       label: conversation
-       plan: free
-    applications:
-    - name: conversation-simple-app-test1
-     command: npm start
-     path: .
-     memory: 256M
-     instances: 1
-     services:
-     - conversation-simple-demo-test1
-     env:
-       NPM_CONFIG_PRODUCTION: false
-    ```
+  ```yml
+  ---
+  declared-services:
+   conversation-service:
+     label: conversation
+     plan: free
+  applications:
+  - name: conversation-simple-app-test1
+   command: npm start
+   path: .
+   memory: 256M
+   instances: 1
+   services:
+   - my-conversation-service
+   env:
+     NPM_CONFIG_PRODUCTION: false
+  ```
 
 1. Push the app to Bluemix:
 
-    ```bash
-    cf push
-    ```
+  ```bash
+  cf push
+  ```
 
-    Access your app on Bluemix at the URL specified in the command output.
+  Access your app on Bluemix at the URL specified in the command output.
 
 ## Troubleshooting
 
 If you encounter a problem, you can check the logs for more information. To see the logs, run the `cf logs` command:
 
-```bash
+```none
 cf logs <application-name> --recent
 ```
 
 ## License
 
-  This sample code is licensed under Apache 2.0.
-  Full license text is available in [LICENSE](LICENSE).
+This sample code is licensed under Apache 2.0.
+Full license text is available in [LICENSE](LICENSE).
 
 ## Contributing
 
-  See [CONTRIBUTING](CONTRIBUTING.md).
+See [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Open Source @ IBM
 
-  Find more open source projects on the
-  [IBM Github Page](http://ibm.github.io/).
+Find more open source projects on the
+[IBM Github Page](http://ibm.github.io/).
 
 
 [cf_docs]: (https://www.ibm.com/watson/developercloud/doc/getting_started/gs-cf.shtml)

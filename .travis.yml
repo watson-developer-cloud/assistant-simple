@@ -1,13 +1,13 @@
 language: node_js
-sudo: true
-node_js: stable
+dist: trusty
+sudo: required
+node_js: 6
+script:
+- npm run test
+
 cache:
   directories:
   - node_modules
-before_install:
-- '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && openssl aes-256-cbc -K $encrypted_047d2e62ea22_key -iv $encrypted_047d2e62ea22_iv -in .env.enc -out .env -d || true'
-script:
-- npm test
 env:
   global:
   - CF_APP=conversation-simple
@@ -20,6 +20,6 @@ deploy:
   script:
   - cf-blue-green-travis
   on:
-    branch: release
+    branch: master
     repo: watson-developer-cloud/conversation-simple
   skip_cleanup: true

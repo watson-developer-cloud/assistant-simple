@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-var fs = require('fs');
-if (!fs.existsSync('.env'))
+require('dotenv').config({ silent: true });
+
+if (!process.env.WORKSPACE_ID) {
+  // eslint-disable-next-line
+  console.warn('Skipping casper tests because WORKSPACE_ID is null');
   return;
+}
 
 var spawn = require('child_process').spawn;
-
-require('dotenv').config({ silent: true });
 
 var app = require('./app');
 var port = 3000;
