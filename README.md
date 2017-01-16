@@ -11,8 +11,10 @@ You can view a [demo][demo_url] of this app.
 * Create a Bluemix account
     * [Sign up][sign_up] in Bluemix, or use an existing account. Your account must have available space for at least 1 app and 1 service.
 * Make sure that you have the following prerequisites installed:
-    * The [Node.js][node_link] runtime (including the [npm][npm_link] package manager)
+    * The [Node.js] (https://nodejs.org/#download) runtime including the [npm][npm_link] package manager (available in the version recommended for most users)
     * The [Cloud Foundry][cloud_foundry] command-line client
+
+      Note: Ensure that you Cloud Foundry version is up to date
 
 ## Installing locally
 
@@ -24,9 +26,12 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 ### Setting up the Conversation service
 
-1. At the command line, go to the local project directory (`conversation-simple`).
+1. At the command line, [go to the local project directory] (https://www.davidbaumgold.com/tutorials/command-line/#moving-around-the-computer) (`conversation-simple`).
 
 1. Connect to Bluemix with the Cloud Foundry command-line tool. For more information, see the Watson Developer Cloud [documentation][cf_docs].
+    ```bash
+    cf login
+    ```
 
 1. Create an instance of the Conversation service in Bluemix. For example:
 
@@ -36,7 +41,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 ### Importing the Conversation workspace
 
-1. In your browser, navigate to your Bluemix console.
+1. In your browser, navigate to [your Bluemix console] (https://console.ng.bluemix.net/dashboard/apps).
 
 1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
 
@@ -44,7 +49,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 1. On the Service Details page, click **Launch tool**.
 
-1. Click **Import** in the Conversation service tool. Specify the location of the workspace JSON file in your local copy of the app project:
+1. Click the **Import** icon in the Conversation service tool. Specify the location of the workspace JSON file in your local copy of the app project:
 
     `<project_root>/training/car_workspace.json`
 
@@ -52,7 +57,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 ### Configuring the app environment
 
-1. Copy the `.env.example` file to a new `.env` file.
+1. Copy the `.env.example` file to a new `.env` file. (You may need to [show hidden files] (http://www.macworld.co.uk/how-to/mac-software/how-show-hidden-files-in-mac-os-x-finder-funter-macos-sierra-3520878/).)
 
 1. Create a service key in the format `cf create-service-key <service_instance> <service_key>`. For example:
 
@@ -177,8 +182,7 @@ You can use Cloud Foundry to deploy your local version of the app to Bluemix.
   ```bash
   cf push
   ```
-
-  Access your app on Bluemix at the URL specified in the command output.
+  This will take a moment to run, but at the end a URL will be displayed. Access your app on Bluemix at the URL specified in the command output.
 
 ## Troubleshooting
 
