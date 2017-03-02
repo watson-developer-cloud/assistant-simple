@@ -34,7 +34,7 @@
     "phantomjs-prebuilt": "^2.1.13",
     "supertest": "^1.2.0"
   },
-  "engine": {
+  "engines": {
     "node": ">= 6.9.x",
     "npm": "> 3.10.x"
   }
