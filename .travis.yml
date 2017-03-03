@@ -13,7 +13,7 @@ env:
   - CF_APP=conversation-simple
   - CF_API=https://api.ng.bluemix.net
   - CF_ORGANIZATION=WatsonPlatformServices
-  - CF_SPACE=appgallery
+  - CF_SPACE=demos
 before_deploy: npm install -g cf-blue-green
 deploy:
   provider: script
