@@ -207,7 +207,7 @@ Find more open source projects on the
 [IBM Github Page](http://ibm.github.io/).
 
 
-[cf_docs]: (https://www.ibm.com/watson/developercloud/doc/getting_started/gs-cf.shtml)
+[cf_docs]: (https://www.ibm.com/watson/developercloud/doc/common/getting-started-cf.html)
 [cloud_foundry]: https://github.com/cloudfoundry/cli#downloads
 [demo_url]: http://conversation-simple.mybluemix.net/
 [doc_intents]: (http://www.ibm.com/watson/developercloud/doc/conversation/intent_ovw.shtml)
