@@ -41,7 +41,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 ### Importing the Conversation workspace
 
-1. In your browser, navigate to [your Bluemix console] (https://console.ng.bluemix.net/dashboard/services).
+1. In your browser, navigate to [your Bluemix console] (https://console.ng.bluemix.net/registration/?target=/catalog/%3fcategory=watson).
 
 1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
 
