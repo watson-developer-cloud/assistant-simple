@@ -9,7 +9,7 @@ You can view a [demo][demo_url] of this app.
 ## Before you begin
 
 * Create a Bluemix account
-    * [Sign up][sign_up] in Bluemix, or use an existing account. Your account must have available space for at least 1 app and 1 service.
+    * [Sign up](https://console.ng.bluemix.net/registration/?target=/catalog/%3fcategory=watson) in Bluemix, or use an existing account. Your account must have available space for at least 1 app and 1 service.
 * Make sure that you have the following prerequisites installed:
     * The [Node.js](https://nodejs.org/#download) runtime, including the [npm][npm_link] package manager
     * The [Cloud Foundry][cloud_foundry] command-line client
@@ -41,7 +41,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 ### Importing the Conversation workspace
 
-1. In your browser, navigate to [your Bluemix console] (https://console.ng.bluemix.net/registration/?target=/catalog/%3fcategory=watson).
+1. In your browser, navigate to [your Bluemix console] (https://console.ng.bluemix.net/dashboard/services).
 
 1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
 
