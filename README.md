@@ -26,6 +26,8 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 ### Setting up the Conversation service
 
+You can use an exisiting instance of the Conversation service. Otherwise, follow these steps.
+
 1. At the command line, go to the local project directory (`conversation-simple`).
 
 1. Connect to Bluemix with the Cloud Foundry command-line tool. For more information, see the Watson Developer Cloud [documentation][cf_docs].
