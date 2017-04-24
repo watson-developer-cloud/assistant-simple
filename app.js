@@ -87,7 +87,7 @@ function updateMessage(input, response) {
     } else if (intent.confidence >= 0.5) {
       responseText = 'I think your intent was ' + intent.intent;
     } else {
-      responseText = 'I did not understand your intent';
+      responseText = 'I did not understand your intent xxx';
     }
   }
   response.output.text = responseText;
