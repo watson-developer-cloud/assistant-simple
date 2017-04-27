@@ -59,7 +59,7 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
 
 ### Configuring the app environment
 
-1. Copy the `.env.example` file to a new `.env` file.
+1. Copy or rename the ".env.example" file to ".env" (nothing before the dot)
 
 1. Create a service key in the format `cf create-service-key <service_instance> <service_key>`. For example:
 
