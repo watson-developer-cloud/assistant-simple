@@ -32,9 +32,8 @@ var conversation = new Conversation({
   // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
   // username: '<username>',
   // password: '<password>',
-  url: 'https://gateway.watsonplatform.net/conversation/api',
-  version_date: '2016-10-21',
-  version: 'v1'
+  // url: 'https://gateway.watsonplatform.net/conversation/api',
+  version_date: Conversation.VERSION_DATE_2017_04_21
 });
 
 // Endpoint to be call from the client side
