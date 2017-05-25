@@ -2,12 +2,13 @@
 declared-services:
   my-conversation-service:
     label: conversation
-    plan: free
+    plan: Lite
 applications:
 - name: conversation-simple
   command: npm start
   path: .
   memory: 256M
+
   instances: 1
   services:
   - my-conversation-service
