@@ -38,7 +38,7 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
 1. Create an instance of the Conversation service in Bluemix. For example:
 
     ```bash
-    cf create-service conversation free my-conversation-service
+    cf create-service conversation lite my-conversation-service
     ```
 
 ### Importing the Conversation workspace
@@ -166,7 +166,7 @@ You can use Cloud Foundry to deploy your local version of the app to Bluemix.
   declared-services:
    conversation-service:
      label: conversation
-     plan: free
+     plan: lite
   applications:
   - name: conversation-simple-app-test1
    command: npm start
