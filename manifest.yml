@@ -2,7 +2,7 @@
 declared-services:
   my-conversation-service:
     label: conversation
-    plan: Lite
+    plan: free
 applications:
 - name: conversation-simple
   command: npm start
