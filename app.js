@@ -30,8 +30,8 @@ app.use(bodyParser.json());
 var conversation = new Conversation({
   // If unspecified here, the CONVERSATION_USERNAME and CONVERSATION_PASSWORD env properties will be checked
   // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
-  'username': process.env.NLU_USERNAME,
-  'password': process.env.NLU_PASSWORD,
+  //'username': process.env.CONVERSATION_USERNAME,
+  //'password': process.env.CONVERSATION_PASSWORD,
   'version_date': '2017-02-27'
 });
 
