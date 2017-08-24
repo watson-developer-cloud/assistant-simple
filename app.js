@@ -33,7 +33,7 @@ var conversation = new Conversation({
   // username: '<username>',
   // password: '<password>',
   // url: 'https://gateway.watsonplatform.net/conversation/api',
-  version_date: Conversation.VERSION_DATE_2017_04_21
+  version_date: Conversation.VERSION_DATE_2017_05_2
 });
 
 // Endpoint to be call from the client side
