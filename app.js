@@ -30,10 +30,9 @@ app.use(bodyParser.json());
 var conversation = new Conversation({
   // If unspecified here, the CONVERSATION_USERNAME and CONVERSATION_PASSWORD env properties will be checked
   // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
-  // username: '<username>',
-  // password: '<password>',
-  // url: 'https://gateway.watsonplatform.net/conversation/api',
-  version_date: Conversation.VERSION_DATE_2017_04_21
+  //'username': process.env.CONVERSATION_USERNAME,
+  //'password': process.env.CONVERSATION_PASSWORD,
+  'version_date': Conversation.VERSION_DATE_2017_04_21
 });
 
 // Endpoint to be call from the client side
