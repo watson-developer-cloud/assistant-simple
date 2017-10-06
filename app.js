@@ -32,7 +32,7 @@ var conversation = new Conversation({
   // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
   //'username': process.env.CONVERSATION_USERNAME,
   //'password': process.env.CONVERSATION_PASSWORD,
-  'version_date': Conversation.VERSION_DATE_2017_04_21
+  'version_date': '2017-05-26'
 });
 
 // Endpoint to be call from the client side
