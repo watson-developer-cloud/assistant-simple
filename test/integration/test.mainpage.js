@@ -32,7 +32,7 @@ casper.test.begin('Conversation simple Demo', 5, function suite(test) {
     casper.waitForSelector('.from-user', function () {
       test.assertExists('.message-inner', 'Message sent');
       test.assertTextExists('turn the wipers on', 'Message in bubble');
-      casper.waitForText('turn on the wipers for you');
+      casper.waitForText('Ok. Turning on the wipers.');
     });
   }
 
