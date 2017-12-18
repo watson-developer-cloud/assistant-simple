@@ -209,12 +209,12 @@ Find more open source projects on the
 [IBM Github Page](http://ibm.github.io/).
 
 
-[cf_docs]: (https://www.ibm.com/watson/developercloud/doc/common/getting-started-cf.html)
+[cf_docs]: (https://console.bluemix.net/docs/services/watson/getting-started-cf.html)
 [cloud_foundry]: https://github.com/cloudfoundry/cli#downloads
-[demo_url]: http://conversation-simple.mybluemix.net/
+[demo_url]: http://conversation-simple.ng.bluemix.net/
 [doc_intents]: (https://console.bluemix.net/docs/services/conversation/intents-entities.html#planning-your-entities)
-[docs]: http://www.ibm.com/watson/developercloud/doc/conversation/overview.shtml
-[docs_landing]: (https://console.bluemix.net/docs/services/conversation/index.html#about)
+[docs]: https://console.bluemix.net/docs/services/conversation/index.html
+[docs_landing]: (https://console.bluemix.net/docs/services/conversation/index.html)
 [node_link]: (http://nodejs.org/)
 [npm_link]: (https://www.npmjs.com/)
 [sign_up]: bluemix.net/registration
