@@ -8,8 +8,8 @@ You can view a [demo][demo_url] of this app.
 
 ## Before you begin
 
-* Create a Bluemix account
-    * [Sign up](https://console.ng.bluemix.net/registration/?target=/catalog/%3fcategory=watson) in Bluemix, or use an existing account. Your account must have available space for at least 1 app and 1 service.
+* Create an IBM Cloud account
+    * [Sign up](https://console.ng.bluemix.net/registration/?target=/catalog/%3fcategory=watson) in IBM Cloud, or use an existing account. Your account must have available space for at least 1 app and 1 service.
 * Make sure that you have the following prerequisites installed:
     * The [Node.js](https://nodejs.org/#download) runtime, including the [npm][npm_link] package manager
     * The [Cloud Foundry][cloud_foundry] command-line client
@@ -18,7 +18,7 @@ You can view a [demo][demo_url] of this app.
 
 ## Installing locally
 
-If you want to modify the app or use it as a basis for building your own app, install it locally. You can then deploy your modified version of the app to the Bluemix cloud.
+If you want to modify the app or use it as a basis for building your own app, install it locally. You can then deploy your modified version of the app to IBM Cloud.
 
 ### Getting the files
 
@@ -30,12 +30,12 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
 
 1. At the command line, go to the local project directory (`conversation-simple`).
 
-1. Connect to Bluemix with the Cloud Foundry command-line tool. For more information, see the Watson Developer Cloud [documentation][cf_docs].
+1. Connect to IBM Cloud with the Cloud Foundry command-line tool. For more information, see the Watson Developer Cloud [documentation][cf_docs].
     ```bash
     cf login
     ```
 
-1. Create an instance of the Conversation service in Bluemix. For example:
+1. Create an instance of the Conversation service in IBM Cloud. For example:
 
     ```bash
     cf create-service conversation free my-conversation-service
@@ -43,7 +43,7 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
 
 ### Importing the Conversation workspace
 
-1. In your browser, navigate to [your Bluemix console] (https://console.ng.bluemix.net/dashboard/services).
+1. In your browser, navigate to [your IBM Cloud console] (https://console.ng.bluemix.net/dashboard/services).
 
 1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
 
@@ -90,7 +90,7 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
     CONVERSATION_PASSWORD=87iT7aqpvU7l
     ```
 
-1. In your Bluemix console, open the Conversation service instance where you imported the workspace.
+1. In your IBM Cloud console, open the Conversation service instance where you imported the workspace.
 
 1. Click the menu icon in the upper-right corner of the workspace tile, and then select **View details**.
 
@@ -150,9 +150,9 @@ After you have the app deployed and running, you can explore the source files an
 * Modify the .html file to change the appearance of the app page.
 * Use the Conversation tool to train the service for new intents, or to modify the dialog flow. For more information, see the [Conversation service documentation][docs_landing].
 
-## Deploying to Bluemix
+## Deploying to IBM Cloud
 
-You can use Cloud Foundry to deploy your local version of the app to Bluemix.
+You can use Cloud Foundry to deploy your local version of the app to IBM Cloud.
 
 1. In the project root directory, open the `manifest.yml` file:
 
@@ -179,12 +179,12 @@ You can use Cloud Foundry to deploy your local version of the app to Bluemix.
      NPM_CONFIG_PRODUCTION: false
   ```
 
-1. Push the app to Bluemix:
+1. Push the app to IBM Cloud:
 
   ```bash
   cf push
   ```
-  Access your app on Bluemix at the URL specified in the command output.
+  Access your app on IBM Cloud at the URL specified in the command output.
 
 ## Troubleshooting
 
