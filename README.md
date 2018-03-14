@@ -1,6 +1,6 @@
-# Watson Assistant Sample Application [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple) [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
+# Watson Assistant (formerly Conversation) Sample Application [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple) [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
-This Node.js app demonstrates the Watson Assistant service in a simple chat interface simulating a cognitive car dashboard.
+This Node.js app demonstrates the Conversation service in a simple chat interface simulating a cognitive car dashboard.
 
 ![Demo](readme_images/demo.gif)
 
@@ -26,7 +26,7 @@ Use GitHub to clone the repository locally, or [download the .zip file](https://
 
 ### Setting up the Conversation service
 
-You can use an exisiting instance of the Watson Assistant service. Otherwise, follow these steps.
+You can use an exisiting instance of the Conversation service. Otherwise, follow these steps.
 
 1. At the command line, go to the local project directory (`conversation-simple`).
 
@@ -35,7 +35,7 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
     cf login
     ```
 
-1. Create an instance of the Watson Assistant service in IBM Cloud. For example:
+1. Create an instance of the Conversation service in IBM Cloud. For example:
 
     ```bash
     cf create-service conversation free my-watson-assistant-service
@@ -45,13 +45,13 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
 
 1. In your browser, navigate to [your IBM Cloud console] (https://console.ng.bluemix.net/dashboard/services).
 
-1. From the **All Items** tab, click the newly created Watson Assistant service in the **Services** list.
+1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
 
     ![Screen capture of Services list](readme_images/conversation_service.png)
 
 1. On the Service Details page, click **Launch tool**.
 
-1. Click the **Import workspace** icon in the Watson Assistant service tool. Specify the location of the workspace JSON file in your local copy of the app project:
+1. Click the **Import workspace** icon in the Conversation service tool. Specify the location of the workspace JSON file in your local copy of the app project:
 
     `<project_root>/training/car_workspace.json`
 
@@ -90,7 +90,7 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
     WATSON_ASSISTANT_PASSWORD=87iT7aqpvU7l
     ```
 
-1. In your IBM Cloud console, open the Watson Assistant service instance where you imported the workspace.
+1. In your IBM Cloud console, open the Conversation service instance where you imported the workspace.
 
 1. Click the menu icon in the upper-right corner of the workspace tile, and then select **View details**.
 
@@ -120,7 +120,7 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
 
 After your app is installed and running, experiment with it to see how it responds.
 
-The chat interface is on the left, and the JSON that the JavaScript code receives from the Watson Assistant service is on the right. Your questions and commands are interpreted using a small set of sample data trained with the following intents:
+The chat interface is on the left, and the JSON that the JavaScript code receives from the Conversation service is on the right. Your questions and commands are interpreted using a small set of sample data trained with the following intents:
 
     turn_on
     turn_off
@@ -148,7 +148,7 @@ After you have the app deployed and running, you can explore the source files an
 
 * Modify the .js files to change the app logic.
 * Modify the .html file to change the appearance of the app page.
-* Use the Watson Assistant tool to train the service for new intents, or to modify the dialog flow. For more information, see the [Watson Assistant service documentation][docs_landing].
+* Use the Conversation tool to train the service for new intents, or to modify the dialog flow. For more information, see the [Watson Assistant service documentation][docs_landing].
 
 ## Deploying to IBM Cloud
 
@@ -157,7 +157,7 @@ You can use Cloud Foundry to deploy your local version of the app to IBM Cloud.
 1. In the project root directory, open the `manifest.yml` file:
 
   * In the `applications` section of the `manifest.yml` file, change the `name` value to a unique name for your version of the demo app.
-  * In the `services` section, specify the name of the Watson Assistant service instance you created for the demo app. If you do not remember the service name, use the `cf services` command to list all services you have created.
+  * In the `services` section, specify the name of the Conversation service instance you created for the demo app. If you do not remember the service name, use the `cf services` command to list all services you have created.
 
   The following example shows a modified `manifest.yml` file:
 
