@@ -35,7 +35,7 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
     cf login
     ```
 
-1. Create an instance of the Watson Assistant service in IBM Cloud. For example:
+1. Create an instance of the Watson Assistant service in IBM Cloud (our CLI is being updated, for now, use the `create-service` conversation command). For example:
 
     ```bash
     cf create-service conversation free my-watson-assistant-service
