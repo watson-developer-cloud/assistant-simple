@@ -24,7 +24,7 @@ If you want to modify the app or use it as a basis for building your own app, in
 
 Use GitHub to clone the repository locally, or [download the .zip file](https://github.com/watson-developer-cloud/conversation-simple/archive/master.zip) of the repository and extract the files.
 
-### Setting up the Conversation service
+### Setting up the Watson Assistant service
 
 You can use an exisiting instance of the Conversation service. Otherwise, follow these steps.
 
