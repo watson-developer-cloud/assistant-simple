@@ -29,10 +29,10 @@ app.use(bodyParser.json());
 // Create the service wrapper
 
 var conversation = new watson.ConversationV1({
-  // If unspecified here, the CONVERSATION_USERNAME and CONVERSATION_PASSWORD env properties will be checked
+  // If unspecified here, the ASSISTANT_USERNAME and ASSISTANT_PASSWORD env properties will be checked
   // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
-  username: process.env.CONVERSATION_USERNAME || '<username>',
-  password: process.env.CONVERSATION_PASSWORD || '<password>',
+  username: process.env.ASSISTANT_USERNAME || '<username>',
+  password: process.env.ASSISTANT_PASSWORD || '<password>',
   version_date: '2018-02-16'
 });
 

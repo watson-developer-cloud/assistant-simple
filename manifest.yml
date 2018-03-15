@@ -1,15 +1,15 @@
 ---
 declared-services:
-  my-conversation-service:
+  my-watson-assistant-service:
     label: conversation
     plan: free
 applications:
-- name: conversation-simple
+- name: watson-assistant-simple
   command: npm start
   path: .
   memory: 256M
   instances: 1
   services:
-  - my-conversation-service
+  - my-watson-assistant-service
   env:
     NPM_CONFIG_PRODUCTION: false

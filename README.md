@@ -1,6 +1,6 @@
-# Conversation Sample Application [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple) [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
+# Watson Assistant (formerly Conversation) Sample Application [![Build Status](https://travis-ci.org/watson-developer-cloud/conversation-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/conversation-simple) [![codecov.io](https://codecov.io/github/watson-developer-cloud/conversation-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/conversation-simple?branch=master)
 
-This Node.js app demonstrates the Conversation service in a simple chat interface simulating a cognitive car dashboard.
+This Node.js app demonstrates the Watson Assistant service in a simple chat interface simulating a cognitive car dashboard.
 
 ![Demo](readme_images/demo.gif)
 
@@ -24,9 +24,9 @@ If you want to modify the app or use it as a basis for building your own app, in
 
 Use GitHub to clone the repository locally, or [download the .zip file](https://github.com/watson-developer-cloud/conversation-simple/archive/master.zip) of the repository and extract the files.
 
-### Setting up the Conversation service
+### Setting up the Watson Assistant service
 
-You can use an exisiting instance of the Conversation service. Otherwise, follow these steps.
+You can use an exisiting instance of the Watson Assistant service. Otherwise, follow these steps.
 
 1. At the command line, go to the local project directory (`conversation-simple`).
 
@@ -35,23 +35,23 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
     cf login
     ```
 
-1. Create an instance of the Conversation service in IBM Cloud. For example:
+1. Create an instance of the Watson Assistant service in IBM Cloud (our CLI is being updated, for now, use the `create-service` conversation command). For example:
 
     ```bash
-    cf create-service conversation free my-conversation-service
+    cf create-service conversation free my-watson-assistant-service
     ```
 
-### Importing the Conversation workspace
+### Importing the Watson Assistant workspace
 
 1. In your browser, navigate to [your IBM Cloud console] (https://console.ng.bluemix.net/dashboard/services).
 
-1. From the **All Items** tab, click the newly created Conversation service in the **Services** list.
+1. From the **All Items** tab, click the newly created Watson Assistant service in the **Services** list.
 
     ![Screen capture of Services list](readme_images/conversation_service.png)
 
 1. On the Service Details page, click **Launch tool**.
 
-1. Click the **Import workspace** icon in the Conversation service tool. Specify the location of the workspace JSON file in your local copy of the app project:
+1. Click the **Import workspace** icon in the Watson Assistant service tool. Specify the location of the workspace JSON file in your local copy of the app project:
 
     `<project_root>/training/car_workspace.json`
 
@@ -64,13 +64,13 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
 1. Create a service key in the format `cf create-service-key <service_instance> <service_key>`. For example:
 
     ```bash
-    cf create-service-key my-conversation-service myKey
+    cf create-service-key my-watson-assistant-service myKey
     ```
 
 1. Retrieve the credentials from the service key using the command `cf service-key <service_instance> <service_key>`. For example:
 
     ```bash
-    cf service-key my-conversation-service myKey
+    cf service-key my-watson-assistant-service myKey
     ```
 
    The output from this command is a JSON object, as in this example:
@@ -83,14 +83,14 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
     }
     ```
 
-1. Paste  the `password` and `username` values (without quotation marks) from the JSON into the `CONVERSATION_PASSWORD` and `CONVERSATION_USERNAME` variables in the `.env` file. For example:
+1. Paste  the `password` and `username` values (without quotation marks) from the JSON into the `ASSISTANT_PASSWORD` and `ASSISTANT_USERNAME` variables in the `.env` file. For example:
 
     ```
-    CONVERSATION_USERNAME=ca2905e6-7b5d-4408-9192-e4d54d83e604
-    CONVERSATION_PASSWORD=87iT7aqpvU7l
+    ASSISTANT_USERNAME=ca2905e6-7b5d-4408-9192-e4d54d83e604
+    ASSISTANT_PASSWORD=87iT7aqpvU7l
     ```
 
-1. In your IBM Cloud console, open the Conversation service instance where you imported the workspace.
+1. In your IBM Cloud console, open the Watson Assistant service instance where you imported the workspace.
 
 1. Click the menu icon in the upper-right corner of the workspace tile, and then select **View details**.
 
@@ -120,7 +120,7 @@ You can use an exisiting instance of the Conversation service. Otherwise, follow
 
 After your app is installed and running, experiment with it to see how it responds.
 
-The chat interface is on the left, and the JSON that the JavaScript code receives from the Conversation service is on the right. Your questions and commands are interpreted using a small set of sample data trained with the following intents:
+The chat interface is on the left, and the JSON that the JavaScript code receives from the Watson Assistant service is on the right. Your questions and commands are interpreted using a small set of sample data trained with the following intents:
 
     turn_on
     turn_off
@@ -138,9 +138,9 @@ Type a request, such as `music on` or `I want to turn on the windshield wipers`.
 
 For example, if you type `Turn on some music`, the JSON data shows that the system understood the `turn_on` intent with a high level of confidence, along with the `appliance` entity with a value of `music`.
 
-For more information about intents, see the [Conversation service documentation][doc_intents].
+For more information about intents, see the [Watson Assistant service documentation][doc_intents].
 
-To see details of how these intents are defined, including sample input for each intent, launch the Conversation tool.
+To see details of how these intents are defined, including sample input for each intent, launch the Watson Assistant tool.
 
 ## Modifying the app
 
@@ -148,7 +148,7 @@ After you have the app deployed and running, you can explore the source files an
 
 * Modify the .js files to change the app logic.
 * Modify the .html file to change the appearance of the app page.
-* Use the Conversation tool to train the service for new intents, or to modify the dialog flow. For more information, see the [Conversation service documentation][docs_landing].
+* Use the Watson Assistant tool to train the service for new intents, or to modify the dialog flow. For more information, see the [Watson Assistant service documentation][docs_landing].
 
 ## Deploying to IBM Cloud
 
@@ -157,14 +157,14 @@ You can use Cloud Foundry to deploy your local version of the app to IBM Cloud.
 1. In the project root directory, open the `manifest.yml` file:
 
   * In the `applications` section of the `manifest.yml` file, change the `name` value to a unique name for your version of the demo app.
-  * In the `services` section, specify the name of the Conversation service instance you created for the demo app. If you do not remember the service name, use the `cf services` command to list all services you have created.
+  * In the `services` section, specify the name of the Watson Assistant service instance you created for the demo app. If you do not remember the service name, use the `cf services` command to list all services you have created.
 
   The following example shows a modified `manifest.yml` file:
 
   ```yml
   ---
   declared-services:
-   conversation-service:
+   my-watson-assistant-service:
      label: conversation
      plan: free
   applications:
@@ -174,7 +174,7 @@ You can use Cloud Foundry to deploy your local version of the app to IBM Cloud.
    memory: 256M
    instances: 1
    services:
-   - my-conversation-service
+   - my-watson-assistant-service
    env:
      NPM_CONFIG_PRODUCTION: false
   ```
