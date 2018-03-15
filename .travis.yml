@@ -10,7 +10,7 @@ cache:
   - node_modules
 env:
   global:
-  - CF_APP=conversation-simple
+  - CF_APP=watson-assistant-simple
   - CF_API=https://api.ng.bluemix.net
   - CF_ORGANIZATION=WatsonPlatformServices
   - CF_SPACE=demos
@@ -21,5 +21,5 @@ deploy:
   - cf-blue-green-travis
   on:
     branch: master
-    repo: watson-developer-cloud/conversation-simple
+    repo: watson-developer-cloud/assistant-simple
   skip_cleanup: true
