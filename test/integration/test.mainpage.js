@@ -15,7 +15,7 @@
  */
 /* eslint no-undef: 0 */
 
-casper.test.begin('Conversation simple Demo', 5, function suite(test) {
+casper.test.begin('Watson Assistant simple Demo', 5, function suite(test) {
   var baseHost = 'http://localhost:3000';
 
   function testWelcomeMessageExists() {
