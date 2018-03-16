@@ -38,7 +38,7 @@ casper.test.begin('Conversation simple Demo', 5, function suite(test) {
 
   casper.start(baseHost, function () {
     casper.test.comment('Starting Testing');
-    test.assertHttpStatus(200, 'conversation-simple is up');
+    test.assertHttpStatus(200, 'assistant-simple is up');
     test.assertTitle('Conversation Chat App', 'Title is correct');
 
     testWelcomeMessageExists();
