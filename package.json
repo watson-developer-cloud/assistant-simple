@@ -1,5 +1,5 @@
 {
-  "name": "conversation-simple",
+  "name": "assistant-simple",
   "description": "A simple Node.js based web app which shows how to use the Conversation API to recognize user intents.",
   "version": "0.1.1",
   "main": "server.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/watson-developer-cloud/conversation-simple.git"
+    "url": "https://github.com/watson-developer-cloud/assistant-simple.git"
   },
   "license": "Apache-2.0",
   "dependencies": {
