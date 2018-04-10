@@ -5,3 +5,4 @@ temp/
 coverage
 .env
 npm-debug.log
+.jshintrc
