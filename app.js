@@ -28,12 +28,12 @@ app.use(bodyParser.json());
 
 // Create the service wrapper
 
-var conversation = new watson.ConversationV1({
+var assistant = new watson.AssistantV1({
   // If unspecified here, the ASSISTANT_USERNAME and ASSISTANT_PASSWORD env properties will be checked
   // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
   username: process.env.ASSISTANT_USERNAME || '<username>',
   password: process.env.ASSISTANT_PASSWORD || '<password>',
-  version_date: '2018-02-16'
+  version: '2018-02-16'
 });
 
 // Endpoint to be call from the client side
@@ -52,8 +52,8 @@ app.post('/api/message', function(req, res) {
     input: req.body.input || {}
   };
 
-  // Send the input to the conversation service
-  conversation.message(payload, function(err, data) {
+  // Send the input to the assistant service
+  assistant.message(payload, function(err, data) {
     if (err) {
       return res.status(err.code || 500).json(err);
     }
@@ -63,8 +63,8 @@ app.post('/api/message', function(req, res) {
 
 /**
  * Updates the response text using the intent confidence
- * @param  {Object} input The request to the Conversation service
- * @param  {Object} response The response from the Conversation service
+ * @param  {Object} input The request to the Assistant service
+ * @param  {Object} response The response from the Assistant service
  * @return {Object}          The response with the updated message
  */
 function updateMessage(input, response) {
