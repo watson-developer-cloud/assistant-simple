@@ -22,13 +22,13 @@ If you want to modify the app or use it as a basis for building your own app, in
 
 ### Getting the files
 
-Use GitHub to clone the repository locally, or [download the .zip file](https://github.com/watson-developer-cloud/conversation-simple/archive/master.zip) of the repository and extract the files.
+Use GitHub to clone the repository locally, or [download the .zip file](https://github.com/watson-developer-cloud/assistant-simple/archive/master.zip) of the repository and extract the files.
 
 ### Setting up the Watson Assistant service
 
 You can use an exisiting instance of the Watson Assistant service. Otherwise, follow these steps.
 
-1. At the command line, go to the local project directory (`conversation-simple`).
+1. At the command line, go to the local project directory (`assistant-simple`).
 
 1. Connect to IBM Cloud with the Cloud Foundry command-line tool. For more information, see the Watson Developer Cloud [documentation][cf_docs].
     ```bash
