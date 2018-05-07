@@ -15,6 +15,10 @@ div {
   line-height: 1.25rem;
 }
 
+.disclaimer-message .base-h6 {
+  padding: 5px;
+}
+
 #view-change-button {
   display: inline-block;
   position: absolute;

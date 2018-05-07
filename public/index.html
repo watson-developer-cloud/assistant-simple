@@ -1,4 +1,5 @@
 <html>
+
 <head>
   <base href="/">
   <title>Watson Assistant Chat App</title>
@@ -6,23 +7,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta property="og:image" content="conversation.svg" />
   <meta property="og:title" content="Conversation Chat Simple" />
-  <meta property="og:description" content="Sample application that shows how to use the Watson Assistant API to identify user intents" />
+  <meta property="og:description" content="Sample application that shows how to use the Watson Assistant API to identify user intents"
+  />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
   <div id="view-change-button" class="button" onclick="PayloadPanel.togglePanel(event, this)">
     <img class="option full" src="../img/Chat Button.png">
     <img class="option not-full" src="../img/Code Button.png">
   </div>
   <div id="contentParent" class="responsive-columns-wrapper">
+
     <div id="chat-column-holder" class="responsive-column content-column">
       <div class="chat-column">
         <div id="scrollingChat"></div>
         <label for="textInput" class="inputOutline">
-          <input id="textInput" class="input responsive-column"
-            placeholder="Type something" type="text"
-            onkeydown="ConversationPanel.inputKeyDown(event, this)">
+          <input id="textInput" class="input responsive-column" placeholder="Type something" type="text" onkeydown="ConversationPanel.inputKeyDown(event, this)">
         </label>
       </div>
     </div>
@@ -35,10 +37,19 @@
     </div>
   </div>
 
+  <div class="disclaimer-message">
+    <h6 class="base-h6">
+      * This system is for demonstration purposes only and is not intended to process Personal Data. No Personal Data is to be entered
+      into this system as it may not have the necessary controls in place to meet the requirements of the General Data Protection
+      Regulation (EU) 2016/679.
+    </h6>
+  </div>
+
   <script src="js/common.js"></script>
   <script src="js/api.js"></script>
   <script src="js/conversation.js"></script>
   <script src="js/payload.js"></script>
   <script src="js/global.js"></script>
 </body>
+
 </html>
