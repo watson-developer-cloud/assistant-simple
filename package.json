@@ -8,7 +8,7 @@
     "test-integration": "casperjs test ./test/integration/test.*.js",
     "test-integration-runner": "NODE_ENV=test node casper-runner.js",
     "test": "npm run lint && npm run test-unit && npm run test-integration-runner",
-    "test-unit": "istanbul cover ./node_modules/mocha/bin/_mocha test/unit",
+    "test-unit": "jest test/unit --coverage",
     "lint": "eslint .",
     "autofix": "eslint --fix .",
     "codecov": "npm run test && (codecov || true)"
@@ -20,19 +20,18 @@
   "license": "Apache-2.0",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "dotenv": "^2.0.0",
+    "dotenv": "^5.0.1",
     "express": "^4.16.1",
     "watson-developer-cloud": "^3.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.4",
     "casperjs": "^1.1.4",
-    "codecov": "^1.0.1",
+    "codecov": "^3.0.2",
     "eslint": "^2.8.0",
-    "istanbul": "^0.4.2",
-    "mocha": "^2.4.5",
+    "jest": "^22.4.3",
     "phantomjs-prebuilt": "^2.1.15",
-    "supertest": "^1.2.0"
+    "supertest": "^3.1.0"
   },
   "engines": {
     "node": ">= 6.9.x",

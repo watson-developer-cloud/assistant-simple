@@ -23,11 +23,10 @@ var request = require('supertest');
 
 describe('express', function() {
   it('load home page when GET /', function() {
-    request(app).get('/').expect(200);
+    return request(app).get('/').expect(200);
   });
 
   it('404 when page not found', function() {
-    request(app).get('/foo/bar').expect(404);
+    return request(app).get('/foo/bar').expect(404);
   });
-
 });
