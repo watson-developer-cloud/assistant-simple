@@ -15,8 +15,9 @@ div {
   line-height: 1.25rem;
 }
 
-.disclaimer-message .base-h6 {
-  padding: 5px;
+.disclaimer {
+  font-size: 0.75rem;
+  padding: 0.5rem;
 }
 
 #view-change-button {
@@ -48,7 +49,7 @@ div {
 }
 
 #contentParent {
-  height: 92%;
+  height: 100%;
 }
 
 .responsive-columns-wrapper {
@@ -72,7 +73,7 @@ div {
 }
 
 .chat-column {
-  height: 100%;
+  height: 90%;
   padding: 0.9375rem 0 0.625rem 0;
   margin: auto;
   text-align: left;
