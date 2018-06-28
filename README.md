@@ -84,7 +84,7 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
         "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
         "iam_serviceid_crn": "crn:v1:bluemix:public:iam...",
         "url": "https://gateway-syd.watsonplatform.net/assistant/api"
-    }
+      }
     ```
     ```
     ASSISTANT_IAM_APIKEY=ca2905e6-7b5d-4408-9192-e4d54d83e604
