@@ -63,7 +63,7 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
 
 1. In your IBM Cloud Dashboard, open the Watson Assistant service. Click `show` to retrieve your credentials.
 
-1. If your credentials contain a username and password, copy the credentials to the relevant fields.
+1. If your credentials contain a `username` and `password`, copy the credentials to the relevant fields.
     ```JSON
     {
       "url": "https://gateway.watsonplatform.net/conversation/api",
@@ -75,7 +75,7 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
     ASSISTANT_USERNAME=ca2905e6-7b5d-4408-9192-e4d54d83e604
     ASSISTANT_PASSWORD=87iT7aqpvU7l
     ```
-    However, if your credentials contain an IAM API key, copy the apikey and url to the relevant fields.
+    However, if your credentials contain an IAM API key, copy the `apikey` and `url` to the relevant fields.
     ```JSON
       {
         "apikey": "ca2905e6-7b5d-4408-9192-e4d54d83e604",
