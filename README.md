@@ -43,7 +43,7 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
 
 ### Importing the Watson Assistant workspace
 
-1. In your browser, navigate to [your IBM Cloud console] (https://console.ng.bluemix.net/dashboard/services).
+1. In your browser, navigate to [your IBM Cloud console](https://console.ng.bluemix.net/dashboard/services).
 
 1. From the **All Items** tab, click the newly created Watson Assistant service in the **Services** list.
 
@@ -61,33 +61,34 @@ You can use an exisiting instance of the Watson Assistant service. Otherwise, fo
 
 1. Copy or rename the `.env.example` file to `.env` (nothing before the dot).
 
-1. Create a service key in the format `cf create-service-key <service_instance> <service_key>`. For example:
+1. In your IBM Cloud Dashboard, open the Watson Assistant service. Click `show` to retrieve your credentials.
 
-    ```bash
-    cf create-service-key my-watson-assistant-service myKey
-    ```
-
-1. Retrieve the credentials from the service key using the command `cf service-key <service_instance> <service_key>`. For example:
-
-    ```bash
-    cf service-key my-watson-assistant-service myKey
-    ```
-
-   The output from this command is a JSON object, as in this example:
-
+1. If your credentials contain a `username` and `password`, copy the credentials to the relevant fields.
     ```JSON
     {
-      "password": "87iT7aqpvU7l",
       "url": "https://gateway.watsonplatform.net/conversation/api",
-      "username": "ca2905e6-7b5d-4408-9192-e4d54d83e604"
+      "username": "ca2905e6-7b5d-4408-9192-e4d54d83e604",
+      "password": "87iT7aqpvU7l"
     }
     ```
-
-1. Paste  the `password` and `username` values (without quotation marks) from the JSON into the `ASSISTANT_PASSWORD` and `ASSISTANT_USERNAME` variables in the `.env` file. For example:
-
     ```
     ASSISTANT_USERNAME=ca2905e6-7b5d-4408-9192-e4d54d83e604
     ASSISTANT_PASSWORD=87iT7aqpvU7l
+    ```
+    However, if your credentials contain an IAM API key, copy the `apikey` and `url` to the relevant fields.
+    ```JSON
+      {
+        "apikey": "ca2905e6-7b5d-4408-9192-e4d54d83e604",
+        "iam_apikey_description": "Auto generated apikey during resource-key ...",
+        "iam_apikey_name": "auto-generated-apikey-62b71334-3ae3-4609-be26-846fa59ece42",
+        "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+        "iam_serviceid_crn": "crn:v1:bluemix:public:iam...",
+        "url": "https://gateway-syd.watsonplatform.net/assistant/api"
+      }
+    ```
+    ```
+    ASSISTANT_IAM_APIKEY=ca2905e6-7b5d-4408-9192-e4d54d83e604
+    ASSISTANT_IAM_URL=https://gateway-syd.watsonplatform.net/assistant/api
     ```
 
 1. In your IBM Cloud console, open the Watson Assistant service instance where you imported the workspace.

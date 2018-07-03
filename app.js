@@ -18,7 +18,7 @@
 
 var express = require('express'); // app server
 var bodyParser = require('body-parser'); // parser for post requests
-var watson = require('watson-developer-cloud'); // watson sdk
+var AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sdk
 
 var app = express();
 
@@ -28,16 +28,25 @@ app.use(bodyParser.json());
 
 // Create the service wrapper
 
-var assistant = new watson.AssistantV1({
-  // If unspecified here, the ASSISTANT_USERNAME and ASSISTANT_PASSWORD env properties will be checked
-  // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
-  username: process.env.ASSISTANT_USERNAME || '<username>',
-  password: process.env.ASSISTANT_PASSWORD || '<password>',
-  version: '2018-02-16'
-});
+var assistant;
+
+if (process.env.ASSISTANT_IAM_APIKEY !== undefined && process.env.ASSISTANT_IAM_APIKEY.length > 0) {
+  assistant = new AssistantV1({
+    'version': '2018-02-16',
+    'url': process.env.ASSISTANT_IAM_URL || '<url>',
+    'iam_apikey': process.env.ASSISTANT_IAM_APIKEY || '<iam_apikey>',
+    'iam_url': 'https://iam.bluemix.net/identity/token'
+  });
+} else {
+  assistant = new AssistantV1({
+    'version': '2018-02-16',
+    'username': process.env.ASSISTANT_USERNAME || '<username>',
+    'password': process.env.ASSISTANT_PASSWORD || '<password>'
+  });
+}
 
 // Endpoint to be call from the client side
-app.post('/api/message', function(req, res) {
+app.post('/api/message', function (req, res) {
   var workspace = process.env.WORKSPACE_ID || '<workspace-id>';
   if (!workspace || workspace === '<workspace-id>') {
     return res.json({
@@ -53,7 +62,7 @@ app.post('/api/message', function(req, res) {
   };
 
   // Send the input to the assistant service
-  assistant.message(payload, function(err, data) {
+  assistant.message(payload, function (err, data) {
     if (err) {
       return res.status(err.code || 500).json(err);
     }
