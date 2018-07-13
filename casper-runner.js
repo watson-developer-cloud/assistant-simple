@@ -23,7 +23,6 @@ if (!process.env.WORKSPACE_ID) {
 }
 
 var spawn = require('child_process').spawn;
-
 var app = require('./app');
 var port = 3000;
 

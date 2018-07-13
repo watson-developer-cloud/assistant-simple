@@ -45,7 +45,7 @@ var ConversationPanel = (function() {
     };
   }
 
-// Set up the input box to underline text as it is typed
+  // Set up the input box to underline text as it is typed
   // This is done by creating a hidden dummy version of the input box that
   // is used to determine what the width of the input text should be.
   // This value is then used to set the new width of the visible input box.
@@ -84,8 +84,8 @@ var ConversationPanel = (function() {
         var txtNode = document.createTextNode(input.value);
         ['font-size', 'font-style', 'font-weight', 'font-family', 'line-height',
           'text-transform', 'letter-spacing'].forEach(function(index) {
-            dummy.style[index] = window.getComputedStyle(input, null).getPropertyValue(index);
-          });
+          dummy.style[index] = window.getComputedStyle(input, null).getPropertyValue(index);
+        });
         dummy.textContent = txtNode.textContent;
 
         var padding = 0;
@@ -122,7 +122,7 @@ var ConversationPanel = (function() {
       var messageDivs = buildMessageDomElements(newPayload, isUser);
       var chatBoxElement = document.querySelector(settings.selectors.chatBox);
       var previousLatest = chatBoxElement.querySelectorAll((isUser
-              ? settings.selectors.fromUser : settings.selectors.fromWatson)
+        ? settings.selectors.fromUser : settings.selectors.fromWatson)
               + settings.selectors.latest);
       // Previous "latest" message is no longer the most recent
       if (previousLatest) {
