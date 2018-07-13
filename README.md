@@ -1,6 +1,14 @@
-# Watson Assistant (formerly Conversation) Sample Application [![Build Status](https://travis-ci.org/watson-developer-cloud/assistant-simple.svg?branch=master)](http://travis-ci.org/watson-developer-cloud/assistant-simple) [![codecov.io](https://codecov.io/github/watson-developer-cloud/assistant-simple/coverage.svg?branch=master)](https://codecov.io/github/watson-developer-cloud/assistant-simple?branch=master)
-
-This Node.js app demonstrates the Watson Assistant service in a simple chat interface simulating a cognitive car dashboard.
+<h1 align="center" style="border-bottom: none;">🚀🚀 Watson Assistant (formerly Conversation) Sample Application</h1>
+<h3 align="center">This Node.js app demonstrates the Watson Assistant service in a simple chat interface simulating a cognitive car dashboard.</h3>
+<p align="center">
+  <a href="http://travis-ci.org/watson-developer-cloud/assistant-simple">
+    <img alt="Travis" src="https://travis-ci.org/watson-developer-cloud/assistant-simple.svg?branch=master">
+  </a>
+  <a href="#badge">
+    <img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
+  </a>
+</p>
+</p>
 
 ![Demo](readme_images/demo.gif)
 
@@ -31,10 +39,9 @@ You can view a [demo][demo_url] of this app.
 
 4. Click the menu icon in the upper-right corner of the workspace tile, and then select **View details**.
 
-    ![Screen capture of workspace tile menu](readme_images/workspace_details.png)
-
 5. Click the ![Copy](readme_images/copy_icon.png) icon to copy the workspace ID to the clipboard.
 
+    ![Steps to get credentials](readme_images/assistant-simple.gif)
 
 6. In the application folder, copy the *.env.example* file and create a file called *.env*
 
@@ -42,7 +49,7 @@ You can view a [demo][demo_url] of this app.
     cp .env.example .env
     ```
 
-2. Open the *.env* file and add the service credentials that you obtained in the previous step.
+7. Open the *.env* file and add the service credentials that you obtained in the previous step.
 
     Example *.env* file that configures the `apikey` and `url` for a Watson Assistant service instance hosted in the US East region:
 
@@ -61,7 +68,7 @@ You can view a [demo][demo_url] of this app.
     ASSISTANT_URL=https://gateway-syd.watsonplatform.net/assistant/api
     ```
 
-3. Add the `WORKSPACE_ID` to the previous properties
+8. Add the `WORKSPACE_ID` to the previous properties
 
     ```
     WORKSPACE_ID=522be-7b41-ab44-dec3-g1eab2ha73c6
@@ -97,19 +104,21 @@ You can view a [demo][demo_url] of this app.
     ibmcloud target --cf
     ```
 
-1. Edit the *manifest.yml* file. Change the **name** field to something unique. For example, `- name: my-app-name`.
+1. Edit the *manifest.yml* file. Change the **name** field to something unique.  
+  For example, `- name: my-app-name`.
 1. Deploy the application
 
     ```
     ibmcloud app push
     ```
 
-1. View the application online at the app URL, for example: https://my-app-name.mybluemix.net
+1. View the application online at the app URL.  
+For example: https://my-app-name.mybluemix.net
 
 
 ## License
 
-This sample code is licensed under Apache 2.0.
+This sample code is licensed under Apache 2.0.  
 Full license text is available in [LICENSE](LICENSE).
 
 ## Contributing
