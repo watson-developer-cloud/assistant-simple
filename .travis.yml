@@ -1,7 +1,7 @@
 language: node_js
 dist: trusty
 sudo: required
-node_js: 6
+node_js: 8
 script:
 - npm run test
 
@@ -16,10 +16,15 @@ env:
   - CF_SPACE=demos
 before_deploy: npm install -g cf-blue-green
 deploy:
-  provider: script
+- provider: script
+  skip_cleanup: true
+  script: npx semantic-release
+  on:
+    node: 8
+- provider: script
+  skip_cleanup: true
   script:
   - cf-blue-green-travis
   on:
     branch: master
     repo: watson-developer-cloud/assistant-simple
-  skip_cleanup: true
