@@ -36,8 +36,5 @@
     "jest": "^23.4.1",
     "phantomjs-prebuilt": "^2.1.16",
     "supertest": "^3.1.0"
-  },
-  "engines": {
-    "node": ">=8"
   }
 }
