@@ -11,5 +11,3 @@ applications:
   instances: 1
   services:
   - my-watson-assistant-service
-  env:
-    NPM_CONFIG_PRODUCTION: false
