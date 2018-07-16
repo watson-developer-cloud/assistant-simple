@@ -33,15 +33,16 @@ var assistant;
 if (process.env.ASSISTANT_IAM_APIKEY && process.env.ASSISTANT_IAM_APIKEY != '') {
   assistant = new AssistantV1({
     version: '2018-02-16',
-    url: process.env.ASSISTANT_IAM_URL || '<url>',
+    url: process.env.ASSISTANT_URL || '<service-url>',
     iam_apikey: process.env.ASSISTANT_IAM_APIKEY || '<iam_apikey>',
-    iam_url: 'https://iam.bluemix.net/identity/token'
+    iam_url: process.env.ASSISTANT_IAM_URL || 'https://iam.bluemix.net/identity/token',
   });
 } else {
   assistant = new AssistantV1({
     version: '2018-02-16',
+    url: process.env.ASSISTANT_URL || '<service-url>',
     username: process.env.ASSISTANT_USERNAME || '<username>',
-    password: process.env.ASSISTANT_PASSWORD || '<password>'
+    password: process.env.ASSISTANT_PASSWORD || '<password>',
   });
 }
 
