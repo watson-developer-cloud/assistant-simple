@@ -38,7 +38,6 @@
     "supertest": "^3.1.0"
   },
   "engines": {
-    "node": ">=8",
-    "npm": ">=5"
+    "node": ">=8"
   }
 }
