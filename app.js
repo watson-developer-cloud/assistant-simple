@@ -40,7 +40,6 @@ if (process.env.ASSISTANT_IAM_APIKEY && process.env.ASSISTANT_IAM_APIKEY != '') 
 } else {
   assistant = new AssistantV1({
     version: '2018-02-16',
-    url: process.env.ASSISTANT_URL || '<service-url>',
     username: process.env.ASSISTANT_USERNAME || '<username>',
     password: process.env.ASSISTANT_PASSWORD || '<password>',
   });
