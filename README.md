@@ -49,7 +49,7 @@ You can view a [demo][demo_url] of this app.
     cp .env.example .env
     ```
 
-7. Open the *.env* file and add the service credentials that you obtained in the previous step.
+7. Open the *.env* file and add the service credentials that you obtained in the previous step. The Watson SDK automaticaly locates the correct enviromental variables for either `username`, `password`, and `url` or the `apikey` and `url` credentials found in the *.env* file.
 
     Example *.env* file that configures the `apikey` and `url` for a Watson Assistant service instance hosted in the US East region:
 
