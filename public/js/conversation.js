@@ -122,8 +122,7 @@ var ConversationPanel = (function () {
       // Create new message DOM element
       var messageDivs = buildMessageDomElements(newPayload, isUser);
       var chatBoxElement = document.querySelector(settings.selectors.chatBox);
-      var previousLatest = chatBoxElement.querySelectorAll((isUser ?
-          settings.selectors.fromUser : settings.selectors.fromWatson) +
+      var previousLatest = chatBoxElement.querySelectorAll((isUser ? settings.selectors.fromUser : settings.selectors.fromWatson) +
         settings.selectors.latest);
       // Previous "latest" message is no longer the most recent
       if (previousLatest) {
