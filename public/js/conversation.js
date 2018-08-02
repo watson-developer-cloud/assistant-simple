@@ -174,12 +174,9 @@ var ConversationPanel = (function () {
             options = newPayload.output.generic[i].options;
           }
         }
-
         if (options !== null) {
           if (preference === 'text') {
-
             outMsg += '<ul>';
-
             for (i = 0; i < options.length; i++) {
               if (options[i].value) {
                 outMsg += '<li>' + options[i].label + '</li>';
