@@ -7,7 +7,7 @@
     "start": "node server.js",
     "test-integration": "casperjs test ./test/integration/test.*.js",
     "test-integration-runner": "NODE_ENV=test node casper-runner.js",
-    "test": "npm run lint && npm run test-unit && npm run test-integration-runner",
+    "test": "npm run lint && npm run test-integration-runner",
     "test-unit": "jest test/unit --coverage",
     "lint": "eslint .",
     "autofix": "eslint --fix .",

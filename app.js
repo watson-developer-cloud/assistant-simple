@@ -28,23 +28,9 @@ app.use(bodyParser.json());
 
 // Create the service wrapper
 
-var assistant;
-
-if (process.env.ASSISTANT_IAM_APIKEY && process.env.ASSISTANT_IAM_APIKEY != '') {
-  assistant = new AssistantV1({
-    version: '2018-02-16',
-    url: process.env.ASSISTANT_URL || '<service-url>',
-    iam_apikey: process.env.ASSISTANT_IAM_APIKEY || '<iam_apikey>',
-    iam_url: process.env.ASSISTANT_IAM_URL || 'https://iam.bluemix.net/identity/token',
-  });
-} else {
-  assistant = new AssistantV1({
-    version: '2018-02-16',
-    url: process.env.ASSISTANT_URL || '<service-url>',
-    username: process.env.ASSISTANT_USERNAME || '<username>',
-    password: process.env.ASSISTANT_PASSWORD || '<password>',
-  });
-}
+var assistant = new AssistantV1({
+  version: '2018-07-10'
+});
 
 // Endpoint to be call from the client side
 app.post('/api/message', function (req, res) {
@@ -67,6 +53,19 @@ app.post('/api/message', function (req, res) {
     if (err) {
       return res.status(err.code || 500).json(err);
     }
+
+    // This is a fix for now, as since Assistant version 2018-07-10,
+    // output text can now be in output.generic.text
+    if (data.output.text.length === 0) {
+      if (data.output.generic !== undefined) {
+        if (data.output.generic[0].text !== undefined) {
+          data.output.text = data.output.generic[0].text;
+        } else if (data.output.generic[0].title !== undefined) {
+          data.output.text = data.output.generic[0].title;
+        }
+      }
+    }
+
     return res.json(updateMessage(payload, data));
   });
 });

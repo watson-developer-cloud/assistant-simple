@@ -162,7 +162,8 @@ div {
   border-top-right-radius: 1.25rem;
 }
 
-.from-watson .message-inner {
+.from-watson, 
+.message-inner {
   position: relative;
   border-radius: 1.5625rem;
   font-size: 1rem;

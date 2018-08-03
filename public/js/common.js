@@ -2,7 +2,7 @@
 // to hold functions that are used in multiple other modules
 /* eslint no-unused-vars: "off" */
 
-var Common = (function() {
+var Common = (function () {
   // Publicly accessible methods defined
   return {
     buildDomElement: buildDomElementFromJson,
