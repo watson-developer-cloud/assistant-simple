@@ -19,6 +19,7 @@
 var express = require('express'); // app server
 var bodyParser = require('body-parser'); // parser for post requests
 var AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sdk
+var _ = require('lodash'); // lodash
 
 var app = express();
 
@@ -54,17 +55,27 @@ app.post('/api/message', function (req, res) {
       return res.status(err.code || 500).json(err);
     }
 
+    console.log("\n\nData.output:");
+
+    console.log(data.output);
+
     // This is a fix for now, as since Assistant version 2018-07-10,
     // output text can now be in output.generic.text
-    if (data.output.text.length === 0) {
-      if (data.output.generic !== undefined) {
-        if (data.output.generic[0].text !== undefined) {
-          data.output.text = data.output.generic[0].text;
-        } else if (data.output.generic[0].title !== undefined) {
+    var output = data.output;
+    if (output.text.length === 0 && _.has(output, 'generic')) {
+      var generic = output.generic;
+
+      if (_.isArray(generic)) {
+        if (_.has(generic[0], 'text')) {
+          data.output.text = generic[0].text;
+        } else if (_.has(generic[0], 'title')) {
           data.output.text = data.output.generic[0].title;
         }
       }
     }
+
+    console.log("Output text:");
+    console.log(data.output.text);
 
     return res.json(updateMessage(payload, data));
   });
