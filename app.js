@@ -55,7 +55,7 @@ app.post('/api/message', function (req, res) {
       return res.status(err.code || 500).json(err);
     }
 
-    console.log("\n\nData.output:");
+    console.log('\n\nData.output:');
 
     console.log(data.output);
 
@@ -66,14 +66,20 @@ app.post('/api/message', function (req, res) {
       var generic = output.generic;
 
       if (_.isArray(generic)) {
-        if (_.has(generic[0], 'text')) {
-          data.output.text = generic[0].text;
-        } else if (_.has(generic[0], 'title')) {
-          data.output.text = data.output.generic[0].title;
+        // Loop through generic and add all text to data.output.text.
+        // If there are multiple responses, this will add all of them
+        // to the response.
+        for(var i = 0; i < generic.length; i++) {
+          if (_.has(generic[i], 'text')) {
+            data.output.text.push(generic[i].text);
+          } else if (_.has(generic[i], 'title')) {
+            data.output.text.push(generic[i].title);
+          }
         }
       }
     }
 
+    console.log("------------");
     console.log("Output text:");
     console.log(data.output.text);
 
