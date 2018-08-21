@@ -19,7 +19,6 @@
 var express = require('express'); // app server
 var bodyParser = require('body-parser'); // parser for post requests
 var AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sdk
-var _ = require('lodash'); // lodash
 
 var app = express();
 
@@ -55,33 +54,25 @@ app.post('/api/message', function (req, res) {
       return res.status(err.code || 500).json(err);
     }
 
-    console.log('\n\nData.output:');
-
-    console.log(data.output);
-
     // This is a fix for now, as since Assistant version 2018-07-10,
     // output text can now be in output.generic.text
     var output = data.output;
-    if (output.text.length === 0 && _.has(output, 'generic')) {
+    if (output.text.length === 0 && output.hasOwnProperty('generic')) {
       var generic = output.generic;
 
-      if (_.isArray(generic)) {
+      if (Array.isArray(generic)) {
         // Loop through generic and add all text to data.output.text.
         // If there are multiple responses, this will add all of them
         // to the response.
         for(var i = 0; i < generic.length; i++) {
-          if (_.has(generic[i], 'text')) {
+          if (generic[i].hasOwnProperty('text')) {
             data.output.text.push(generic[i].text);
-          } else if (_.has(generic[i], 'title')) {
+          } else if (generic[i].hasOwnProperty('title')) {
             data.output.text.push(generic[i].title);
           }
         }
       }
     }
-
-    console.log("------------");
-    console.log("Output text:");
-    console.log(data.output.text);
 
     return res.json(updateMessage(payload, data));
   });

@@ -22,7 +22,6 @@
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "lodash": "^4.17.10",
     "watson-developer-cloud": "^3.7.0"
   },
   "publishConfig": {
