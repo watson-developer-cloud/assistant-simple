@@ -1,13 +1,6 @@
----
-declared-services:
-  my-watson-assistant-service:
-    label: conversation
-    plan: free
 applications:
 - name: watson-assistant-simple
   command: npm start
   path: .
   memory: 256M
   instances: 1
-  services:
-  - my-watson-assistant-service
