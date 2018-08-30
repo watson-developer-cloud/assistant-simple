@@ -56,12 +56,20 @@ app.post('/api/message', function (req, res) {
 
     // This is a fix for now, as since Assistant version 2018-07-10,
     // output text can now be in output.generic.text
-    if (data.output.text.length === 0) {
-      if (data.output.generic !== undefined) {
-        if (data.output.generic[0].text !== undefined) {
-          data.output.text = data.output.generic[0].text;
-        } else if (data.output.generic[0].title !== undefined) {
-          data.output.text = data.output.generic[0].title;
+    var output = data.output;
+    if (output.text.length === 0 && output.hasOwnProperty('generic')) {
+      var generic = output.generic;
+
+      if (Array.isArray(generic)) {
+        // Loop through generic and add all text to data.output.text.
+        // If there are multiple responses, this will add all of them
+        // to the response.
+        for(var i = 0; i < generic.length; i++) {
+          if (generic[i].hasOwnProperty('text')) {
+            data.output.text.push(generic[i].text);
+          } else if (generic[i].hasOwnProperty('title')) {
+            data.output.text.push(generic[i].title);
+          }
         }
       }
     }
