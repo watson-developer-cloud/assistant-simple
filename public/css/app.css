@@ -435,3 +435,8 @@ html{
   font-weight: normal;
   font-style: normal;
 }
+
+.button-options {
+  color: #8d25e8;
+  cursor: pointer;
+}

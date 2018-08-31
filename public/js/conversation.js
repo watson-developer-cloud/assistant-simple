@@ -20,7 +20,8 @@ var ConversationPanel = (function () {
   // Publicly accessible methods defined
   return {
     init: init,
-    inputKeyDown: inputKeyDown
+    inputKeyDown: inputKeyDown,
+    sendMessage: sendMessage
   };
 
   // Initialize the module
@@ -162,15 +163,19 @@ var ConversationPanel = (function () {
 
     var outMsg = '';
 
-    if (newPayload.output !== undefined) {
-      if (newPayload.output.generic !== undefined) {
+    if (newPayload.hasOwnProperty('output')) {
+      if (newPayload.output.hasOwnProperty('generic')) {
         var options = null;
 
         var preference = 'text';
 
         for (var i = 0; i < newPayload.output.generic.length; i++) {
-          if (newPayload.output.generic[i].options !== undefined) {
+          if (newPayload.output.generic[i].hasOwnProperty('options')) {
             options = newPayload.output.generic[i].options;
+          }
+
+          if (newPayload.output.generic[i].hasOwnProperty('preference')) {
+            preference = newPayload.output.generic[i].preference;
           }
         }
         if (options !== null) {
@@ -179,6 +184,14 @@ var ConversationPanel = (function () {
             for (i = 0; i < options.length; i++) {
               if (options[i].value) {
                 outMsg += '<li>' + options[i].label + '</li>';
+              }
+            }
+            outMsg += '</ul>';
+          } else if (preference === 'button') {
+            outMsg += '<ul>';
+            for (i = 0; i < options.length; i++) {
+              if (options[i].value) {
+                outMsg += '<li><div class="button-options" onclick="ConversationPanel.sendMessage(\'' + options[i].value.input.text + '\');" >' + options[i].label + '</div></li>';
               }
             }
             outMsg += '</ul>';
@@ -236,20 +249,23 @@ var ConversationPanel = (function () {
     }
   }
 
+  function sendMessage(text) {
+    // Retrieve the context from the previous server response
+    var context;
+    var latestResponse = Api.getResponsePayload();
+    if (latestResponse) {
+      context = latestResponse.context;
+    }
+
+    // Send the user message
+    Api.sendRequest(text, context);
+  }
+
   // Handles the submission of input
   function inputKeyDown(event, inputBox) {
     // Submit on enter key, dis-allowing blank messages
     if (event.keyCode === 13 && inputBox.value) {
-      // Retrieve the context from the previous server response
-      var context;
-      var latestResponse = Api.getResponsePayload();
-      if (latestResponse) {
-        context = latestResponse.context;
-      }
-
-      // Send the user message
-      Api.sendRequest(inputBox.value, context);
-
+      sendMessage(inputBox.value);
       // Clear input box for further messages
       inputBox.value = '';
       Common.fireEvent(inputBox, 'input');
