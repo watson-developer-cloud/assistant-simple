@@ -169,15 +169,34 @@ var ConversationPanel = (function () {
 
         var preference = 'text';
 
-        for (var i = 0; i < newPayload.output.generic.length; i++) {
-          if (newPayload.output.generic[i].hasOwnProperty('options')) {
-            options = newPayload.output.generic[i].options;
+        var source = '';
+
+        var response_type = '';
+
+        var generic = newPayload.output.generic;
+
+        for (var i = 0; i < generic.length; i++) {
+          if (generic[i].hasOwnProperty('options')) {
+            options = generic[i].options;
           }
 
-          if (newPayload.output.generic[i].hasOwnProperty('preference')) {
-            preference = newPayload.output.generic[i].preference;
+          if (generic[i].hasOwnProperty('preference')) {
+            preference = generic[i].preference;
+          }
+
+          if (generic[i].hasOwnProperty('response_type')) {
+            response_type = generic[i].response_type;
+          }
+
+          if (generic[i].hasOwnProperty('source')) {
+            source = generic[i].source;
           }
         }
+
+        if (response_type === 'image') {
+          outMsg += '<div><img src="' + source + '" width="300"></div>';
+        }
+
         if (options !== null) {
           if (preference === 'text') {
             outMsg += '<ul>';
@@ -200,7 +219,11 @@ var ConversationPanel = (function () {
       }
     }
 
-    textArray[textArray.length - 1] += outMsg;
+    if (textArray.length === 0) {
+      textArray[0] = outMsg;
+    } else {
+      textArray[textArray.length - 1] += outMsg;
+    }
 
     var messageArray = [];
 
