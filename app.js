@@ -56,6 +56,7 @@ app.post('/api/message', function (req, res) {
 
     // This is a fix for now, as since Assistant version 2018-07-10,
     // output text can now be in output.generic.text
+    /*
     var output = data.output;
     if (output.text.length === 0 && output.hasOwnProperty('generic')) {
       var generic = output.generic;
@@ -72,7 +73,7 @@ app.post('/api/message', function (req, res) {
           }
         }
       }
-    }
+    }*/
 
     return res.json(updateMessage(payload, data));
   });
