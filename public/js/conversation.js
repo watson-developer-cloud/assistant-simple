@@ -134,9 +134,19 @@ var ConversationPanel = (function () {
 
       var isTop = true;
       var pause = 0;
+      var userTyping = false;
+
+      var userTypringField = document.getElementById('user-typing-field');
 
       responses.forEach(function (res) {
         if (res.type !== 'pause') {
+          if(userTyping) {
+            userTypringField.innerHTML = 'User Typing...';
+            setTimeout(function () {
+              userTypringField.innerHTML = '';
+              userTyping = false;
+            }, pause);
+          }
           setTimeout(function () {
             var currentDiv = getDivObject(res, isUser, isTop);
             chatBoxElement.appendChild(currentDiv);
@@ -149,6 +159,7 @@ var ConversationPanel = (function () {
           }, pause);
         } else {
           pause = res.time;
+          userTyping = res.typing;
         }
       });
     }
@@ -286,10 +297,6 @@ var ConversationPanel = (function () {
         });
       }
     }
-
-    responses.forEach(function (res) {
-      console.log(res);
-    });
     return responses;
   }
 
