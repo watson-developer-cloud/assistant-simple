@@ -1,5 +1,5 @@
 applications:
-- name: watson-assistant-simple-dev
+- name: watson-assistant-simple
   command: npm start
   path: .
   memory: 256M

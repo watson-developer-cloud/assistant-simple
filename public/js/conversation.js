@@ -131,11 +131,12 @@ var ConversationPanel = (function () {
           element.classList.remove('latest');
         });
       }
-      setMessage(responses, isUser, chatBoxElement, 0);
+      setResponse(responses, isUser, chatBoxElement, 0);
     }
   }
 
-  function setMessage(responses, isUser, chatBoxElement, index) {
+  // Recurisive function to add responses to the chat area
+  function setResponse(responses, isUser, chatBoxElement, index) {
     if (index < responses.length) {
       var res = responses[index];
       if (res.type !== 'pause') {
@@ -145,7 +146,7 @@ var ConversationPanel = (function () {
         currentDiv.classList.add('load');
         // Move chat to the most recent messages when new messages are added
         scrollToChatBottom();
-        setMessage(responses, isUser, chatBoxElement, index + 1);
+        setResponse(responses, isUser, chatBoxElement, index + 1);
       } else {
         var userTypringField = document.getElementById('user-typing-field');
         if (res.typing) {
@@ -153,7 +154,7 @@ var ConversationPanel = (function () {
         }
         setTimeout(function () {
           userTypringField.innerHTML = '';
-          setMessage(responses, isUser, chatBoxElement, index + 1);
+          setResponse(responses, isUser, chatBoxElement, index + 1);
         }, res.time);
       }
     }
@@ -291,10 +292,6 @@ var ConversationPanel = (function () {
         });
       }
     }
-
-    responses.forEach(function (res) {
-      console.log(res);
-    });
     return responses;
   }
 
