@@ -81,6 +81,14 @@ div {
   min-width: 9.375rem;
 }
 
+.user-typing {
+  border: none;
+  color: #8d25e8;
+  margin: 0.75rem;
+  font-size: 15;
+  font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
 #scrollingChat {
   margin: 0.75rem;
   overflow-y: auto;

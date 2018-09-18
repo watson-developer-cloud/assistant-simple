@@ -120,8 +120,8 @@ var ConversationPanel = (function () {
     var textExists = (newPayload.input && newPayload.input.text) ||
       (newPayload.output && newPayload.output.text);
     if (isUser !== null && textExists) {
-      // Create new message DOM element
-      var messageDivs = buildMessageDomElements(newPayload, isUser);
+      // Create new message generic elements
+      var responses = buildMessageDomElements(newPayload, isUser);
       var chatBoxElement = document.querySelector(settings.selectors.chatBox);
       var previousLatest = chatBoxElement.querySelectorAll((isUser ? settings.selectors.fromUser : settings.selectors.fromWatson) +
         settings.selectors.latest);
@@ -131,15 +131,59 @@ var ConversationPanel = (function () {
           element.classList.remove('latest');
         });
       }
+      setResponse(responses, isUser, chatBoxElement, 0, true);
+    }
+  }
 
-      messageDivs.forEach(function (currentDiv) {
+  // Recurisive function to add responses to the chat area
+  function setResponse(responses, isUser, chatBoxElement, index, isTop) {
+    if (index < responses.length) {
+      var res = responses[index];
+      if (res.type !== 'pause') {
+        var currentDiv = getDivObject(res, isUser, isTop);
         chatBoxElement.appendChild(currentDiv);
         // Class to start fade in animation
         currentDiv.classList.add('load');
-      });
-      // Move chat to the most recent messages when new messages are added
-      scrollToChatBottom();
+        // Move chat to the most recent messages when new messages are added
+        scrollToChatBottom();
+        setResponse(responses, isUser, chatBoxElement, index + 1, false);
+      } else {
+        var userTypringField = document.getElementById('user-typing-field');
+        if (res.typing) {
+          userTypringField.innerHTML = 'Watson Assistant Typing...';
+        }
+        setTimeout(function () {
+          userTypringField.innerHTML = '';
+          setResponse(responses, isUser, chatBoxElement, index + 1, isTop);
+        }, res.time);
+      }
     }
+  }
+
+  // Constructs new DOM element from a message
+  function getDivObject(res, isUser, isTop) {
+    var classes = [(isUser ? 'from-user' : 'from-watson'), 'latest', (isTop ? 'top' : 'sub')];
+    var messageJson = {
+      // <div class='segments'>
+      'tagName': 'div',
+      'classNames': ['segments'],
+      'children': [{
+        // <div class='from-user/from-watson latest'>
+        'tagName': 'div',
+        'classNames': classes,
+        'children': [{
+          // <div class='message-inner'>
+          'tagName': 'div',
+          'classNames': ['message-inner'],
+          'children': [{
+            // <p>{messageText}</p>
+            'tagName': 'p',
+            'text': res.innerhtml
+          }]
+        }]
+      }]
+    };
+    return Common.buildDomElement(messageJson);
   }
 
   // Checks if the given typeValue matches with the user "name", the Watson "name", or neither
@@ -154,99 +198,107 @@ var ConversationPanel = (function () {
     return null;
   }
 
-  // Constructs new DOM element from a message payload
+  function getOptions(optionsList, preference) {
+    var list = '';
+    var i = 0;
+    if (optionsList !== null) {
+      if (preference === 'text') {
+        list = '<ul>';
+        for (i = 0; i < optionsList.length; i++) {
+          if (optionsList[i].value) {
+            list += '<li>' + optionsList[i].label + '</li>';
+          }
+        }
+        list += '</ul>';
+      } else if (preference === 'button') {
+        list = '<ul>';
+        for (i = 0; i < optionsList.length; i++) {
+          if (optionsList[i].value) {
+            var item = '<li><div class="button-options" onclick="ConversationPanel.sendMessage(\'' +
+              optionsList[i].value.input.text + '\');" >' + optionsList[i].label + '</div></li>';
+            list += item;
+          }
+        }
+        list += '</ul>';
+      }
+    }
+    return list;
+  }
+
+  function getResponse(responses, gen) {
+    var title = '';
+    if (gen.hasOwnProperty('title')) {
+      title = gen.title;
+    }
+    if (gen.response_type === 'image') {
+      var img = '<div><img src="' + gen.source + '" width="300"></div>';
+      responses.push({
+        type: gen.response_type,
+        innerhtml: title + img
+      });
+    } else if (gen.response_type === 'text') {
+      responses.push({
+        type: gen.response_type,
+        innerhtml: gen.text
+      });
+    } else if (gen.response_type === 'pause') {
+      responses.push({
+        type: gen.response_type,
+        time: gen.time,
+        typing: gen.typing
+      });
+    } else if (gen.response_type === 'option') {
+      var preference = 'text';
+      if (gen.hasOwnProperty('preference')) {
+        preference = gen.preference;
+      }
+
+      var list = getOptions(gen.options, preference);
+      responses.push({
+        type: gen.response_type,
+        innerhtml: title + list
+      });
+    }
+  }
+
+  // Constructs new generic elements from a message payload
   function buildMessageDomElements(newPayload, isUser) {
     var textArray = isUser ? newPayload.input.text : newPayload.output.text;
     if (Object.prototype.toString.call(textArray) !== '[object Array]') {
       textArray = [textArray];
     }
 
-    var outMsg = '';
+    var responses = [];
 
     if (newPayload.hasOwnProperty('output')) {
       if (newPayload.output.hasOwnProperty('generic')) {
-        var options = null;
 
-        var preference = 'text';
+        var generic = newPayload.output.generic;
 
-        for (var i = 0; i < newPayload.output.generic.length; i++) {
-          if (newPayload.output.generic[i].hasOwnProperty('options')) {
-            options = newPayload.output.generic[i].options;
-          }
-
-          if (newPayload.output.generic[i].hasOwnProperty('preference')) {
-            preference = newPayload.output.generic[i].preference;
-          }
-        }
-        if (options !== null) {
-          if (preference === 'text') {
-            outMsg += '<ul>';
-            for (i = 0; i < options.length; i++) {
-              if (options[i].value) {
-                outMsg += '<li>' + options[i].label + '</li>';
-              }
-            }
-            outMsg += '</ul>';
-          } else if (preference === 'button') {
-            outMsg += '<ul>';
-            for (i = 0; i < options.length; i++) {
-              if (options[i].value) {
-                outMsg += '<li><div class="button-options" onclick="ConversationPanel.sendMessage(\'' + options[i].value.input.text + '\');" >' + options[i].label + '</div></li>';
-              }
-            }
-            outMsg += '</ul>';
-          }
-        }
+        generic.forEach(function (gen) {
+          getResponse(responses, gen);
+        });
+      }
+    } else if (newPayload.hasOwnProperty('input')) {
+      var input = '';
+      textArray.forEach(function (msg) {
+        input += msg + ' ';
+      });
+      input.trim().replace(' ', '<br>');
+      if (input.length !== 0) {
+        responses.push({
+          type: 'text',
+          innerhtml: input
+        });
       }
     }
-
-    textArray[textArray.length - 1] += outMsg;
-
-    var messageArray = [];
-
-    textArray.forEach(function (currentText) {
-      if (currentText) {
-        var messageJson = {
-          // <div class='segments'>
-          'tagName': 'div',
-          'classNames': ['segments'],
-          'children': [{
-            // <div class='from-user/from-watson latest'>
-            'tagName': 'div',
-            'classNames': [(isUser ? 'from-user' : 'from-watson'), 'latest', ((messageArray.length === 0) ? 'top' : 'sub')],
-            'children': [{
-              // <div class='message-inner'>
-              'tagName': 'div',
-              'classNames': ['message-inner'],
-              'children': [{
-                // <p>{messageText}</p>
-                'tagName': 'p',
-                'text': currentText
-              }]
-            }]
-          }]
-        };
-        messageArray.push(Common.buildDomElement(messageJson));
-      }
-    });
-
-    return messageArray;
+    return responses;
   }
 
-  // Scroll to the bottom of the chat window (to the most recent messages)
-  // Note: this method will bring the most recent user message into view,
-  //   even if the most recent message is from Watson.
-  //   This is done so that the "context" of the conversation is maintained in the view,
-  //   even if the Watson message is long.
+  // Scroll to the bottom of the chat window
   function scrollToChatBottom() {
     var scrollingChat = document.querySelector('#scrollingChat');
-
-    // Scroll to the latest message sent by the user
-    var scrollEl = scrollingChat.querySelector(settings.selectors.fromUser +
-      settings.selectors.latest);
-    if (scrollEl) {
-      scrollingChat.scrollTop = scrollEl.offsetTop;
-    }
+    scrollingChat.scrollTop = scrollingChat.scrollHeight;
   }
 
   function sendMessage(text) {
