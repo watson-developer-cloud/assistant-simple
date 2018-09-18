@@ -131,22 +131,22 @@ var ConversationPanel = (function () {
           element.classList.remove('latest');
         });
       }
-      setResponse(responses, isUser, chatBoxElement, 0);
+      setResponse(responses, isUser, chatBoxElement, 0, true);
     }
   }
 
   // Recurisive function to add responses to the chat area
-  function setResponse(responses, isUser, chatBoxElement, index) {
+  function setResponse(responses, isUser, chatBoxElement, index, isTop) {
     if (index < responses.length) {
       var res = responses[index];
       if (res.type !== 'pause') {
-        var currentDiv = getDivObject(res, isUser, index === 0);
+        var currentDiv = getDivObject(res, isUser, isTop);
         chatBoxElement.appendChild(currentDiv);
         // Class to start fade in animation
         currentDiv.classList.add('load');
         // Move chat to the most recent messages when new messages are added
         scrollToChatBottom();
-        setResponse(responses, isUser, chatBoxElement, index + 1);
+        setResponse(responses, isUser, chatBoxElement, index + 1, false);
       } else {
         var userTypringField = document.getElementById('user-typing-field');
         if (res.typing) {
@@ -154,7 +154,7 @@ var ConversationPanel = (function () {
         }
         setTimeout(function () {
           userTypringField.innerHTML = '';
-          setResponse(responses, isUser, chatBoxElement, index + 1);
+          setResponse(responses, isUser, chatBoxElement, index + 1, isTop);
         }, res.time);
       }
     }
@@ -199,7 +199,8 @@ var ConversationPanel = (function () {
   }
 
   function getOptions(optionsList, preference) {
-    var list, i;
+    var list = '';
+    var i = 0;
     if (optionsList !== null) {
       if (preference === 'text') {
         list = '<ul>';
@@ -225,11 +226,15 @@ var ConversationPanel = (function () {
   }
 
   function getResponse(responses, gen) {
+    var title = '';
+    if (gen.hasOwnProperty('title')) {
+      title = gen.title;
+    }
     if (gen.response_type === 'image') {
       var img = '<div><img src="' + gen.source + '" width="300"></div>';
       responses.push({
         type: gen.response_type,
-        innerhtml: img
+        innerhtml: title + img
       });
     } else if (gen.response_type === 'text') {
       responses.push({
@@ -247,16 +252,11 @@ var ConversationPanel = (function () {
       if (gen.hasOwnProperty('preference')) {
         preference = gen.preference;
       }
-      if (gen.hasOwnProperty('title')) {
-        responses.push({
-          type: 'text',
-          innerhtml: gen.title
-        });
-      }
+
       var list = getOptions(gen.options, preference);
       responses.push({
         type: gen.response_type,
-        innerhtml: list
+        innerhtml: title + list
       });
     }
   }
