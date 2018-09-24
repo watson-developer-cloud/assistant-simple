@@ -206,12 +206,17 @@ var ConversationPanel = (function () {
         list = '<ul>';
         for (i = 0; i < optionsList.length; i++) {
           if (optionsList[i].value) {
+<<<<<<< HEAD
             list += '<li><div class="options-list" onclick="ConversationPanel.sendMessage(\'' +
             optionsList[i].value.input.text + '\');" >' + optionsList[i].label + '</div></li>';
+=======
+            list += '<li>' + optionsList[i].label + '</li>';
+>>>>>>> bdfc9105722b9846b32d9aca860627b75a16537a
           }
         }
         list += '</ul>';
       } else if (preference === 'button') {
+<<<<<<< HEAD
         list = '<br>';
         for (i = 0; i < optionsList.length; i++) {
           if (optionsList[i].value) {
@@ -220,6 +225,17 @@ var ConversationPanel = (function () {
             list += item;
           }
         }
+=======
+        list = '<ul>';
+        for (i = 0; i < optionsList.length; i++) {
+          if (optionsList[i].value) {
+            var item = '<li><div class="button-options" onclick="ConversationPanel.sendMessage(\'' +
+              optionsList[i].value.input.text + '\');" >' + optionsList[i].label + '</div></li>';
+            list += item;
+          }
+        }
+        list += '</ul>';
+>>>>>>> bdfc9105722b9846b32d9aca860627b75a16537a
       }
     }
     return list;
