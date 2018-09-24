@@ -206,20 +206,20 @@ var ConversationPanel = (function () {
         list = '<ul>';
         for (i = 0; i < optionsList.length; i++) {
           if (optionsList[i].value) {
-            list += '<li>' + optionsList[i].label + '</li>';
+            list += '<li><div class="options-list" onclick="ConversationPanel.sendMessage(\'' +
+            optionsList[i].value.input.text + '\');" >' + optionsList[i].label + '</div></li>';
           }
         }
         list += '</ul>';
       } else if (preference === 'button') {
-        list = '<ul>';
+        list = '<br>';
         for (i = 0; i < optionsList.length; i++) {
           if (optionsList[i].value) {
-            var item = '<li><div class="button-options" onclick="ConversationPanel.sendMessage(\'' +
-              optionsList[i].value.input.text + '\');" >' + optionsList[i].label + '</div></li>';
+            var item = '<div class="options-button" onclick="ConversationPanel.sendMessage(\'' +
+              optionsList[i].value.input.text + '\');" >' + optionsList[i].label + '</div>';
             list += item;
           }
         }
-        list += '</ul>';
       }
     }
     return list;

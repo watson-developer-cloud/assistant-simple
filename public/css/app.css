@@ -444,7 +444,20 @@ html{
   font-style: normal;
 }
 
-.button-options {
+.options-list {
   color: #8d25e8;
   cursor: pointer;
+}
+
+.options-button {
+  color: white;
+  background-color: #8d25e8;
+  border-radius: 6px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin: 3px;
+  cursor: pointer;
+  display: inline-block;
 }
