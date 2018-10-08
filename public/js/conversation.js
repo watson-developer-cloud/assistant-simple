@@ -284,7 +284,11 @@ var ConversationPanel = (function () {
       textArray.forEach(function (msg) {
         input += msg + ' ';
       });
-      input.trim().replace(' ', '<br>');
+      input = input.trim()
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+
       if (input.length !== 0) {
         responses.push({
           type: 'text',

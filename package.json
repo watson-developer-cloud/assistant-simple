@@ -31,10 +31,10 @@
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "casperjs": "^1.1.4",
-    "codecov": "^3.0.4",
-    "eslint": "^5.1.0",
-    "jest": "^23.4.1",
+    "codecov": "^3.1.0",
+    "eslint": "^5.6.1",
+    "jest": "^23.6.0",
     "phantomjs-prebuilt": "^2.1.16",
-    "supertest": "^3.1.0"
+    "supertest": "^3.3.0"
   }
 }
