@@ -33,7 +33,7 @@ You can view a [demo][demo_url] of this app.
 
 2. Click the **Import workspace** icon in the Watson Assistant service tool. Specify the location of the workspace JSON file in your local copy of the app project:
 
-    `<project_root>/training/bank_workspace.json`
+    `<project_root>/training/bank_simple_workspace.json`
 
 3. Select **Everything (Intents, Entities, and Dialog)** and then click **Import**. The car dashboard workspace is created.
 
