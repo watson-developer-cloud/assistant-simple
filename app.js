@@ -20,6 +20,8 @@ var express = require('express'); // app server
 var bodyParser = require('body-parser'); // parser for post requests
 var AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sdk
 
+const trace = function(message) { console.log("[TRACE] " + message); }
+
 var app = express();
 
 // Bootstrap application settings
@@ -27,10 +29,15 @@ app.use(express.static('./public')); // load UI from public folder
 app.use(bodyParser.json());
 
 // Create the service wrapper
+const url = process.env.ASSISTANT_URL;
+trace("url: " + url);
 
 var assistant = new AssistantV1({
+  url: url,
   version: '2018-07-10'
 });
+
+trace(JSON.stringify(assistant, null, 2));
 
 // Endpoint to be call from the client side
 app.post('/api/message', function (req, res) {
@@ -42,20 +49,33 @@ app.post('/api/message', function (req, res) {
       }
     });
   }
+  
   var payload = {
     workspace_id: workspace,
     context: req.body.context || {},
     input: req.body.input || {}
   };
-
+  trace(JSON.stringify(payload));
+  
   // Send the input to the assistant service
   assistant.message(payload, function (err, data) {
+    trace("Response from Watson Assistant err: " + err + " data: " + JSON.stringify(data));
     if (err) {
       return res.status(err.code || 500).json(err);
     }
 
     return res.json(updateMessage(payload, data));
   });
+});
+
+app.get("/api/message2", function(req, res) {
+  trace("Within /api/message2 callback");
+  res.send("From /api/message2 callback");
+});
+
+app.post("/api/message3", function(req, res) {
+  trace("Within /api/message3 callback");
+  res.send("From /api/message3 callback");
 });
 
 /**
