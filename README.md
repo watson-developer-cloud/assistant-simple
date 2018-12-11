@@ -14,6 +14,10 @@
 
 You can view a [demo][demo_url] of this app.
 
+Please note this app uses the [Watson Assistant V2 API](https://console.bluemix.net/apidocs/assistant-v2#introduction). To access a version of the V1 app, you can go to [v1.4.1](https://github.com/watson-developer-cloud/assistant-simple/releases/tag/v1.4.1).
+
+If you need more information about the V1 API, you can go to the [Watson Assistant V1 API page](https://cloud.ibm.com/apidocs/assistant#introduction).
+
 
 ## Prerequisites
 
@@ -83,10 +87,10 @@ You can view a [demo][demo_url] of this app.
     ASSISTANT_IAM_URL=https://gateway-syd.watsonplatform.net/assistant/api
     ```
 
-8. Add the `WORKSPACE_ID` to the previous properties
+8. Add the `ASSISTANT_ID` to the previous properties
 
     ```
-    WORKSPACE_ID=522be-7b41-ab44-dec3-g1eab2ha73c6
+    ASSISTANT_ID=522be-7b41-ab44-dec3-g1eab2ha73c6
     ```
 
 ## Running locally
@@ -146,7 +150,7 @@ Find more open source projects on the
 [IBM Github Page](http://ibm.github.io/).
 
 
-[demo_url]: http://conversation-simple.ng.bluemix.net/
+[demo_url]: https://assistant-simple.ng.bluemix.net/
 [doc_intents]: (https://console.bluemix.net/docs/services/conversation/intents-entities.html#planning-your-entities)
 [docs]: https://console.bluemix.net/docs/services/conversation/index.html
 [docs_landing]: (https://console.bluemix.net/docs/services/conversation/index.html)

@@ -26,13 +26,13 @@ casper.test.begin('Watson Assistant simple Demo', 5, function suite(test) {
 
   function testEnterMessageClick() {
     casper.then(function () {
-      this.sendKeys('#textInput', 'turn the wipers on');
+      this.sendKeys('#textInput', 'I want to make a credit card payment');
       this.sendKeys('#textInput', casper.page.event.key.Enter);
     });
     casper.waitForSelector('.from-user', function () {
       test.assertExists('.message-inner', 'Message sent');
-      test.assertTextExists('turn the wipers on', 'Message in bubble');
-      casper.waitForText('I\'ll turn on the wipers for you.');
+      test.assertTextExists('I want to make a credit card payment', 'Message in bubble');
+      casper.waitForText('I can help you with credit card payments');
     });
   }
 

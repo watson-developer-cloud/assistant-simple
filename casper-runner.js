@@ -16,9 +16,9 @@
 
 require('dotenv').config({ silent: true });
 
-if (!process.env.WORKSPACE_ID) {
+if (!process.env.ASSISTANT_ID) {
   // eslint-disable-next-line
-  console.warn('Skipping casper tests because WORKSPACE_ID is null');
+  console.warn('Skipping casper tests because ASSISTANT_ID is null');
   return;
 }
 
