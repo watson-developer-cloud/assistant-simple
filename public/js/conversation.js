@@ -27,7 +27,9 @@ var ConversationPanel = (function () {
   // Initialize the module
   function init() {
     chatUpdateSetup();
-    Api.sendRequest('', null);
+    Api.getSessionId(function() {
+      Api.sendRequest('', null);
+    });
     setupInputBox();
   }
   // Set up callbacks on payload setters in Api module
@@ -117,9 +119,8 @@ var ConversationPanel = (function () {
   // Display a user or Watson message that has just been sent/received
   function displayMessage(newPayload, typeValue) {
     var isUser = isUserMessage(typeValue);
-    var textExists = (newPayload.input && newPayload.input.text) ||
-      (newPayload.output && newPayload.output.text);
-    if (isUser !== null && textExists) {
+    //var textExists = newPayload.generic;
+    if ((newPayload.output && newPayload.output.generic) ||  newPayload.input){
       // Create new message generic elements
       var responses = buildMessageDomElements(newPayload, isUser);
       var chatBoxElement = document.querySelector(settings.selectors.chatBox);

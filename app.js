@@ -18,7 +18,7 @@
 
 var express = require('express'); // app server
 var bodyParser = require('body-parser'); // parser for post requests
-var AssistantV1 = require('watson-developer-cloud/assistant/v1'); // watson sdk
+var AssistantV2 = require('watson-developer-cloud/assistant/v2'); // watson sdk
 
 var app = express();
 
@@ -28,24 +28,53 @@ app.use(bodyParser.json());
 
 // Create the service wrapper
 
-var assistant = new AssistantV1({
-  version: '2018-07-10'
+var assistant = new AssistantV2({
+  version: '2018-11-08'
 });
+
+var newContext = {
+  global : {
+    system : {
+      turn_count : 1
+    }
+  }
+};
 
 // Endpoint to be call from the client side
 app.post('/api/message', function (req, res) {
-  var workspace = process.env.WORKSPACE_ID || '<workspace-id>';
-  if (!workspace || workspace === '<workspace-id>') {
+  var assistantId = process.env.ASSISTANT_ID || '<assistant-id>';
+  if (!assistantId || assistantId === '<assistant-id>>') {
     return res.json({
       'output': {
-        'text': 'The app has not been configured with a <b>WORKSPACE_ID</b> environment variable. Please refer to the ' + '<a href="https://github.com/watson-developer-cloud/assistant-simple">README</a> documentation on how to set this variable. <br>' + 'Once a workspace has been defined the intents may be imported from ' + '<a href="https://github.com/watson-developer-cloud/assistant-simple/blob/master/training/car_workspace.json">here</a> in order to get a working application.'
+        'text': 'The app has not been configured with a <b>ASSISTANT_ID</b> environment variable. Please refer to the ' + '<a href="https://github.com/watson-developer-cloud/assistant-simple">README</a> documentation on how to set this variable. <br>' + 'Once a workspace has been defined the intents may be imported from ' + '<a href="https://github.com/watson-developer-cloud/assistant-simple/blob/master/training/car_workspace.json">here</a> in order to get a working application.'
       }
     });
   }
+  var contextWithAcc = (req.body.context) ? req.body.context : newContext;
+
+  if (req.body.context) {
+    contextWithAcc.global.system.turn_count += 1;
+  }
+
+  //console.log(JSON.stringify(contextWithAcc, null, 2));
+
+  var textIn = '';
+
+  if(req.body.input) {
+    textIn = req.body.input.text;
+  }
+
   var payload = {
-    workspace_id: workspace,
-    context: req.body.context || {},
-    input: req.body.input || {}
+    assistant_id: assistantId,
+    session_id: req.body.session_id,
+    context: contextWithAcc,
+    input: {
+      message_type : 'text',
+      text : textIn,
+      options : {
+        return_context : true
+      }
+    }
   };
 
   // Send the input to the assistant service
@@ -54,40 +83,20 @@ app.post('/api/message', function (req, res) {
       return res.status(err.code || 500).json(err);
     }
 
-    return res.json(updateMessage(payload, data));
+    return res.json(data);
   });
 });
 
-/**
- * Updates the response text using the intent confidence
- * @param  {Object} input The request to the Assistant service
- * @param  {Object} response The response from the Assistant service
- * @return {Object}          The response with the updated message
- */
-function updateMessage(input, response) {
-  var responseText = null;
-  if (!response.output) {
-    response.output = {};
-  } else {
-    return response;
-  }
-  if (response.intents && response.intents[0]) {
-    var intent = response.intents[0];
-    // Depending on the confidence of the response the app can return different messages.
-    // The confidence will vary depending on how well the system is trained. The service will always try to assign
-    // a class/intent to the input. If the confidence is low, then it suggests the service is unsure of the
-    // user's intent . In these cases it is usually best to return a disambiguation message
-    // ('I did not understand your intent, please rephrase your question', etc..)
-    if (intent.confidence >= 0.75) {
-      responseText = 'I understood your intent was ' + intent.intent;
-    } else if (intent.confidence >= 0.5) {
-      responseText = 'I think your intent was ' + intent.intent;
+app.get('/api/session', function (req, res) {
+  assistant.createSession({
+    assistant_id: process.env.ASSISTANT_ID || '{assistant_id}',
+  }, function (error, response) {
+    if (error) {
+      return res.send(error);
     } else {
-      responseText = 'I did not understand your intent';
+      return res.send(response);
     }
-  }
-  response.output.text = responseText;
-  return response;
-}
+  });
+});
 
 module.exports = app;
