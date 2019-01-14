@@ -46,6 +46,10 @@ var ConversationPanel = (function () {
       currentResponsePayloadSetter.call(Api, newPayloadStr);
       displayMessage(JSON.parse(newPayloadStr), settings.authorTypes.watson);
     };
+
+    Api.setErrorPayload = function (newPayload) {
+      displayMessage(newPayload, settings.authorTypes.watson);
+    };
   }
 
   // Set up the input box to underline text as it is typed
@@ -146,7 +150,10 @@ var ConversationPanel = (function () {
         // Class to start fade in animation
         currentDiv.classList.add('load');
         // Move chat to the most recent messages when new messages are added
-        scrollToChatBottom();
+        setTimeout(function () {
+          // wait a sec before scrolling
+          scrollToChatBottom();
+        }, 1000);
         setResponse(responses, isUser, chatBoxElement, index + 1, false);
       } else {
         var userTypringField = document.getElementById('user-typing-field');

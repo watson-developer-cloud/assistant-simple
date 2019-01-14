@@ -28,6 +28,10 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "engines": {
+    "node": ">=8.15.0"
+  },
+  "engineStrict": true,
   "devDependencies": {
     "babel-eslint": "^8.2.6",
     "casperjs": "^1.1.4",
