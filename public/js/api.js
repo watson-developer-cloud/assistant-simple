@@ -27,6 +27,8 @@ var Api = (function() {
     },
     setResponsePayload: function(newPayloadStr) {
       responsePayload = JSON.parse(newPayloadStr);
+    },
+    setErrorPayload: function() {
     }
   };
 
@@ -35,7 +37,7 @@ var Api = (function() {
     http.open('GET', sessionEndpoint, true);
     http.setRequestHeader('Content-type', 'application/json');
     http.onreadystatechange = function () {
-      if (http.readyState == XMLHttpRequest.DONE) {
+      if (http.readyState === XMLHttpRequest.DONE) {
         var res = JSON.parse(http.responseText);
         sessionId = res.session_id;
         callback();
@@ -65,8 +67,19 @@ var Api = (function() {
     http.open('POST', messageEndpoint, true);
     http.setRequestHeader('Content-type', 'application/json');
     http.onreadystatechange = function() {
-      if (http.readyState === 4 && http.status === 200 && http.responseText) {
+      if (http.readyState === XMLHttpRequest.DONE && http.status === 200 && http.responseText) {
         Api.setResponsePayload(http.responseText);
+      } else if (http.readyState === XMLHttpRequest.DONE && http.status !== 200) {
+        Api.setErrorPayload({
+          'output': {
+            'generic': [
+              {
+                'response_type': 'text',
+                'text': 'I\'m having trouble connecting to the server, please refresh the page'
+              }
+            ],
+          }
+        });
       }
     };
 
