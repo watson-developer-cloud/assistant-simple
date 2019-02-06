@@ -239,7 +239,7 @@ var ConversationPanel = (function () {
       title = gen.title;
     }
     if (gen.hasOwnProperty('description')) {
-      var description = '<div>' + gen.description + '</div>';
+      var description = '<div class="description-area">' + gen.description + '</div>';
     }
     if (gen.response_type === 'image') {
       var img = '<div><img src="' + gen.source + '" width="300"></div>';
