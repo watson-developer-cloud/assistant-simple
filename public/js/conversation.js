@@ -236,7 +236,7 @@ var ConversationPanel = (function () {
   function getResponse(responses, gen) {
     var title = '';
     if (gen.hasOwnProperty('title')) {
-      title = '<div><b>' + gen.title + '</b></div>';
+      title = gen.title;
     }
     if (gen.hasOwnProperty('description')) {
       var description = '<div>' + gen.description + '</div>';
