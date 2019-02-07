@@ -238,6 +238,9 @@ var ConversationPanel = (function () {
     if (gen.hasOwnProperty('title')) {
       title = gen.title;
     }
+    if (gen.hasOwnProperty('description')) {
+      var description = '<div class="description-area">' + gen.description + '</div>';
+    }
     if (gen.response_type === 'image') {
       var img = '<div><img src="' + gen.source + '" width="300"></div>';
       responses.push({
@@ -264,7 +267,7 @@ var ConversationPanel = (function () {
       var list = getOptions(gen.options, preference);
       responses.push({
         type: gen.response_type,
-        innerhtml: title + list
+        innerhtml: title + description + list
       });
     }
   }
