@@ -14,17 +14,17 @@
 
 You can view a [demo][demo_url] of this app.
 
-Please note this app uses the [Watson Assistant V2 API](https://console.bluemix.net/apidocs/assistant-v2#introduction). To access a version of the V1 app, you can go to [v1.4.1](https://github.com/watson-developer-cloud/assistant-simple/releases/tag/v1.4.1).
+Please note this app uses the [Watson Assistant V2 API](https://cloud.ibm.com/apidocs/assistant-v2#introduction). To access a version of the V1 app, you can go to [v1.4.1](https://github.com/watson-developer-cloud/assistant-simple/releases/tag/v1.4.1).
 
 If you need more information about the V1 API, you can go to the [Watson Assistant V1 API page](https://cloud.ibm.com/apidocs/assistant#introduction).
 
 
 ## Prerequisites
 
-1. Sign up for an [IBM Cloud account](https://console.bluemix.net/registration/).
-1. Download the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#overview).
+1. Sign up for an [IBM Cloud account](https://cloud.ibm.com/registration/).
+1. Download the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/index.html#overview).
 1. Create an instance of the Watson Assistant service and get your credentials:
-    - Go to the [Watson Assistant](https://console.bluemix.net/catalog/services/conversation) page in the IBM Cloud Catalog.
+    - Go to the [Watson Assistant](https://cloud.ibm.com/catalog/services/conversation) page in the IBM Cloud Catalog.
     - Log in to your IBM Cloud account.
     - Click **Create**.
     - Click **Show** to view the service credentials.
@@ -84,7 +84,6 @@ If you need more information about the V1 API, you can go to the [Watson Assista
     ```
     ```
     ASSISTANT_IAM_APIKEY=ca2905e6-7b5d-4408-9192-e4d54d83e604
-    ASSISTANT_IAM_URL=https://gateway-syd.watsonplatform.net/assistant/api
     ```
 
 8. Add the `ASSISTANT_ID` to the previous properties
@@ -111,7 +110,7 @@ If you need more information about the V1 API, you can go to the [Watson Assista
 
 ## Deploying to IBM Cloud as a Cloud Foundry Application
 
-1. Login to IBM Cloud with the [IBM Cloud CLI](https://console.bluemix.net/docs/cli/index.html#overview)
+1. Login to IBM Cloud with the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli/index.html#overview)
 
     ```
     ibmcloud login
@@ -151,9 +150,9 @@ Find more open source projects on the
 
 
 [demo_url]: https://assistant-simple.ng.bluemix.net/
-[doc_intents]: (https://console.bluemix.net/docs/services/conversation/intents-entities.html#planning-your-entities)
-[docs]: https://console.bluemix.net/docs/services/conversation/index.html
-[docs_landing]: (https://console.bluemix.net/docs/services/conversation/index.html)
+[doc_intents]: https://cloud.ibm.com/docs/services/conversation/intents-entities.html#planning-your-entities
+[docs]: https://cloud.ibm.com/docs/services/assistant/index.html#index
+[docs_landing]: (https://cloud.ibm.com/docs/services/assistant/index.html#index)
 [node_link]: (http://nodejs.org/)
 [npm_link]: (https://www.npmjs.com/)
-[sign_up]: bluemix.net/registration
+[sign_up]: https://cloud.ibm.com/registration
