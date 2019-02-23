@@ -4,6 +4,7 @@ temp/
 .idea/
 coverage
 .env
+manifest.yml
 npm-debug.log
 .jshintrc
 .DS_Store

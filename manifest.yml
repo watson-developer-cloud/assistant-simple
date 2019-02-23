@@ -1,5 +1,5 @@
 applications:
-- name: leighs-watson-assistant-simple
+- name: leighs-watson-assistant-simple-dev
   command: npm start
   path: .
   memory: 256M
