@@ -80,7 +80,8 @@ app.post('/api/message', function (req, res) {
   // Send the input to the assistant service
   assistant.message(payload, function (err, data) {
     if (err) {
-      return res.status(err.code || 500).json(err);
+      const status = (err.code  !== undefined && err.code > 0)? err.code : 500;
+      return res.status(status).json(err);
     }
 
     return res.json(data);
