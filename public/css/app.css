@@ -73,6 +73,8 @@ div {
 }
 
 .chat-column {
+  display: flex;
+  flex-direction: column;
   height: 90%;
   padding: 0.9375rem 0 0.625rem 0;
   margin: auto;
@@ -82,6 +84,7 @@ div {
 }
 
 .user-typing {
+  flex: 0;
   border: none;
   color: #8d25e8;
   margin: 0.75rem;
@@ -93,7 +96,7 @@ div {
   margin: 0.75rem;
   overflow-y: auto;
   overflow-x: hidden;
-  height: calc(100% - 4rem);
+  flex: 1;
 }
 
 .message-inner {
