@@ -58,7 +58,7 @@ If you need more information about the V1 API, you can go to the [Watson Assista
     Example *.env* file that configures the `apikey` and `url` for a Watson Assistant service instance hosted in the US East region:
 
     ```
-    ASSISTANT_IAM_APIKEY=X4rbi8vwZmKpXfowaS3GAsA7vdy17Qh7km5D6EzKLHL2
+    ASSISTANT_IAM_APIKEY=X4rbi8vwZmKpXfowaS3GAsA7vdy17Qhxxxxxxxx
     ASSISTANT_URL=https://gateway-wdc.watsonplatform.net/assistant/api
     ```
 
@@ -67,29 +67,29 @@ If you need more information about the V1 API, you can go to the [Watson Assista
     Example *.env* file that configures the `username`, `password`, and `url` for a Watson Assistant service instance hosted in the US South region:
 
     ```
-    ASSISTANT_USERNAME=522be-7b41-ab44-dec3-g1eab2ha73c6
-    ASSISTANT_PASSWORD=A4Z5BdGENrwu8
+    ASSISTANT_USERNAME=522be-7b41-ab44-dec3-xxxxxxxx
+    ASSISTANT_PASSWORD=A4Z5BdGENxxxx
     ASSISTANT_URL=https://gateway.watsonplatform.net/assistant/api
     ```
     However, if your credentials contain an IAM API key, copy the `apikey` and `url` to the relevant fields.
     ```JSON
       {
-        "apikey": "ca2905e6-7b5d-4408-9192-e4d54d83e604",
+        "apikey": "ca2905e6-7b5d-4408-9192-xxxxxxxx",
         "iam_apikey_description": "Auto generated apikey during resource-key ...",
-        "iam_apikey_name": "auto-generated-apikey-62b71334-3ae3-4609-be26-846fa59ece42",
+        "iam_apikey_name": "auto-generated-apikey-62b71334-3ae3-4609-xxxxxxxx",
         "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
         "iam_serviceid_crn": "crn:v1:bluemix:public:iam...",
         "url": "https://gateway-syd.watsonplatform.net/assistant/api"
       }
     ```
     ```
-    ASSISTANT_IAM_APIKEY=ca2905e6-7b5d-4408-9192-e4d54d83e604
+    ASSISTANT_IAM_APIKEY=ca2905e6-7b5d-4408-9192-xxxxxxxx
     ```
 
 8. Add the `ASSISTANT_ID` to the previous properties
 
     ```
-    ASSISTANT_ID=522be-7b41-ab44-dec3-g1eab2ha73c6
+    ASSISTANT_ID=522be-7b41-ab44-dec3-xxxxxxxx
     ```
 
 ## Running locally
