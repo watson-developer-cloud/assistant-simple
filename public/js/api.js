@@ -46,8 +46,9 @@ var Api = (function() {
     http.send();
   }
 
+
   // Send a message request to the server
-  function sendRequest(text, context) {
+  function sendRequest(text) {
     // Build request payload
     var payloadToWatson = {
       session_id: sessionId
@@ -58,9 +59,6 @@ var Api = (function() {
       text: text,
     };
 
-    if (context) {
-      payloadToWatson.context = context;
-    }
 
     // Built http request
     var http = new XMLHttpRequest();
