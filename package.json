@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/watson-developer-cloud/assistant-simple.git"
+    "url": "git+https://github.com/watson-developer-cloud/assistant-simple.git"
   },
   "license": "Apache-2.0",
   "dependencies": {
     "body-parser": "^1.18.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "watson-developer-cloud": "^3.18.1"
+    "ibm-watson": "^4.2.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -40,5 +40,13 @@
     "jest": "^24.1.0",
     "phantomjs-prebuilt": "^2.1.16",
     "supertest": "^3.4.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/watson-developer-cloud/assistant-simple/issues"
+  },
+  "homepage": "https://github.com/watson-developer-cloud/assistant-simple#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": ""
 }

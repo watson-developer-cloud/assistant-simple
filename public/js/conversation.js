@@ -317,15 +317,8 @@ var ConversationPanel = (function () {
   }
 
   function sendMessage(text) {
-    // Retrieve the context from the previous server response
-    var context;
-    var latestResponse = Api.getResponsePayload();
-    if (latestResponse) {
-      context = latestResponse.context;
-    }
-
     // Send the user message
-    Api.sendRequest(text, context);
+    Api.sendRequest(text);
   }
 
   // Handles the submission of input
