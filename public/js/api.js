@@ -26,7 +26,7 @@ var Api = (function() {
       return responsePayload;
     },
     setResponsePayload: function(newPayloadStr) {
-      responsePayload = JSON.parse(newPayloadStr);
+      responsePayload = JSON.parse(newPayloadStr).result;
     },
     setErrorPayload: function() {
     }
@@ -38,8 +38,8 @@ var Api = (function() {
     http.setRequestHeader('Content-type', 'application/json');
     http.onreadystatechange = function () {
       if (http.readyState === XMLHttpRequest.DONE) {
-        var res = JSON.parse(http.responseText);
-        sessionId = res.session_id;
+        let res = JSON.parse(http.response);
+        sessionId = res.result.session_id;
         callback();
       }
     };
