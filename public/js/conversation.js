@@ -44,7 +44,7 @@ var ConversationPanel = (function () {
     var currentResponsePayloadSetter = Api.setResponsePayload;
     Api.setResponsePayload = function (newPayloadStr) {
       currentResponsePayloadSetter.call(Api, newPayloadStr);
-      displayMessage(JSON.parse(newPayloadStr), settings.authorTypes.watson);
+      displayMessage(JSON.parse(newPayloadStr).result, settings.authorTypes.watson);
     };
 
     Api.setErrorPayload = function (newPayload) {

@@ -20,6 +20,7 @@
 var express = require('express'); // app server
 var bodyParser = require('body-parser'); // parser for post requests
 var AssistantV2 = require('ibm-watson/assistant/v2'); // watson sdk
+const { IamAuthenticator } = require('ibm-watson/auth');
 
 var app = express();
 
@@ -30,13 +31,17 @@ app.use(bodyParser.json());
 // Create the service wrapper
 
 var assistant = new AssistantV2({
-  version: '2019-02-28'
+  version: '2019-02-28',
+  authenticator: new IamAuthenticator({
+    apikey: process.env.ASSISTANT_IAM_APIKEY
+  }),
+  url: process.env.ASSISTANT_IAM_URL,
 });
 
 
 // Endpoint to be call from the client side
 app.post('/api/message', function (req, res) {
-  var assistantId = process.env.ASSISTANT_ID || '<assistant-id>';
+  let assistantId = process.env.ASSISTANT_ID || '<assistant-id>';
   if (!assistantId || assistantId === '<assistant-id>') {
     return res.json({
       'output': {
@@ -52,8 +57,8 @@ app.post('/api/message', function (req, res) {
   }
 
   var payload = {
-    assistant_id: assistantId,
-    session_id: req.body.session_id,
+    assistantId: assistantId,
+    sessionId: req.body.session_id,
     input: {
       message_type : 'text',
       text : textIn
@@ -73,7 +78,7 @@ app.post('/api/message', function (req, res) {
 
 app.get('/api/session', function (req, res) {
   assistant.createSession({
-    assistant_id: process.env.ASSISTANT_ID || '{assistant_id}',
+    assistantId: process.env.ASSISTANT_ID || '{assistant_id}',
   }, function (error, response) {
     if (error) {
       return res.send(error);
