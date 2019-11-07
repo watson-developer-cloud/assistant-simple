@@ -29,7 +29,7 @@
     "access": "public"
   },
   "engines": {
-    "node": ">=8.15.0"
+    "node": ">=12"
   },
   "engineStrict": true,
   "devDependencies": {
