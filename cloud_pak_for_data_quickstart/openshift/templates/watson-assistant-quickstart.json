@@ -1,0 +1,327 @@
+{
+  "apiVersion": "v1",
+  "kind": "Template",
+  "labels": {
+    "app": "watson-assistant-quickstart",
+    "template": "watson-assistant-quickstart"
+  },
+  "message": "The ${NAME} service has been created in your project.\n\nFor more information about using this quickstart see https://github.com/watson-developer-cloud/assistant-simple/tree/master/cloud_pak_for_data_quickstart.",
+  "metadata": {
+    "annotations": {
+      "description": "An example Node.js application demonstrating the Watson Assistant api. For more information about using this template see https://github.com/watson-developer-cloud/assistant-simple/tree/master/cloud_pak_for_data_quickstart.",
+      "iconClass": "icon-nodejs",
+      "openshift.io/display-name": "Watson Assistant Quick Start",
+      "openshift.io/documentation-url": "https://github.com/watson-developer-cloud/assistant-simple/tree/master/cloud_pak_for_data_quickstart",
+      "openshift.io/provider-display-name": "IBM",
+      "tags": "quickstart,nodejs,watson,assistant"
+    },
+    "name": "watson-assistant-quickstart"
+  },
+  "objects": [
+    {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "annotations": {
+          "description": "Exposes and load balances the application pods"
+        },
+        "name": "${NAME}"
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "web",
+            "port": 8080,
+            "targetPort": 3000
+          }
+        ],
+        "selector": {
+          "name": "${NAME}"
+        }
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Route",
+      "metadata": {
+        "name": "${NAME}"
+      },
+      "spec": {
+        "host": "${APPLICATION_DOMAIN}",
+        "to": {
+          "kind": "Service",
+          "name": "${NAME}"
+        }
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "ImageStream",
+      "metadata": {
+        "annotations": {
+          "description": "Keeps track of changes in the application image"
+        },
+        "name": "${NAME}"
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "BuildConfig",
+      "metadata": {
+        "annotations": {
+          "description": "Defines how to build the application",
+          "template.alpha.openshift.io/wait-for-ready": "true"
+        },
+        "name": "${NAME}"
+      },
+      "spec": {
+        "output": {
+          "to": {
+            "kind": "ImageStreamTag",
+            "name": "${NAME}:latest"
+          }
+        },
+        "source": {
+          "contextDir": "${CONTEXT_DIR}",
+          "git": {
+            "ref": "${SOURCE_REPOSITORY_REF}",
+            "uri": "${SOURCE_REPOSITORY_URL}"
+          },
+          "type": "Git"
+        },
+        "strategy": {
+          "sourceStrategy": {
+            "env": [
+              {
+                "name": "NPM_MIRROR",
+                "value": "${NPM_MIRROR}"
+              }
+            ],
+            "from": {
+              "kind": "ImageStreamTag",
+              "name": "nodejs:${NODEJS_VERSION}",
+              "namespace": "${NAMESPACE}"
+            }
+          },
+          "type": "Source"
+        },
+        "triggers": [
+          {
+            "type": "ImageChange"
+          },
+          {
+            "type": "ConfigChange"
+          },
+          {
+            "github": {
+              "secret": "${GITHUB_WEBHOOK_SECRET}"
+            },
+            "type": "GitHub"
+          },
+          {
+            "generic": {
+              "secret": "${GENERIC_WEBHOOK_SECRET}"
+            },
+            "type": "Generic"
+          }
+        ]
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "DeploymentConfig",
+      "metadata": {
+        "annotations": {
+          "description": "Defines how to deploy the application server",
+          "template.alpha.openshift.io/wait-for-ready": "true"
+        },
+        "name": "${NAME}"
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "name": "${NAME}"
+        },
+        "strategy": {
+          "type": "Recreate"
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "name": "${NAME}"
+            },
+            "name": "${NAME}"
+          },
+          "spec": {
+            "containers": [
+              {
+                "name": "watson-assistant-quickstart",
+                "image": " ",
+                "ports": [
+                  {
+                    "containerPort": 8080
+                  }
+                ],
+                "env": [
+                  {
+                    "name": "BEARER_TOKEN",
+                    "value": "${BEARER_TOKEN}"
+                  },
+                  {
+                    "name": "ASSISTANT_URL",
+                    "value": "${ASSISTANT_URL}"
+                  },
+				  {
+				  	"name": "ASSISTANT_ID",
+				  	"value": "${ASSISTANT_ID}"
+				  },
+				  {
+				  	"name": "DISABLE_SSL_VERIFICATION",
+				  	"value": "${DISABLE_SSL_VERIFICATION}"
+				  }
+                ],
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/health",
+                    "port": 3000
+                  },
+                  "initialDelaySeconds": 30,
+                  "timeoutSeconds": 3
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/health",
+                    "port": 3000
+                  },
+                  "initialDelaySeconds": 3,
+                  "timeoutSeconds": 3
+                },
+                "resources": {
+                  "limits": {
+                    "memory": "${MEMORY_LIMIT}"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "triggers": [
+          {
+            "imageChangeParams": {
+              "automatic": true,
+              "containerNames": [
+                "watson-assistant-quickstart"
+              ],
+              "from": {
+                "kind": "ImageStreamTag",
+                "name": "${NAME}:latest"
+              }
+            },
+            "type": "ImageChange"
+          },
+          {
+            "type": "ConfigChange"
+          }
+        ]
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "description": "The name assigned to all of the frontend objects defined in this template.",
+      "displayName": "Name",
+      "name": "NAME",
+      "required": true,
+      "value": "watson-assistant-quickstart"
+    },
+    {
+      "displayName": "Cloud Pak for Data bearer token",
+      "description": "Cloud Pak for Data bearer token.",
+      "name": "BEARER_TOKEN",
+      "required": true
+    },
+    {
+      "displayName": "Watson Assistant instance URL",
+      "description": "Watson Assistant instance URL.",
+      "name": "ASSISTANT_URL",
+      "required": true
+    },
+	{
+      "displayName": "Watson Assistant ID",
+      "description": "Watson Assistant ID.",
+      "name": "ASSISTANT_ID",
+      "required": true
+    },
+	{
+      "displayName": "Disable SSL certificate verification",
+      "description": "Set this to 'true' if you are using a self-signed certificate.",
+      "name": "DISABLE_SSL_VERIFICATION",
+      "required": true,
+	  "value": "false"
+    },
+    {
+      "description": "The OpenShift Namespace where the ImageStream resides.",
+      "displayName": "Namespace",
+      "name": "NAMESPACE",
+      "required": true,
+      "value": "openshift"
+    },
+    {
+      "description": "Version of NodeJS image to be used (10 or latest).",
+      "displayName": "Version of NodeJS Image",
+      "name": "NODEJS_VERSION",
+      "required": true,
+      "value": "10"
+    },
+    {
+      "description": "Maximum amount of memory the Node.js container can use.",
+      "displayName": "Memory Limit",
+      "name": "MEMORY_LIMIT",
+      "required": true,
+      "value": "512Mi"
+    },
+    {
+      "description": "The URL of the repository with your application source code.",
+      "displayName": "Git Repository URL",
+      "name": "SOURCE_REPOSITORY_URL",
+      "required": true,
+	  "value": "https://github.com/watson-developer-cloud/assistant-simple"
+	},
+    {
+      "description": "Set this to a branch name, tag or other ref of your repository if you are not using the default branch.",
+      "displayName": "Git Reference",
+      "name": "SOURCE_REPOSITORY_REF"
+    },
+    {
+      "description": "Set this to the relative path to your project if it is not in the root of your repository.",
+      "displayName": "Context Directory",
+      "name": "CONTEXT_DIR"
+    },
+    {
+      "description": "The exposed hostname that will route to the Node.js service, if left blank a value will be defaulted.",
+      "displayName": "Application Hostname",
+      "name": "APPLICATION_DOMAIN",
+      "value": ""
+    },
+    {
+      "description": "Github trigger secret.  A difficult to guess string encoded as part of the webhook URL.  Not encrypted.",
+      "displayName": "GitHub Webhook Secret",
+      "from": "[a-zA-Z0-9]{40}",
+      "generate": "expression",
+      "name": "GITHUB_WEBHOOK_SECRET"
+    },
+    {
+      "description": "A secret string used to configure the Generic webhook.",
+      "displayName": "Generic Webhook Secret",
+      "from": "[a-zA-Z0-9]{40}",
+      "generate": "expression",
+      "name": "GENERIC_WEBHOOK_SECRET"
+    },
+    {
+      "description": "The custom NPM mirror URL",
+      "displayName": "Custom NPM Mirror URL",
+      "name": "NPM_MIRROR",
+      "value": ""
+    }
+  ]
+}
