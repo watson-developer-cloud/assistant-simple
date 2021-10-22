@@ -45,8 +45,8 @@ if (process.env.ASSISTANT_IAM_APIKEY) {
 var assistant = new AssistantV2({
   version: '2019-02-28',
   authenticator: authenticator,
-  url: process.env.ASSISTANT_URL,
-  disableSslVerification: process.env.DISABLE_SSL_VERIFICATION === 'true' ? true : false
+  serviceUrl: process.env.ASSISTANT_URL
+  //disableSslVerification: process.env.DISABLE_SSL_VERIFICATION === 'true' ? true : false
 });
 
 // Endpoint to be call from the client side
