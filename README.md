@@ -1,4 +1,4 @@
-<h1 align="center" style="border-bottom: none;">🚀 Watson Assistant (formerly Conversation) Sample Application</h1>
+<h1 align="center" style="border-bottom: none;">🚀 Watson Assistant Sample Application</h1>
 <h3 align="center">This Node.js app demonstrates the Watson Assistant service in a simple interface engaging in a series of simple simulated banking tasks.</h3>
 <p align="center">
   <a href="http://travis-ci.org/watson-developer-cloud/assistant-simple">
@@ -46,6 +46,7 @@ If you need more information about the V1 API, you can go to the [Watson Assista
 5. Click the ![Copy](readme_images/copy_icon.png) icon to copy the workspace ID to the clipboard.
 
     ![Steps to get credentials](readme_images/assistant-simple.gif)
+6. Alternate way is to setup workspace using upload.sh also set up env for the workspace.
 
 6. In the application folder, copy the *.env.example* file and create a file called *.env*
 
