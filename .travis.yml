@@ -1,7 +1,7 @@
 language: node_js
 dist: trusty
 sudo: required
-node_js: 12
+node_js: 14
 script:
   - npm run test
 
@@ -24,4 +24,4 @@ deploy:
       repo: watson-developer-cloud/assistant-simple
   - provider: script
     skip_cleanup: true
-    script: npx semantic-release
+    script: npx -p node@14 -c "npx semantic-release"
