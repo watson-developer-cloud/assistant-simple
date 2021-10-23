@@ -69,14 +69,19 @@ app.post('/api/message', function(req, res) {
   if (req.body.input) {
     textIn = req.body.input.text;
   }
-
+  // accessing context data
+  //https://cloud.ibm.com/docs/assistant-data?topic=assistant-data-api-client-get-context&code=javascript
   var payload = {
     assistantId: assistantId,
     sessionId: req.body.session_id,
     input: {
       message_type: 'text',
       text: textIn,
+      options: {
+        'return_context': true
+      }
     },
+    
   };
 
   // Send the input to the assistant service

@@ -57,6 +57,9 @@ var Api = (function() {
     payloadToWatson.input = {
       message_type: 'text',
       text: text,
+      options: {
+        'return_context': true
+      }
     };
 
 
